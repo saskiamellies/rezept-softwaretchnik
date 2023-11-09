@@ -2,14 +2,23 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class EingabeFeld extends React.Component {
-  constructor (props) {
+class Eingabefeld extends React.Component {
+  constructor(props) {
     super(props);
+    this.state = {textareaValue: ''};
   }
-  render () {
-    return(<textarea></textarea>);
+
+  handleTextareaChange = (e) => {
+    this.setState({textareaValue: e.target.value });
+  }
+
+  render() {
+    return (
+        <textarea className="Eingabefeld" value={this.state.textareaValue} onChange={this.handleTextareaChange}/>
+    );
   }
 }
+
 
 function App() {
   return (
@@ -24,7 +33,7 @@ function App() {
         >
           Zutaten eingeben:
         </a>
-        <EingabeFeld>TExt</EingabeFeld>
+        <Eingabefeld />
       </header>
     </div>
   );
