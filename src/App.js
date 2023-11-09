@@ -24,7 +24,7 @@ function App() {
         >
           Zutaten eingeben:
         </a>
-        <EingabeFeld></EingabeFeld>
+        <EingabeFeld>TExt</EingabeFeld>
       </header>
     </div>
   );
