@@ -24,6 +24,18 @@
   color: white;
 }
 
+.App textarea {
+  width: 50%;
+  height: 100px;
+  border: 2px solid;
+  border-radius: 3px;
+  resize: none;
+  font-size: 16px;
+  padding: 10px;
+  background-color: beige;
+}
+
+
 .App-link {
   color: #61dafb;
 }
