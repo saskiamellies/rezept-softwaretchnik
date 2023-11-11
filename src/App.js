@@ -14,7 +14,7 @@ class Eingabefeld extends React.Component {
 
   render() {
     return (
-        <textarea className="Eingabefeld" value={this.state.textareaValue} onChange={this.handleTextareaChange}/>
+        <textarea className="Eingabefeld" name="Eingabefeld" placeholder="Bitte Zutaten eingeben" value={this.state.textareaValue} onChange={this.handleTextareaChange}/>
     );
   }
 }
