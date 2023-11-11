@@ -9,7 +9,7 @@
   background-color: beige;
 }
 
-.output-container {
+.card-container {
   display: flex;
   gap: 32px;
 }

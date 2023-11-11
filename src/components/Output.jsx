@@ -5,9 +5,9 @@ class Output extends Component {
 
     state ={  }
     render() {
-      const recipes = ["1", "2", "3", "4"];
+      const recipes = ["1", "2", "3", ];
         return(
-          <div className="output-container">
+          <div className="card-container">
           {recipes.map((recipe) => (
             <div key={recipe.id} className="card">
               <img src="logo192.png" className="card-img-top" width="128px" height="128px" alt="..."/>
