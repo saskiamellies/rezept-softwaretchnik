@@ -5,17 +5,26 @@ class Output extends Component {
 
     state ={  }
     render() {
+      const recipes = ["1", "2", "3", "4"];
         return(
-          <div class="card">
-            <img src="logo192.png" class="card-img-top" width="128px" height="128px" alt="..."/>
-
-            <div class="card-body">
-              <h5 class="card-title">Rezeptname</h5>
-              <p class="card-text">Kurzbeschreibung</p>
-              <a href="#" class="btn btn-primary">Zum Rezept</a>
+          <div className="output-container">
+          {recipes.map((recipe) => (
+            <div key={recipe.id} className="card">
+              <img src="logo192.png" className="card-img-top" width="128px" height="128px" alt="..."/>
+              <div className="card-body">
+              <h5 className="card-title">Rezeptname</h5>
+              <p className="card-text">Kurzbeschreibung</p>
+              <a href="/" className="btn btn-primary">Zum Rezept</a>
             </div>
-          </div>);
+          </div>
+          ))}
+          </div>
+          );
     }
   }
+
+
+
+
  
 export default Output;

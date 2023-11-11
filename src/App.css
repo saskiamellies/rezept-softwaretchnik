@@ -9,3 +9,8 @@
   background-color: beige;
 }
 
+.output-container {
+  display: flex;
+  gap: 32px;
+}
+
