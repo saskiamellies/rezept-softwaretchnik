@@ -1,11 +1,9 @@
 import React, {Component} from "react";
 
 
-class Input extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {textareaValue: ''};
-    }
+class Input extends Component {
+
+    state = {textareaValue: ''};
   
     handleTextareaChange = (e) => {
       this.setState({textareaValue: e.target.value });
