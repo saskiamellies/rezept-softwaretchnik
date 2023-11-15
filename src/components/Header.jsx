@@ -19,7 +19,7 @@ function NavBar(props) {
 function HeadLine (props) {
   return (
     <div className="headline-container">
-      <h1 className="headline">Zutatenzauber</h1>
+      <h1 className="display-2">Zutatenzauber</h1>
     </div>
   );
 }
