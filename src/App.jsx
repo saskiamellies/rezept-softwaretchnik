@@ -1,14 +1,13 @@
-import React, {Component}from 'react';
-import Navbar from './components/Navbar';
-import InputDish from './components/InputDish';
-import OutputDish from './components/OutputDish';
+import React, { Component } from "react";
+import Header from "./components/Header";
+import InputDish from "./components/InputDish";
+import OutputDish from "./components/OutputDish";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Header  />
       <InputDish />
       <OutputDish />
     </div>
