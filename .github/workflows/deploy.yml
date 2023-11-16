@@ -1,35 +1,45 @@
-name: Deploy React App
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 12
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build
-      run: npm run build
-
-    - name: Deploy to GitHub Pages
-      run: |
-        npm install -g gh-pages
-        gh-pages -d build
-
-    - name: Cleanup
-      run: rm -rf node_modules
-
+{
+  "name": "rezepte_softwaretechnik_projektl",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm install -g gh-pages && gh-pages -d build",
+    "predeploy": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "homepage": "https://saskiamellies.github.io/rezepte_softwaretechnik1/"
+}
