@@ -1,7 +1,7 @@
 
 function NavBar(props) {
   return (
-    <ul class="nav nav-tabs">
+    <ul className="nav nav-tabs">
       <li className="nav-item">
         <a className="nav-link active" aria-current="page" href="/">
           Gerichte
