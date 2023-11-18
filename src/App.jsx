@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import InputDish from "./components/InputDish";
 import OutputDish from "./components/OutputDish";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css";
 
 function App() {
   return (
