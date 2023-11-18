@@ -6,29 +6,15 @@ on:
       - develop
 
 jobs:
-  deploy:
-
+  Deploy-Preview:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build
-      run: npm run build
-
-    - name: Deploy to GitHub Pages
-      run: |
-        npm install -g gh-pages
-        gh-pages -d build
-
-    - name: Cleanup
-      run: rm -rf node_modules
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=N975gGRwZXSrpGLGMTfJr1B4
+      - name: Build Project Artifacts
+        run: vercel build --token=N975gGRwZXSrpGLGMTfJr1B4
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --token=N975gGRwZXSrpGLGMTfJr1B4
