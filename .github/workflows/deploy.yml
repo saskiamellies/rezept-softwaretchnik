@@ -3,31 +3,30 @@ name: Deploy React App
 on:
   push:
   
-
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build
-      run: npm run build
+      - name: Build
+        run: npm run build
 
-    - name: Deploy to GitHub Pages
-      run: |
-        npm install -g gh-pages
-        gh-pages -d build
+      - name: Deploy to GitHub Pages
+        run: |
+          npm install -g gh-pages
+          gh-pages -d build
 
-    - name: Cleanup
-      run: rm -rf node_modules
+      - name: Cleanup
+        run: rm -rf node_modules
