@@ -16,9 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "npm install -g gh-pages && gh-pages -d build",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,18 +40,11 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saskiamellies/rezept-softwaretchnik.git"
-  },
+
   "keywords": [
     "recipes",
     "ingredients"
   ],
   "author": "André Schlichting, Jan Gruner, Saskia-Maria Mellies, Daniel Kunst, Christoph Rudolph, Theo Prill",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/saskiamellies/rezept-softwaretchnik/issues"
-  }
+  "license": "MIT"
 }
