@@ -41,7 +41,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
-  "homepage": "https://github.com/saskiamellies/rezept-softwaretchnik/",
+  "homepage": "https://rezept-softwaretchnik.vercel.app/",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "repository": {
