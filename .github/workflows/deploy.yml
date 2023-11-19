@@ -18,13 +18,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        run: |
-          npm install -g gh-pages
-          gh-pages -d build
-
-      - name: Cleanup
-        run: rm -rf node_modules
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{secrets.VERCEL_TOKEN}}
+      - name: Build Project Artifacts to Verce
+        run: vercel build --token=${{secrets.VERCEL_TOKEN}}
+      
