@@ -1,9 +1,7 @@
 name: Test Deploy
 env:
-  VERCEL_ORG_ID: team_QHyIvU5TeVlYaWS4IzIfVKz5
-  VERCEL_PROJECT_ID: prj_DxMoKdSoAvZDCcs4wOpY5CmmxJkF
-#  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-#  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
     branches:
