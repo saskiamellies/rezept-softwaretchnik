@@ -9,7 +9,7 @@ function NavBar(props) {
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/">
-          Test
+          Cocktails
         </a>
       </li>
     </ul>
@@ -28,9 +28,11 @@ function HeadLine (props) {
 function Header (props) {
     return (
       <div className="header-container">
+      <HeadLine />
+      <div className="nav-container">
         <NavBar />
-        <HeadLine />
       </div>
+    </div>
     );
   }
   

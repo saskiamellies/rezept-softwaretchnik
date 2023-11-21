@@ -8,19 +8,31 @@ function SearchBar (props) {
 
 function FilterDish () {
   return( 
-  <div className="filter-container">
+    <div className="filter-container">
     <fieldset>
-    <legend>Zusätzliche Filter:</legend>
+    <legend></legend>
     <div className="form-check">
       <input className="form-check-input" type="checkbox" value="" id="Vegan" />
       <label className="form-check-label" htmlFor="Vegan" >
-      Vegan
+      vegan
       </label>
     </div>
     <div className="form-check">
       <input className="form-check-input" type="checkbox" value="" id="LowCarb"/>
       <label className="form-check-label" htmlFor="LowCarb" >
-      Low Carb
+      low carb
+      </label>
+    </div>
+    <div className="form-check">
+      <input className="form-check-input" type="checkbox" value="" id="glutenfrei"/>
+      <label className="form-check-label" htmlFor="LowCarb" >
+      glutenfrei
+      </label>
+    </div>
+    <div className="form-check">
+      <input className="form-check-input" type="checkbox" value="" id="proteinreich"/>
+      <label className="form-check-label" htmlFor="LowCarb" >
+      proteinreich
       </label>
     </div>
     </fieldset>
@@ -31,10 +43,12 @@ function FilterDish () {
 
 function InputDish (props) {
   return (
-  <div className="input-container">
-    <SearchBar />
-    <FilterDish />
+    <div className="input-container">
+    <div className="filter-container">
+  <SearchBar />
+  <FilterDish />
   </div>
+</div>
   );
 }
 

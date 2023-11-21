@@ -1,51 +1,83 @@
-
 body {
-    background-color: rgba(63, 5, 5, 0.514);
+  background-color: rgb(255, 255, 255);
 }
 
-.App {
-  padding-left:2rem;
-  padding-right:2rem;
-}
-
-.headline-container {
+.header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  background-color: #14354b; 
+  padding: 10px;
+  color: #fff; 
+}
 
+.nav.nav-tabs {
+  margin-bottom: 0;
+  margin-right: 40px;
 }
 
 
-.Eingabefeld {
-    width: 50%;
-    height: 100px;
-    border: 2px solid;
-    border-radius: 3px;
-    resize: none;
-    font-size: 16px;
-    padding: 10px;
-    background-color: beige;
-  }
+.nav.nav-tabs .nav-item {
+  margin-right: 0px;
+}
 
-  .filter-container {
-    display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    gap: 1rem;
-  }
-  
-  .card-container {
-    display: flex;
-    gap: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  
-  .card {
-    width: 75%;
-  }
+/* HeadLine Component */
+.headline-container {
+  color: #fdfdfd; 
+  margin-left: 70px;
+}
+
+/* Suchleiste (Zutaten) */
+.form-control {
+  width: 70%;
+  resize: none;
+  margin-right: auto;
+  margin-left: 90px;
+  margin-top: 15px;
+}
+
+/* FilterKategorien */
+.filter-container {
+  margin-top: 5px;
+  margin-right: 240px;
+  display: flex;
+ 
+}
+
+/* InputDish Komponente */
+.input-container {
+  margin-top: 20px;
+}
+
+/* CardDish und OutputDish Komponenten */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+
+.card {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  background-color: #ffffff; 
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: #14354b; 
+  color: #ffffff; 
+  border: 1px solid #ffffff
+}
+
 
   @media (max-width: 850px) {
     .card-container {
