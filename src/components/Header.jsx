@@ -9,7 +9,7 @@ function NavBar(props) {
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/">
-          Cocktails
+          Test
         </a>
       </li>
     </ul>
