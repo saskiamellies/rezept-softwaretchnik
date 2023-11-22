@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import InputDish from "./components/InputDish";
-import OutputDish from "./components/OutputDish";
+import SearchDish from "./components/SearchDish";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
@@ -9,8 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header  />
-      <InputDish />
-      <OutputDish />
+      <SearchDish />
     </div>
   );
 }

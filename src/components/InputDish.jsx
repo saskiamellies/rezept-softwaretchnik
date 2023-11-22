@@ -1,9 +1,4 @@
-
-function SearchBar (props) {
-  return (
-  <textarea className="form-control" id="SearchBar" rows="3" placeholder="Bitte Zutaten eingeben"></textarea>
-  );
-}
+import { useState } from "react";
 
 
 function FilterDish () {
@@ -41,13 +36,31 @@ function FilterDish () {
 }
 
 
-function InputDish (props) {
+const InputDish = (props) => {
+
+  const [inputText, SetInputText] = useState("");
+
+  const changeInputText = (e) => {
+    SetInputText(e.target.value);
+  }
+
+  const submit = (e) => {
+    e.preventDefault();
+    props.onClick(inputText)
+  }
+
   return (
     <div className="input-container">
+    <form>
+        <input type="text" onChange={changeInputText} value={inputText} className="form-control" placeholder="Bitte Zutaten eingeben"></input> 
+        {/*
+        <input type="text" onChange={(e) => props.onChange(e.target.value)} className="form-control" placeholder="Bitte Zutaten eingeben"></input>  //Update bei jeder Zeicheneingabe
+        */}
+        <input type="submit" onClick={submit} className="form-button-control" value="Suchen"></input>
+      </form>
     <div className="filter-container">
-  <SearchBar />
   <FilterDish />
-  </div>
+    </div>
 </div>
   );
 }

@@ -36,6 +36,22 @@ body {
   margin-top: 15px;
 }
 
+/* Button Suchleiste (Zutaten) */
+.form-button-control {
+  cursor: pointer;
+}
+
+
+/* Button Suchleiste (Zutaten) */
+.form-control {
+  width: 70%;
+  resize: none;
+  margin-right: auto;
+  margin-left: 90px;
+  margin-top: 15px;
+}
+
+
 /* FilterKategorien */
 .filter-container {
   margin-top: 5px;
