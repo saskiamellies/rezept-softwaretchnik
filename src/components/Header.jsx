@@ -1,4 +1,4 @@
-
+import Navbar from "./Navbar";
 function NavBar(props) {
   return (
     <ul className="nav nav-tabs">
@@ -37,4 +37,3 @@ function Header(props) {
 }
 
 export default Header;
-import Navbar from "./Navbar";
