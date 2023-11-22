@@ -49,6 +49,7 @@ const InputDish = (props) => {
     props.onClick(inputText)
   }
 
+
   return (
     <div className="input-container">
     <form>
