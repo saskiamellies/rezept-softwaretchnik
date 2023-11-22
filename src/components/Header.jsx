@@ -1,4 +1,4 @@
-
+import Navbar from "./Navbar";
 function NavBar(props) {
   return (
     <ul className="nav nav-tabs">
@@ -16,7 +16,7 @@ function NavBar(props) {
   );
 }
 
-function HeadLine (props) {
+function HeadLine(props) {
   return (
     <div className="headline-container">
       <h1 className="display-2">Zutatenzauber</h1>
@@ -25,15 +25,15 @@ function HeadLine (props) {
 }
 
 
-function Header (props) {
-    return (
-      <div className="header-container">
+function Header(props) {
+  return (
+    <div className="header-container">
       <HeadLine />
       <div className="nav-container">
         <NavBar />
       </div>
     </div>
-    );
-  }
-  
-  export default Header;
+  );
+}
+
+export default Header;
