@@ -30,7 +30,7 @@ const OutputDish = ({ingredient}) => {
     <div>
     <h1>Child-Element (Output): {ingredient}</h1>
     <div className="card-container">
-      {dishes.map((dish) => (
+      {dishes?.map((dish) => (
         <div key={dish.idMeal} className="card">
         <img alt="dish" width="200px" src={dish.strMealThumb}/>
           <div className="card-body">
