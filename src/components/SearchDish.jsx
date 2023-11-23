@@ -14,8 +14,8 @@ const SearchDish = () => {
 
   return (
     <div className="SearchDish">
-    <h1>Test: {ingredient}</h1>
-      <InputDish onClick={(value) => handleInputText(value)} />
+    <h1>parent-Element: {ingredient}</h1>
+      <InputDish onClick={handleInputText} />
       {/*
       <InputDish onChange={value => SetIngredient(value)} />  //Update nach jeder Zeicheneingabe
       */}

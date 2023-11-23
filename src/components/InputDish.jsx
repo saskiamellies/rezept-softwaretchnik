@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function FilterDish() {
+/*function FilterDish() {
   return (
     <div className="filter-container">
       <fieldset>
@@ -34,9 +34,9 @@ function FilterDish() {
     </div>
   );
 }
+*/
 
-
-const InputDish = (props) => {
+const InputDish = ({onClick}) => {
 
   const [inputText, SetInputText] = useState("");
 
@@ -46,22 +46,19 @@ const InputDish = (props) => {
 
   const submit = (e) => {
     e.preventDefault();
-    props.onClick(inputText)
+    onClick(inputText)
   }
 
 
   return (
     <div className="input-container">
-      <form>
+      <form >
         <input type="text" onChange={changeInputText} value={inputText} className="form-control" placeholder="Bitte Zutaten eingeben"></input>
         {/*
         <input type="text" onChange={(e) => props.onChange(e.target.value)} className="form-control" placeholder="Bitte Zutaten eingeben"></input>  //Update bei jeder Zeicheneingabe
         */}
         <input type="submit" onClick={submit} className="form-button-control" value="Suchen"></input>
       </form>
-      <div className="filter-container">
-        <FilterDish />
-      </div>
     </div>
   );
 }
