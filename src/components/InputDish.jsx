@@ -36,7 +36,7 @@ import { useState } from "react";
 }
 */
 
-const InputDish = ({onClick, onChange}) => {
+const InputDish = ({onTyping}) => {
 
     {/*
   const [inputText, SetInputText] = useState("");
@@ -54,7 +54,7 @@ const InputDish = ({onClick, onChange}) => {
 
   return (
     <div className="input-container">
-    <input type="text" onChange={(e) => onChange(e.target.value)} className="form-control" placeholder="Bitte Zutat eingeben"></input>
+    <input type="text" onChange={(e) => onTyping(e.target.value)} className="form-control" placeholder="Bitte Zutat eingeben"></input>
        {/*<form >
        <input type="text" onChange={changeInputText} value={inputText} className="form-control" placeholder="Bitte Zutaten eingeben"></input>
        <input type="submit" onClick={submit} className="form-button-control" value="Suchen"></input>

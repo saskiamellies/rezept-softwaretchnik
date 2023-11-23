@@ -8,7 +8,7 @@ function CardDish (props) {
 
 
 
-const OutputDish = ({ingredient}) => {
+const OutputDish = ({ingredient, onClickRecipe}) => {
 
   const [dishes, setDishes] = useState([]);
 
@@ -21,10 +21,12 @@ const OutputDish = ({ingredient}) => {
       .then(response => response.json())
       .then(data => {
         setDishes(data.meals);
+        
       })
-      .catch(error => console.log(error));
     }
+    
   }, [ingredient]);
+
 
   return (
     <div>
@@ -36,10 +38,11 @@ const OutputDish = ({ingredient}) => {
           <div className="card-body">
            <h5 className="card-title">{dish.strMeal}</h5>
            <p className="card-text">Hier steht eine Kurzbeschreibung</p>
-           <a href="/" className="btn btn-primary">Zum Rezept</a>
+           <button onClick={(e) => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
+          </div>
         </div>
-    </div>
     ))}
+    
   </div>
   </div>
   );
