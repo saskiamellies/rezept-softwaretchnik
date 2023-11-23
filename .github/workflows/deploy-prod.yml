@@ -1,11 +1,11 @@
-name: Test Deploy
+name: Production Deploy
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
     branches:
-      - develop
+      - master
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
