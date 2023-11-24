@@ -46,8 +46,8 @@ Nutzer können die Lebensmittel, die sie zu Hause haben, eingeben oder aus einer
 - Rezeptvorschläge:
 Ausgabe von Rezepten, die den ausgewählten Lebensmitteln entsprechen
 <!-- blank line -->
-- Anzeigen von Details
-Anzeigen von Details: eines Rezeptes (Schritte, Zutaten etc.) nach Klick auf einem Rezeptvorschlag
+- Anzeigen von Details:
+Anzeigen von Details eines Rezeptes (Schritte, Zutaten etc.) nach Klick auf ein Rezeptvorschlag
 <!-- blank line -->
 - Filterfunktionen:
 1.	Es werden Rezepte basierend auf den Eingaben angezeigt 
