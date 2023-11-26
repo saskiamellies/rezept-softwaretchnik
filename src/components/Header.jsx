@@ -9,16 +9,14 @@ function HeadLine(props) {
   );
 }
 
-
 function Header(props) {
   return (
     <div className="header-container">
       <HeadLine />
-      <div className="nav-container">
-    <Navbar />
-      </div>
-    </div>
+      <Navbar />
+     </div>
   );
 }
+
 
 export default Header;

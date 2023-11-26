@@ -4,26 +4,36 @@ body {
 
 .header-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #14354b; 
+  background-color: #14354b;
   padding: 10px;
-  color: #fff; 
+  color: #fff;
 }
 
-.nav.nav-tabs {
-  margin-bottom: 0;
-  margin-right: 40px;
+.nav-container {
+  z-index: 1;
+}
+
+/* NavBar-Elemente*/
+.nav a {
+  color: inherit;
+
+}
+.nav ul{
+  padding: 20;
+  margin: 0;
+  list-style: disc;
+  display: flex;
+  gap: 3rem;
 }
 
 
-.nav.nav-tabs .nav-item {
-  margin-right: 0px;
-}
 
 /* HeadLine Component */
 .headline-container {
-  color: #fdfdfd; 
+  color: #fdfdfd;
   margin-left: 70px;
 }
 
@@ -57,7 +67,7 @@ body {
   margin-top: 5px;
   margin-right: 240px;
   display: flex;
- 
+
 }
 
 /* InputDish Komponente */
@@ -84,19 +94,19 @@ body {
 }
 
 .card-body {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   padding: 15px;
 }
 
 .btn-primary {
-  background-color: #14354b; 
-  color: #ffffff; 
+  background-color: #14354b;
+  color: #ffffff;
   border: 1px solid #ffffff
 }
 
 
-  @media (max-width: 850px) {
-    .card-container {
-        flex-direction: column;
-    }
+@media (max-width: 850px) {
+  .card-container {
+    flex-direction: column;
   }
+}
