@@ -10,11 +10,9 @@ function App() {
     <div className="App">
       <Header  />
       <SearchDish />
+      <NavBar />
     </div>
   );
-  return(
-    <NavBar />
-  )
 }
 
 export default App;
