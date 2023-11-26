@@ -1,18 +1,8 @@
+import React from "react";
 import Navbar from "../Navbar";
 function NavBar(props) {
   return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/">
-          Gerichte
-        </a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/">
-          Cocktails
-        </a>
-      </li>
-    </ul>
+  src/Navbar.js
   );
 }
 
