@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import SearchDish from "./components/SearchDish";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import NavBar from "./components/Navbar";
+import NavBar from "./Navbar";
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 function NavBar(props) {
   return (
     <ul className="nav nav-tabs">
