@@ -20,6 +20,10 @@ body {
 .nav a {
   color: inherit;
   text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  padding: .25rem;
 
 }
 .nav ul{
@@ -29,14 +33,12 @@ body {
   display: flex;
   gap: 3rem;
 }
-.nav li:hover{
-  background-color: #777;
-}
 .nav li:active{
   background-color: #555;
 }
-
-
+.nav li:hover{
+  background-color: #777;
+}
 
 /* HeadLine Component */
 .headline-container {
