@@ -1,10 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar";
-function NavBar(props) {
-  return (
-  src/Navbar.js
-  );
-}
+import Navbar from "./Navbar";
 
 function HeadLine(props) {
   return (
@@ -20,7 +15,7 @@ function Header(props) {
     <div className="header-container">
       <HeadLine />
       <div className="nav-container">
-        <NavBar />
+    <Navbar />
       </div>
     </div>
   );
