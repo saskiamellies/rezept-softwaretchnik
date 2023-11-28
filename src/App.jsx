@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link, Navigate} from "react-router-dom";
 import Header from "./components/Header";
-import SearchDish from "./components/SearchDish";
+import Recipes from "./components/Recipes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import NavBar from "./components/Navbar";
@@ -9,23 +9,13 @@ import Login from "./components/Login";
 import MeineVorratskammer from "./components/MeineVorratskammer";
 import MeinEssensplaner from "./components/MeinEssensplaner";
 
-function App() {
-  /*return (
 
-   <div className="App">
-      <Header  />
-      <SearchDish />
-      <NavBar />
-    </div>
-
-  );*/
-
-  
-    return (
+const App = () => {
+  return (
       <Router>
         <div className="App">
           <Header />
-          <SearchDish />
+          <Recipes />
           <NavBar />
         <Link to="/login">Go to Login</Link>
         <Link to="/my-pantry">Go to My Pantry</Link>

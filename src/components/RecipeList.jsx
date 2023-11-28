@@ -1,14 +1,7 @@
 import { useState, useEffect } from "react";
 
-function CardDish (props) {
-  return (
-    <div className="test"> </div>
-  )
-}
 
-
-
-const OutputDish = ({ingredient, onClickRecipe}) => {
+const Recipe = ({ingredient, onClickRecipe}) => {
 
   const [dishes, setDishes] = useState([]);
 
@@ -29,8 +22,6 @@ const OutputDish = ({ingredient, onClickRecipe}) => {
 
 
   return (
-    <div>
-    <h1>Child-Element (Output): {ingredient}</h1>
     <div className="card-container">
       {dishes?.map((dish) => (
         <div key={dish.idMeal} className="card">
@@ -38,14 +29,12 @@ const OutputDish = ({ingredient, onClickRecipe}) => {
           <div className="card-body">
            <h5 className="card-title">{dish.strMeal}</h5>
            <p className="card-text">Hier steht eine Kurzbeschreibung</p>
-           <button onClick={(e) => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
+           <button onClick={() => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
           </div>
         </div>
     ))}
-    
-  </div>
   </div>
   );
 }
 
-export default OutputDish;
+export default Recipe;
