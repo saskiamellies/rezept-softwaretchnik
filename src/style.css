@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+
 body {
   background-color: rgb(255, 255, 255);
 }
@@ -27,32 +35,40 @@ body {
 
 }
 .nav ul{
-  padding: 20;
-  margin: 0;
   list-style: none;
+  padding: 0;
   display: flex;
-  gap: 3rem;
 }
-.nav li:active{
-  background-color: #555;
+.nav li {
+  margin-right: 40px
 }
 .nav li:hover{
-  background-color: #777;
+  background-color: #a19595;
+  border-radius: 8px;
 }
 
 /* HeadLine Component */
 .headline-container {
   color: #fdfdfd;
-  margin-left: 70px;
+  text-align: center;
 }
 
 /* Suchleiste (Zutaten) */
 .form-control {
-  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 60%;
   resize: none;
-  margin-right: auto;
-  margin-left: 90px;
-  margin-top: 15px;
+
+}
+
+/* InputDish Komponente */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 /* Button Suchleiste (Zutaten) */
@@ -61,14 +77,6 @@ body {
 }
 
 
-/* Button Suchleiste (Zutaten) */
-.form-control {
-  width: 70%;
-  resize: none;
-  margin-right: auto;
-  margin-left: 90px;
-  margin-top: 15px;
-}
 
 
 /* FilterKategorien */
@@ -79,10 +87,7 @@ body {
 
 }
 
-/* InputDish Komponente */
-.input-container {
-  margin-top: 20px;
-}
+
 
 /* CardDish und OutputDish Komponenten */
 .card-container {
