@@ -7,6 +7,7 @@ const Recipes = () => {
 
   const [ingredient, SetIngredient] = useState("");
   const [dishSelected, setDishSelected] = useState([]);
+  const [isDetailsOpen, setDetailsOpen] = useState(false);
 
 
   const handleInputText = (value) => {
@@ -14,23 +15,31 @@ const Recipes = () => {
     SetIngredient(valueTrim);
   }
 
-
   const handleClickRecipe = (dishID) => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dishID}`)
       .then(response => response.json())
       .then(data => {
         setDishSelected(data.meals);
           })
+    setDetailsOpen(true);
     }
-
+ 
+  const closeDetails = () => {
+    setDishSelected([]);
+    setDetailsOpen(false);
+  };
 
   return (
     <div className="Recipes">
       <RecipeInput onTyping={handleInputText} placeholder="Bitte Hauptzutat eingeben" />
       <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
+      <RecipeDetails isOpen={isDetailsOpen} onClose={closeDetails} recipeDetails={dishSelected} />
+
+      {/*}
       {dishSelected.length > 0 && (
         <RecipeDetails recipeDetails={dishSelected} onClose={() => setDishSelected([])} />
       )} 
+      */}
     </div>
   )
 }

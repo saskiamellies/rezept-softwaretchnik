@@ -1,7 +1,7 @@
 import React from "react";
 
-const RecipeDetails = ({ recipeDetails, onClose }) => {
-  if (!recipeDetails || recipeDetails.length === 0) {
+const RecipeDetails = ({ isOpen, recipeDetails, onClose }) => {
+  if (!isOpen || !recipeDetails || recipeDetails.length === 0) {
     return null;
   }
 
