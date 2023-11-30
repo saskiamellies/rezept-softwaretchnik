@@ -63,7 +63,7 @@ body {
 
 }
 
-/* InputDish Komponente */
+/* RecipeInput Komponente */
 .input-container {
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
 
 
 
-/* CardDish und OutputDish Komponenten */
+/* RecipeList Komponente */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -123,4 +123,12 @@ body {
   .card-container {
     flex-direction: column;
   }
+}
+
+/* RecipeDetails Komponente */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.recipe-card {
 }

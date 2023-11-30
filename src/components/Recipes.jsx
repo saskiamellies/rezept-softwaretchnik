@@ -23,23 +23,17 @@ const Recipes = () => {
           })
     setDetailsOpen(true);
     }
- 
+
   const closeDetails = () => {
     setDishSelected([]);
     setDetailsOpen(false);
-  };
+  }
 
   return (
     <div className="Recipes">
       <RecipeInput onTyping={handleInputText} placeholder="Bitte Hauptzutat eingeben" />
       <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
       <RecipeDetails isOpen={isDetailsOpen} onClose={closeDetails} recipeDetails={dishSelected} />
-
-      {/*}
-      {dishSelected.length > 0 && (
-        <RecipeDetails recipeDetails={dishSelected} onClose={() => setDishSelected([])} />
-      )} 
-      */}
     </div>
   )
 }
