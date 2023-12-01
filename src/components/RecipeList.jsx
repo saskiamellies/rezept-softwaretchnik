@@ -28,7 +28,6 @@ const Recipe = ({ingredient, onClickRecipe}) => {
         <img alt="dish" width="200px" src={dish.strMealThumb}/>
           <div className="card-body">
            <h5 className="card-title">{dish.strMeal}</h5>
-           <p className="card-text">Hier steht eine Kurzbeschreibung</p>
            <button onClick={() => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
           </div>
         </div>
