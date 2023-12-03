@@ -25,7 +25,6 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/my-pantry" element={<MeineVorratskammer />} />
           <Route path="/meal-schedule" element={<MeinEssensplaner />} />
-          {/* Füge weitere Routen hinzu, falls erforderlich */}
         </Routes>
       </div>
     </Router>
