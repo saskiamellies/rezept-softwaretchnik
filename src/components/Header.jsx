@@ -1,22 +1,7 @@
+import React from "react";
+import Navbar from "./Navbar";
 
-function NavBar(props) {
-  return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/">
-          Gerichte
-        </a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/">
-          Cocktails
-        </a>
-      </li>
-    </ul>
-  );
-}
-
-function HeadLine (props) {
+function HeadLine(props) {
   return (
     <div className="headline-container">
       <h1 className="display-2">Zutatenzauber</h1>
@@ -24,14 +9,14 @@ function HeadLine (props) {
   );
 }
 
+function Header(props) {
+  return (
+    <div className="header-container">
+      <HeadLine />
+      <Navbar />
+     </div>
+  );
+}
 
-function Header (props) {
-    return (
-      <div className="header-container">
-        <NavBar />
-        <HeadLine />
-      </div>
-    );
-  }
-  
-  export default Header;
+
+export default Header;

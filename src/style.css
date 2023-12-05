@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #14354b;
+  padding: 10px;
+  color: #fff;
+}
+
+.nav-container {
+  z-index: 1;
+}
+
+/* NavBar-Elemente*/
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  padding: .25rem;
+
+}
+.nav ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav li {
+  margin-right: 40px
+}
+.nav li:hover{
+  background-color: #550d0d;
+  border-radius: 8px;
+}
+
+/* HeadLine Component */
+.headline-container {
+  color: #fdfdfd;
+  text-align: center;
+}
+
+
+/* InputDish Komponente */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  width: 93%;
+}
+
+/* Button Suchleiste (Zutaten) */
+.form-button-control {
+  cursor: pointer;
+}
+
+
+/* FilterKategorien */
+.filter-container {
+  margin-top: 5px;
+  margin-right: 240px;
+  display: flex;
+
+}
+
+/* CardDish und OutputDish Komponenten */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+
+.card {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: #14354b;
+  color: #ffffff;
+  border: 1px solid #ffffff
+}
+
+
+
+.Recipes {
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+/* Eingabebereich */
+.Recipes input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Zufälliges-Rezept-Button */
+.Recipes button {
+  background-color: #14354b; 
+  color: #fff; 
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+.Recipes button:hover{
+  background-color: #550d0d;
+  border-radius: 8px;
+}
+
+
+
+
+
+@media (max-width: 850px) {
+  .card-container {
+    flex-direction: column;
+  }
+}

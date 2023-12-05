@@ -3,22 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.2",
+    "express": "^4.18.2",
+    "node": "^21.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "npm install -g gh-pages && gh-pages -d build",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -38,23 +37,24 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "@testing-library/react"
+    ]
+  },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
+    "babel-jest": "^24.9.0",
+    "jest": "^29.7.0"
   },
-  "homepage": "https://rezept-softwaretchnik.vercel.app/",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saskiamellies/rezept-softwaretchnik.git"
-  },
   "keywords": [
     "recipes",
     "ingredients"
   ],
   "author": "André Schlichting, Jan Gruner, Saskia-Maria Mellies, Daniel Kunst, Christoph Rudolph, Theo Prill",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/saskiamellies/rezept-softwaretchnik/issues"
-  }
+  "license": "MIT"
 }
