@@ -1,5 +1,5 @@
 {
-  "name": "zutatenzauber",
+  "name": "c",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -56,5 +56,6 @@
     "ingredients"
   ],
   "author": "André Schlichting, Jan Gruner, Saskia-Maria Mellies, Daniel Kunst, Christoph Rudolph, Theo Prill",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js"
 }
