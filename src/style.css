@@ -43,7 +43,7 @@ body {
   margin-right: 40px
 }
 .nav li:hover{
-  background-color: #a19595;
+  background-color: #550d0d;
   border-radius: 8px;
 }
 
@@ -53,30 +53,21 @@ body {
   text-align: center;
 }
 
-/* Suchleiste (Zutaten) */
-.form-control {
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  width: 60%;
-  resize: none;
 
-}
-
-/* RecipeInput Komponente */
+/* InputDish Komponente */
 .input-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 60px;
+  width: 93%;
 }
 
 /* Button Suchleiste (Zutaten) */
 .form-button-control {
   cursor: pointer;
 }
-
-
 
 
 /* FilterKategorien */
@@ -87,9 +78,7 @@ body {
 
 }
 
-
-
-/* RecipeList Komponente */
+/* CardDish und OutputDish Komponenten */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -119,16 +108,42 @@ body {
 }
 
 
+
+.Recipes {
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+/* Eingabebereich */
+.Recipes input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Zufälliges-Rezept-Button */
+.Recipes button {
+  background-color: #14354b; 
+  color: #fff; 
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+.Recipes button:hover{
+  background-color: #550d0d;
+  border-radius: 8px;
+}
+
+
+
+
+
 @media (max-width: 850px) {
   .card-container {
     flex-direction: column;
   }
-}
-
-/* RecipeDetails Komponente */
-.modal-overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.recipe-card {
 }
