@@ -15,6 +15,7 @@ const Recipes = () => {
     SetIngredient(valueTrim);
   }
 
+
   const handleClickRecipe = (dishID) => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dishID}`)
       .then(response => response.json())
@@ -26,7 +27,6 @@ const Recipes = () => {
         console.error("Fehler beim Abrufen des ausgewählten Rezepts:", error);
       });
     }
-
 
   const handleRandomRecipe = () => {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
