@@ -14,14 +14,11 @@ const App = () => {
   return (
       <Router>
         <div className="App">
-          <Header>
-          <NavBar/>
-          </Header>
+          <Header />
           <Recipes />
         <Link to="/login">Go to Login</Link>
         <Link to="/my-pantry">Go to My Pantry</Link>
         <Link to="/meal-schedule">Go to Meal Schedule</Link>
-
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/my-pantry" element={<MeineVorratskammer />} />
