@@ -20,8 +20,24 @@ const Recipes = () => {
       .then(response => response.json())
       .then(data => {
         setDishSelected(data.meals);
-          })
-    setDetailsOpen(true);
+        setDetailsOpen(true);
+      })
+      .catch((error) => {
+        console.error("Fehler beim Abrufen des ausgewählten Rezepts:", error);
+      });
+    }
+
+
+  const handleRandomRecipe = () => {
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+      .then(response => response.json())
+      .then(data => {
+        setDishSelected(data.meals);
+        setDetailsOpen(true);
+      })
+      .catch((error) => {
+      console.error("Fehler beim Abrufen des ausgewählten Rezepts:", error);
+      });
     }
 
   const closeDetails = () => {
@@ -29,25 +45,10 @@ const Recipes = () => {
     setDetailsOpen(false);
   }
 
-  // Random Rezept Ausgabe - Verknüpfung API
-
-  const handleRandomRecipe = () => {
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-      .then((response) => response.json())
-      .then((data) => {
-        const randomDish = data.meals[0];
-        setDishSelected([randomDish]);
-        setDetailsOpen(true);
-      })
-      .catch((error) => {
-        console.error("Fehler beim Abrufen des zufälligen Rezepts:", error);
-      });
-  };
-
 
   return (
     <div className="Recipes">
-      <RecipeInput onTyping={handleInputText} placeholder="Bitte Hauptzutat eingeben" />
+      <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Bitte Hauptzutat eingeben" />
       {/* Random Rezept Button */}
       <button onClick={handleRandomRecipe} className="btn btn-primary">Zufälliges Rezept </button>
       <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />

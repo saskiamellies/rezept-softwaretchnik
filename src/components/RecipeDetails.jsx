@@ -32,13 +32,7 @@ const RecipeDetails = ({ isOpen, recipeDetails, onClose }) => {
 
         <div className="video-link">
           {meal.strYoutube && (
-            <div>
-            <a href={meal.strYoutube} target="_blank" rel="noopener noreferrer">
-             Watch Video
-            </a>
-          
             <iframe width="560" height="315" src={meal.strYoutube.replace("watch?v=", "embed/")} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
           )
           } 
         </div>
