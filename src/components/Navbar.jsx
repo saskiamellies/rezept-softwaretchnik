@@ -1,7 +1,7 @@
 // src/Navbar.js
 import React from "react";
 
-function NavBar(props) {
+const NavBar = () => {
   return (
     <nav className="nav">
       <ul><li><a href="/" className="home-page">Recipe Search</a></li></ul>
