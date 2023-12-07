@@ -2,6 +2,7 @@ import { useState } from "react";
 import RecipeInput from "./RecipeInput";
 import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
+import { unmountComponentAtNode } from "react-dom";
 
 const Recipes = () => {
 
@@ -46,15 +47,21 @@ const Recipes = () => {
   }
 
 
-  return (
+  if (isDetailsOpen) {
+    return (
     <div className="Recipes">
-      <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Bitte Hauptzutat eingeben" />
-      {/* Random Rezept Button */}
-      <button onClick={handleRandomRecipe} className="btn btn-primary">Zufälliges Rezept </button>
-      <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
-      <RecipeDetails isOpen={isDetailsOpen} onClose={closeDetails} recipeDetails={dishSelected} />
-    </div>
-  )
+    <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
+    <RecipeDetails isOpen={isDetailsOpen} onClose={closeDetails} recipeDetails={dishSelected} />
+    </div>)
+  }
+  else {
+    return(
+    <div className="Recipes">
+    <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
+    <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
+  </div>)
+  }
+
 }
 
 export default Recipes;

@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import NavBar from "./components/Navbar";
 import Login from "./components/Login";
 import MeineVorratskammer from "./components/MeineVorratskammer";
 import MeinEssensplaner from "./components/MeinEssensplaner";

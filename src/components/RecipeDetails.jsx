@@ -1,9 +1,6 @@
 import React from "react";
 
-const RecipeDetails = ({ isOpen, recipeDetails, onClose }) => {
-  if (!isOpen || !recipeDetails || recipeDetails.length === 0) {
-    return null;
-  }
+const RecipeDetails = ({ recipeDetails, onClose }) => {
 
   const meal = recipeDetails[0];
 
