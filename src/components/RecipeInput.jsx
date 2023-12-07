@@ -1,5 +1,5 @@
 
-const RecipeInput = ({onTyping, onClickingRandom, placeholder}) => {
+const RecipeInput = ({ onTyping, placeholder, onClickingRandom }) => {
 
   return (
     <div className="input-container">
