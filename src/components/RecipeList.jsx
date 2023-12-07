@@ -22,16 +22,19 @@ const Recipe = ({ingredient, onClickRecipe}) => {
 
 
   return (
-    <div className="card-container">
-      {dishes?.map((dish) => (
-        <div key={dish.idMeal} className="card">
-        <img alt="dish" width="200px" src={dish.strMealThumb}/>
-          <div className="card-body">
-           <h5 className="card-title">{dish.strMeal}</h5>
-           <button onClick={() => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
+    <div className="output-container">
+      {dishes?.length > 0 &&
+        <h3>found {dishes.length} recipes:</h3>
+      }
+      <div className="card-container">
+        {dishes?.map((dish) => (
+          <div key={dish.idMeal} className="card">
+            <img alt="dish" src={dish.strMealThumb}/>
+            <h5 className="card-title">{dish.strMeal}</h5>
+            <button onClick={() => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
           </div>
-        </div>
-    ))}
+      ))}
+    </div>
   </div>
   );
 }
