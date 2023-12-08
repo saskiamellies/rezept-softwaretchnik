@@ -31,7 +31,7 @@ const Recipe = ({ingredient, onClickRecipe}) => {
           <div key={dish.idMeal} className="card">
             <img alt="dish" src={dish.strMealThumb}/>
             <h5 className="card-title">{dish.strMeal}</h5>
-            <button onClick={() => onClickRecipe(dish.idMeal)} className="btn btn-primary">Zum Rezept</button>
+            <button onClick={() => onClickRecipe(dish.idMeal)} className="btn btn-primary">open recipe</button>
           </div>
       ))}
     </div>

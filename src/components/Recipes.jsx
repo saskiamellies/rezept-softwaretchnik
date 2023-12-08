@@ -25,7 +25,7 @@ const Recipes = () => {
         setDetailsOpen(true);
       })
       .catch((error) => {
-        console.error("Fehler beim Abrufen des ausgewählten Rezepts:", error);
+        console.error("Error: Cannot open selected recipe:", error);
       });
     }
 
@@ -37,7 +37,7 @@ const Recipes = () => {
         setDetailsOpen(true);
       })
       .catch((error) => {
-      console.error("Fehler beim Abrufen des ausgewählten Rezepts:", error);
+      console.error("Error: Cannot open selected recipe:", error);
       });
     }
 
