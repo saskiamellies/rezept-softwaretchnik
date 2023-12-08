@@ -1,3 +1,3 @@
-export default function MeinEssensplaner(){
+export default function MealSchedule(){
     return <h1>My meal-schedule</h1>
 }
