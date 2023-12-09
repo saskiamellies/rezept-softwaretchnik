@@ -51,7 +51,7 @@ const Recipes = () => {
     return (
     <div className="Recipes">
     <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
-    <RecipeDetails isOpen={isDetailsOpen} onClose={closeDetails} recipeDetails={dishSelected} />
+    <RecipeDetails onClose={closeDetails} recipeDetails={dishSelected} />
     </div>)
   }
   else {
