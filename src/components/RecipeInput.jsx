@@ -1,6 +1,8 @@
 
 const RecipeInput = ({ onClickingSearch, placeholder, onClickingRandom }) => {
 
+  
+
   return (
     <div className="input-container">
     <h3> You can search for recipes here</h3>

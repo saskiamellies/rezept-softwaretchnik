@@ -16,6 +16,7 @@ const Recipes = () => {
 
   const handleClickRecipe = (dish) => {
         setDishSelected(dish);
+        console.log(dishSelected);
         setDetailsOpen(true);
       }
 
@@ -28,7 +29,7 @@ const Recipes = () => {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
       .then(response => response.json())
       .then(data => {
-        setDishSelected(data.meals);
+        setDishSelected(data.meals[0]);
         setDetailsOpen(true);
       })
       .catch((error) => {
