@@ -4,24 +4,31 @@ import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import Profile from "./components/Profile";
-import Pantry from "./components/Pantry";
-import MealSchedule from "./components/MealSchedule";
+import NavBar from "./components/Navbar";
+import MyProfile from "./components/Profile";
+import MyPantry from "./components/MyPantry";
+import MyMealSchedule from "./components/MealSchedule";
 
 
 const App = () => {
   return (
-    <div className="App">
-      <Header />
       <Router>
+        <div className="App">
+          <Header>
+          <NavBar/>
+          </Header>
+          <Recipes/>
+        <Link to="/profile"></Link>
+        <Link to="/my-pantry"></Link>
+        <Link to="/meal-schedule"></Link>
+
         <Routes>
-          <Route path="/" element={<Recipes />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/pantry" element={<Pantry />} />
-          <Route path="/meal-schedule" element={<MealSchedule />} />
+          <Route path="/profile" element={<MyProfile />} />
+          <Route path="/mypantry" element={<MyPantry/>} />
+          <Route path="/meal-schedule" element={<MyMealSchedule />} />
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
     );
   }
 
