@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const RecipeList = ({ ingredient, isVegetarian, onClickRecipe }) => {
+const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
@@ -26,13 +26,21 @@ const RecipeList = ({ ingredient, isVegetarian, onClickRecipe }) => {
             const dishesFilterVegetarian = isVegetarian
               ? dishesFetch.filter((dish) => dish.strCategory === "Vegetarian")
               : dishesFetch;
-            setDishes(dishesFilterVegetarian);
+             // setDishes(dishesFilterVegetarian);
+
+            
+             const dishesFilterArea = area
+              ? dishesFilterVegetarian.filter((dish) => dish.strArea === area)
+              : dishesFilterVegetarian;
+
+              setDishes(dishesFilterArea);
+
           } else {
             setDishes([]);
           }
         });
     }
-  }, [ingredient, isVegetarian]);
+  }, [ingredient, isVegetarian, area]);
 
   return (
     <div className="output-container">

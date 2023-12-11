@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-const RecipeInput = ({ onClickingSearch, onClickingRandom }) => {
+const RecipeInput = ({ onClickingSearch, onClickingRandom, onAreaChange }) => {
 
   const [isVegetarian, setIsVegetarian] = useState(false);
+  const [selectedArea, setSelectedArea] = useState(""); // neu
 
   const handleCheckboxChange = () => {
     setIsVegetarian(!isVegetarian);
@@ -10,7 +11,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom }) => {
 
   const handleSearchClick = () => {
     const ingredient = document.getElementById("inputText").value;
-    onClickingSearch(ingredient, isVegetarian);
+    onClickingSearch(ingredient, isVegetarian, selectedArea);
   };
 
   const handleRandomClick = () => {
@@ -21,6 +22,15 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom }) => {
       });
   };
 
+  // neu
+
+  const handleAreaChange = (event) => {
+    const areaValue = event.target.value;
+    setSelectedArea(areaValue);
+    onAreaChange(areaValue);
+  };
+
+
   return (
     <div className="input-container">
       <h3>You can search for recipes here</h3>
@@ -30,6 +40,43 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom }) => {
       <label>Vegetarian:
         <input type="checkbox" onChange={handleCheckboxChange} />
       </label>
+
+  {/* NEU */}
+      <label>Area:
+        <select onChange={handleAreaChange} value={selectedArea}>
+          <option value="">Select Area</option>
+          <option value="American">American</option>
+          <option value="British">British</option>
+          <option value="Canadian">Canadian</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Croatian">Croatian</option>
+          <option value="Dutch">Dutch</option>
+          <option value="Egyptian">Egyptian</option>
+          <option value="Filipino">Filipino</option>
+          <option value="French">French</option>
+          <option value="Greek">Greek</option>
+          <option value="Indian">Indian</option>
+          <option value="Irish">Irish</option>
+          <option value="Italian">Italian</option>
+          <option value="Jamaican">Jamaican</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Kenyan">Kenyan</option>
+          <option value="Malaysian">Malaysian</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Moroccan">Moroccan</option>
+          <option value="Polish">Polish</option>
+          <option value="Portuguese">Portuguese</option>
+          <option value="Russian">Russian</option>
+          <option value="Spanish">Spanish</option>
+          <option value="Thai">Thai</option>
+          <option value="Tunisian">Tunisian</option>
+          <option value="Turkish">Turkish</option>
+          <option value="Unknown">Unknown</option>
+          <option value="Vietnamese">Vietnamese</option>
+          {/* Weitere Optionen hier hinzufügen */}
+        </select>
+      </label>
+
 
       <button onClick={handleRandomClick} className="btn btn-primary"> give me a random recipe! </button>
       

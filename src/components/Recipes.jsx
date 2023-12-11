@@ -7,12 +7,14 @@ const Recipes = () => {
   
   const [ingredient, setIngredient] = useState("");
   const [isVegetarian, setIsVegetarian] = useState(false);
+  const [area, setArea] = useState("");
   const [dishSelected, setDishSelected] = useState([]);
   const [isRecipeShow, setIsRecipeShow] = useState(false);
 
-  const handleSearch = (value, isVegetarian) => {
+  const handleSearch = (value, isVegetarian, selectedArea) => {
     setIngredient(value.trim());
     setIsVegetarian(isVegetarian);
+    setArea(selectedArea); // neu
   };
 
   const handleRandomRecipe = (dishRandom) => {
@@ -35,15 +37,15 @@ const Recipes = () => {
   if (isRecipeShow) {
     return (
       <div className="Recipes">
-        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} />
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onAreaChange={setArea} />
         <RecipeDetails recipeDetails={dishSelected} onClose={handleCloseRecipe} />
       </div>
     );
   } else {
     return (
       <div className="Recipes">
-        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} />
-        <RecipeList ingredient={ingredient} isVegetarian={isVegetarian} onClickRecipe={handleShowRecipe} />
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onAreaChange={setArea} />
+        <RecipeList ingredient={ingredient} isVegetarian={isVegetarian} area={area} onClickRecipe={handleShowRecipe} />
       </div>
     );
   }
