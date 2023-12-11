@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const RecipeInput = ({ onClickingSearch, onClickingRandom }) => {
 
   const [isVegetarian, setIsVegetarian] = useState(false);
-  const [dishRandom, setDishRandom] = useState([]);
 
   const handleCheckboxChange = () => {
     setIsVegetarian(!isVegetarian);
@@ -18,9 +17,8 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom }) => {
     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
       .then((response) => response.json())
       .then((data) => {
-        setDishRandom(data.meals[0]);
+        onClickingRandom(data.meals[0]); 
       });
-    onClickingRandom(dishRandom);
   };
 
   return (

@@ -42,16 +42,9 @@ const RecipeList = ({ ingredient, isVegetarian, onClickRecipe }) => {
           <div className="card-container">
             {dishes.map((dishComplete) => (
               <div key={dishComplete.idMeal} className="card">
-                <img alt="dish" src={dishComplete.strMealThumb} />
+                <img src={dishComplete.strMealThumb} alt="could not be loaded"  />
                 <h5 className="card-title">{dishComplete.strMeal}</h5>
-                <h5 className="card-title">{dishComplete.strArea}</h5>
-                <h5 className="card-title">{dishComplete.strCategory}</h5>
-                <button
-                  onClick={() => onClickRecipe(dishComplete)}
-                  className="btn btn-primary"
-                >
-                  open recipe
-                </button>
+                <button onClick={() => onClickRecipe(dishComplete)} className="btn btn-primary" > open recipe </button>
               </div>
             ))}
           </div>
