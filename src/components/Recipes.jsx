@@ -4,55 +4,49 @@ import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
 
 const Recipes = () => {
-
-  const [ingredient, SetIngredient] = useState("");
+  
+  const [ingredient, setIngredient] = useState("");
+  const [isVegetarian, setIsVegetarian] = useState(false);
   const [dishSelected, setDishSelected] = useState([]);
-  const [isDetailsOpen, setDetailsOpen] = useState(false);
+  const [isRecipeShow, setIsRecipeShow] = useState(false);
+
+  const handleSearch = (value, isVegetarian) => {
+    setIngredient(value.trim());
+    setIsVegetarian(isVegetarian);
+  };
+
+  const handleRandomRecipe = (dishRandom) => {
+    setDishSelected(dishRandom);
+    setIsRecipeShow(true);
+  };
+
+  const handleShowRecipe = (dish) => {
+    setDishSelected(dish);
+    console.log(dishSelected);
+    setIsRecipeShow(true);
+  };
+
+  const handleCloseRecipe = () => {
+    setDishSelected([]);
+    setIsRecipeShow(false);
+  };
 
 
-  const handleInputText = (value) => {
-    SetIngredient(value.trim());
-  }
-
-  const handleClickRecipe = (dish) => {
-        setDishSelected(dish);
-        console.log(dishSelected);
-        setDetailsOpen(true);
-      }
-
-  const closeDetails = () => {
-        setDishSelected([]);
-        setDetailsOpen(false);
-      }
-
-  const handleRandomRecipe = () => {
-    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-      .then(response => response.json())
-      .then(data => {
-        setDishSelected(data.meals[0]);
-        setDetailsOpen(true);
-      })
-      .catch((error) => {
-      console.error("Error: Cannot open selected recipe:", error);
-      });
-    }
-
-
-  if (isDetailsOpen) {
+  if (isRecipeShow) {
     return (
-    <div className="Recipes">
-    <RecipeInput onClickingSearch={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
-    <RecipeDetails onClose={closeDetails} recipeDetails={dishSelected} />
-    </div>)
+      <div className="Recipes">
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} />
+        <RecipeDetails recipeDetails={dishSelected} onClose={handleCloseRecipe} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="Recipes">
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} />
+        <RecipeList ingredient={ingredient} isVegetarian={isVegetarian} onClickRecipe={handleShowRecipe} />
+      </div>
+    );
   }
-  else {
-    return(
-    <div className="Recipes">
-    <RecipeInput onClickingSearch={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
-    <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
-  </div>)
-  }
-
-}
+};
 
 export default Recipes;
