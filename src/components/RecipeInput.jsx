@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onAreaChange }) => {
 
   const [isVegetarian, setIsVegetarian] = useState(false);
-  const [selectedArea, setSelectedArea] = useState(""); // neu
+  const [selectedArea, setSelectedArea] = useState("");
 
   const handleSearchClick = () => {
     const ingredient = document.getElementById("inputText").value;
@@ -30,7 +30,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
       });
   };
 
- 
+
   return (
     <div className="input-container">
       <h3>You can search for recipes here</h3>
@@ -41,7 +41,6 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
         <label>Vegetarian:
           <input type="checkbox" onChange={handleCheckboxChange} />
         </label>
-
         <label>Area:
           <select onChange={handleAreaChange} value={selectedArea}>
             <option value="">Select Area</option>
@@ -79,7 +78,6 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
       </div>
 
       <button onClick={handleRandomClick} className="btn btn-primary"> give me a random recipe! </button>
-      
     </div>
   );
 };

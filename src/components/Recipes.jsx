@@ -14,7 +14,7 @@ const Recipes = () => {
   const handleSearch = (value, isVegetarian, selectedArea) => {
     setIngredient(value.trim());
     setIsVegetarian(isVegetarian);
-    setArea(selectedArea); // neu
+    setArea(selectedArea);
   };
 
   const handleRandomRecipe = (dishRandom) => {

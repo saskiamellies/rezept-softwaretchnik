@@ -12,17 +12,12 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
       }
 
       try {
-        const response = await fetch(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
-        );
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`);
         const data = await response.json();
 
         if (data.meals) {
-          const dishesFetch = await Promise.all(
-            data.meals.map(async (dish) => {
-              const response = await fetch(
-                `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dish.idMeal}`
-              );
+          const dishesFetch = await Promise.all(data.meals.map(async (dish) => {
+              const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dish.idMeal}`);
               const dishData = await response.json();
               return dishData.meals[0];
             })
