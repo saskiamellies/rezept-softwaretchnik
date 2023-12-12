@@ -5,22 +5,17 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
   const [isVegetarian, setIsVegetarian] = useState(false);
   const [selectedArea, setSelectedArea] = useState(""); // neu
 
-
-
   const handleSearchClick = () => {
     const ingredient = document.getElementById("inputText").value;
     onClickingSearch(ingredient, isVegetarian, selectedArea);
   };
 
-  const handleCheckboxChange = () => {
-    setIsVegetarian((prevIsVegetarian) => {
-      const newIsVegetarian = !prevIsVegetarian;
-      onCheckboxChange(newIsVegetarian);
-      console.log('newIsVegetarian:', newIsVegetarian);
-      setIsVegetarian(newIsVegetarian);
-    });
+  const handleCheckboxChange = (event) => {
+    const checkboxValue = event.target.checked;
+    setIsVegetarian(checkboxValue) 
+    onCheckboxChange(checkboxValue);
   };
-// neu
+
   const handleAreaChange = (event) => {
     const areaValue = event.target.value;
     setSelectedArea(areaValue);
@@ -46,7 +41,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
         <label>Vegetarian:
           <input type="checkbox" onChange={handleCheckboxChange} />
         </label>
-  {/* NEU */}
+
         <label>Area:
           <select onChange={handleAreaChange} value={selectedArea}>
             <option value="">Select Area</option>
