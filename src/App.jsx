@@ -11,17 +11,17 @@ import "./style.css";
 
 const App = () => {
   return (
+    <div className="App">
       <Router>
-        <div className="App">
-          <Header />
+        <Header />
         <Routes>
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/profile" element={<MyProfile />} />
           <Route path="/mypantry" element={<MyPantry/>} />
           <Route path="/meal-schedule" element={<MyMealSchedule />} />
         </Routes>
-      </div>
     </Router>
+    </div>
     );
   }
 
