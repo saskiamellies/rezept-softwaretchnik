@@ -1,46 +1,57 @@
 import { useState, useEffect } from "react";
 
 const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
+
   const [dishes, setDishes] = useState([]);
 
-  useEffect(() => {
-    if (!ingredient) {
-      return;
-    } else {
-      fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
-      )
-        .then((response) => response.json())
-        .then(async (data) => {
-          if (data.meals) {
-            const dishesFetch = await Promise.all(
-              data.meals.map(async (dish) => {
-                const response = await fetch(
-                  `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dish.idMeal}`
-                );
-                const dishData = await response.json();
-                return dishData.meals[0];
-              })
-            );
+   useEffect(() => {
+    const fetchData = async () => {
+      if (!ingredient) {
+        setDishes([]);
+        return;
+      }
 
-            const dishesFilterVegetarian = isVegetarian
-              ? dishesFetch.filter((dish) => dish.strCategory === "Vegetarian")
-              : dishesFetch;
-             // setDishes(dishesFilterVegetarian);
+      try {
+        const response = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
+        );
+        const data = await response.json();
 
-            
-             const dishesFilterArea = area
-              ? dishesFilterVegetarian.filter((dish) => dish.strArea === area)
-              : dishesFilterVegetarian;
+        if (data.meals) {
+          const dishesFetch = await Promise.all(
+            data.meals.map(async (dish) => {
+              const response = await fetch(
+                `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dish.idMeal}`
+              );
+              const dishData = await response.json();
+              return dishData.meals[0];
+            })
+          );
 
-              setDishes(dishesFilterArea);
+          const filteredDishes = filterDishes(dishesFetch);
+          setDishes(filteredDishes);
+        } else {
+          setDishes([]);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-          } else {
-            setDishes([]);
-          }
-        });
-    }
+    fetchData();
   }, [ingredient, isVegetarian, area]);
+
+  const filterDishes = (dishesFetch) => {
+    const vegetarianFilter = isVegetarian
+      ? dishesFetch.filter((dish) => dish.strCategory === 'Vegetarian')
+      : dishesFetch;
+
+    const areaFilter = area
+      ? vegetarianFilter.filter((dish) => dish.strArea === area)
+      : vegetarianFilter;
+
+    return areaFilter;
+  };
 
   return (
     <div className="output-container">
@@ -58,7 +69,7 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
           </div>
         </>
       ) : (
-        <p>Kein Rezept gefunden</p>
+        <p>no recipe found</p>
       )}
     </div>
   );

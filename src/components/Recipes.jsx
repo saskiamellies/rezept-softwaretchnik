@@ -37,14 +37,14 @@ const Recipes = () => {
   if (isRecipeShow) {
     return (
       <div className="Recipes">
-        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onAreaChange={setArea} />
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
         <RecipeDetails recipeDetails={dishSelected} onClose={handleCloseRecipe} />
       </div>
     );
   } else {
     return (
       <div className="Recipes">
-        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onAreaChange={setArea} />
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
         <RecipeList ingredient={ingredient} isVegetarian={isVegetarian} area={area} onClickRecipe={handleShowRecipe} />
       </div>
     );
