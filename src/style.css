@@ -192,10 +192,6 @@ input {
   border: 1px solid #ccc;
 }
 
-/* Dropdown-Auswahlmenü */
-select {
-  width: 100%;
-}
 
 .card-container table {
   border-collapse: collapse;
@@ -216,13 +212,20 @@ padding-right: 3%;
 width: 16%;
 }
 
+.dropdown{
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+ 
+}
+
 /* bis hier von Jan hinzugefügt*/
 
 
 .Food {
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 80px;
   text-align: center;
 
