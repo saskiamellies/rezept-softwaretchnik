@@ -25,15 +25,16 @@ const MyPantryInput = ({ onTypingName, onTypingAmount, onTypingUnit, onTypingCat
         </div>
         
         <div className="dropdown">
-          <label>categorie:</label>
+          <label>storage categorie:</label>
         <form name="choosecategorie" method="post">
           <select id="categorie" onChange={(e) => onTypingCategorie(e.target.value)}>
             <option value="--">choose:</option>
             <option value="frozen">frozen food</option>
-            <option value="chilled">fridge</option>
-            <option value="preserve">preserve</option>
+            <option value="chilled">store chilled</option>
+            <option value="preserve">preserved food</option>
              <option value="dry">store dry</option>
             <option value="beverage">beverage</option>
+            <option value="dark">store away from light</option>
           </select>
         </form>
       </div>
