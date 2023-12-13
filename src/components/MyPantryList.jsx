@@ -20,7 +20,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
     return null; // Wenn die Liste leer ist, nichts anzeigen
   }
 
-  const columnHeaders = ["ID", "Name", "Amount", "Unit", "Best Before Date", "Actions"];
+  const columnHeaders = ["ID", "Name", "Amount", "Unit", "Categorie", "Best Before Date", "Actions"];
 
   return (
     <div className="card-container" style={{ marginBottom: "20px"}}>
@@ -39,6 +39,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
               <td>{foodItem.name}</td>
               <td>{foodItem.amount}</td>
               <td>{foodItem.unit}</td>
+              <td>{foodItem.categorie}</td>
               <td>{foodItem.bestBefore}</td>
               <td>
                 
