@@ -78,9 +78,7 @@ export default function MyPantry() {
 
   return (
     <div className="Food">
-      <h1>My Pantry</h1>
-      <br />
-      <h4>enter your stored food here</h4>
+      <h3>enter your stored food here:</h3>
       <MyPantryInput
         onTypingName={(value) => handleInputText(value, "name")}
         onTypingAmount={(value) => handleInputText(value, "amount")}
@@ -89,7 +87,7 @@ export default function MyPantry() {
         newEntry={newEntry} // Übergeben Sie die aktuellen Werte an das Eingabefeld
       />
       <div className="buttons">
-        <button onClick={saveInput}>Save Entry</button>
+        <button onClick= {saveInput}>Save Entry</button>
         <button onClick={showFoodList}>Show List</button>
         <button onClick={clearFoodList}>Clear Entry</button>
         {showList && <MyPantryList foodList={foodList} onDelete={onDelete} />}
