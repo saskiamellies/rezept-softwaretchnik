@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
 
+  const [dishesUnfiltered, setDishesUnfiltered] = useState([]);
   const [dishes, setDishes] = useState([]);
 
    useEffect(() => {
@@ -22,7 +23,7 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
               return dishData.meals[0];
             })
           );
-
+          setDishesUnfiltered(dishesFetch);
           const filteredDishes = filterDishes(dishesFetch);
           setDishes(filteredDishes);
         } else {
@@ -34,12 +35,19 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
     };
 
     fetchData();
-  }, [ingredient, isVegetarian, area]);
+  }, [ingredient]);
 
-  const filterDishes = (dishesFetch) => {
+  useEffect(() => {
+      const filteredDishes = filterDishes(dishesUnfiltered);
+      setDishes(filteredDishes);
+        }
+  , [isVegetarian, area]);
+  
+
+  const filterDishes = (dishesUnfiltered) => {
     const vegetarianFilter = isVegetarian
-      ? dishesFetch.filter((dish) => dish.strCategory === 'Vegetarian')
-      : dishesFetch;
+      ? dishesUnfiltered.filter((dish) => dish.strCategory === 'Vegetarian')
+      : dishesUnfiltered;
 
     const areaFilter = area
       ? vegetarianFilter.filter((dish) => dish.strArea === area)
