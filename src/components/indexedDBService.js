@@ -30,24 +30,16 @@ class IndexedDBService {
   }
 
   addProfile(profile) {
-    return new Promise((resolve, reject) => {
-      const transaction = this.db.transaction([storeName], 'readwrite');
-      const objectStore = transaction.objectStore(storeName);
-
-      const request = objectStore.add(profile);
-
-      request.onsuccess = () => {
-        resolve(request.result);
-      };
-
-      request.onerror = (event) => {
-        reject(event.target.error);
-      };
-    });
+    // ... (unverändert)
   }
 
   getProfile() {
     return new Promise((resolve, reject) => {
+      if (!this.db) {
+        reject(new Error('IndexedDB not initialized.'));
+        return;
+      }
+
       const transaction = this.db.transaction([storeName], 'readonly');
       const objectStore = transaction.objectStore(storeName);
 
