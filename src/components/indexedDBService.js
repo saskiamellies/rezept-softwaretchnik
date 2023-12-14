@@ -64,4 +64,6 @@ class IndexedDBService {
   }
 }
 
-export default new IndexedDBService();
+const indexedDBServiceInstance = new IndexedDBService();
+
+export { indexedDBServiceInstance as indexedDBService };

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { saveProfile } from "src/components/indexedDBService.js";
-import { getDB } from "src/components/profileService.js";
+import { saveProfile } from "./profileService.js";
 
-const EditMyProfile = ({ initialProfile, updateProfile }) => {
-  const [editedProfile, setEditedProfile] = useState(initialProfile || {});
 
-  useEffect(() => {
-    const storedProfile = JSON.parse(localStorage.getItem("userProfile")) || initialProfile;
-    setEditedProfile(storedProfile);
-  }, [initialProfile]);
+const EditProfile = ({ initialProfile, updateProfile }) => {
+    const [editedProfile, setEditedProfile] = useState(initialProfile || {});
+  
+    useEffect(() => {
+      const storedProfile = JSON.parse(localStorage.getItem("userProfile")) || initialProfile;
+      setEditedProfile(storedProfile);
+    }, [initialProfile]);
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -44,15 +44,14 @@ const EditMyProfile = ({ initialProfile, updateProfile }) => {
     };
 
     try {
-      // Speichern Sie das Profil sowohl in localStorage als auch in IndexedDB
-      localStorage.setItem("userProfile", JSON.stringify(updatedProfile));
-      await saveProfile(updatedProfile);
-
-      updateProfile(updatedProfile);
-    } catch (error) {
-      console.error("Failed to save profile:", error);
-    }
-  };
+        localStorage.setItem("userProfile", JSON.stringify(updatedProfile));
+        await saveProfile(updatedProfile);
+  
+        updateProfile(updatedProfile);
+      } catch (error) {
+        console.error("Failed to save profile:", error);
+      }
+    };
 
   return (
     <form className="edit-form" onSubmit={handleSubmit}>
@@ -83,4 +82,4 @@ const EditMyProfile = ({ initialProfile, updateProfile }) => {
   );
 };
 
-export default EditMyProfile;
+export default EditProfile;

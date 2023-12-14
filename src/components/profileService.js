@@ -1,17 +1,11 @@
-import { getDB } from './indexedDBService';
+import { indexedDBService } from './indexedDBService';
 
 const saveProfile = async (profile) => {
-  const db = await getDB();
-  const tx = db.transaction('userProfiles', 'readwrite');
-  const store = tx.objectStore('userProfiles');
-  await store.put(profile);
+  await indexedDBService.addProfile(profile);
 };
 
 const getProfile = async () => {
-  const db = await getDB();
-  const tx = db.transaction('userProfiles', 'readonly');
-  const store = tx.objectStore('userProfiles');
-  return await store.getAll();
+  return await indexedDBService.getProfile();
 };
 
 export { saveProfile, getProfile };
