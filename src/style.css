@@ -270,3 +270,48 @@ width: 16%;
   flex-direction: column;
   align-items: center;
 }
+
+/* Style für die MyProfile-Seite*/
+
+
+.clear {
+  clear: both;
+}
+
+.image-preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid black; /* Schwarzer Rahmen */
+  border-radius: 8px; /* Abgerundete Ecken */
+  display: block;
+  margin: 0 auto; /* Zentriert das Bild */
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px solid #14354b; /* Rahmenfarbe */
+  border-radius: 10px; /* Abgerundete Ecken */
+}
+
+.profile-info {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-text {
+  margin-bottom: 10px;
+}
