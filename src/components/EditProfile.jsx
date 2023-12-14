@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../style.css";
+import { saveProfile } from "src/components/indexedDBService.js";
+import { getDB } from "src/components/profileService.js";
 
 const EditMyProfile = ({ initialProfile, updateProfile }) => {
   const [editedProfile, setEditedProfile] = useState(initialProfile || {});
@@ -12,11 +13,11 @@ const EditMyProfile = ({ initialProfile, updateProfile }) => {
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
 
-    if (type === 'file' && editedProfile.photo) {
+    if (type === "file" && editedProfile.photo) {
       localStorage.removeItem("userProfile");
     }
 
-    if (type === 'file') {
+    if (type === "file") {
       const reader = new FileReader();
       reader.onload = (event) => {
         const fileValue = event.target.result;
@@ -34,37 +35,22 @@ const EditMyProfile = ({ initialProfile, updateProfile }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const updatedProfile = {
       ...editedProfile,
-      hobbies: typeof editedProfile.hobbies === 'string' ? editedProfile.hobbies.split(", ") : [],
-      allergies: typeof editedProfile.allergies === 'string' ? editedProfile.allergies.split(", ") : [],
+      hobbies: typeof editedProfile.hobbies === "string" ? editedProfile.hobbies.split(", ") : [],
+      allergies: typeof editedProfile.allergies === "string" ? editedProfile.allergies.split(", ") : [],
     };
-  
-    // Nur die relevanten Informationen speichern
-    const simplifiedProfile = {
-      name: updatedProfile.name,
-      job: updatedProfile.job,
-      photo: updatedProfile.photo,
-      hobbies: updatedProfile.hobbies.join(", "),
-      allergies: updatedProfile.allergies.join(", "),
-      dietaryRestrictions: updatedProfile.dietaryRestrictions,
-    };
-  
+
     try {
-      // Protokolliere die aktuelle Größe des localStorage
-      console.log("localStorage Size Before Clear (bytes):", JSON.stringify(localStorage).length);
-  
-      localStorage.clear(); // Lösche alle Einträge im localStorage
-  
-      // Protokolliere die Größe des aktualisierten Profils vor dem Speichern
-      console.log("Profile Size Before Save (bytes):", JSON.stringify(simplifiedProfile).length);
-  
-      localStorage.setItem("userProfile", JSON.stringify(simplifiedProfile));
+      // Speichern Sie das Profil sowohl in localStorage als auch in IndexedDB
+      localStorage.setItem("userProfile", JSON.stringify(updatedProfile));
+      await saveProfile(updatedProfile);
+
       updateProfile(updatedProfile);
     } catch (error) {
-      console.error("Failed to save profile to local storage:", error);
+      console.error("Failed to save profile:", error);
     }
   };
 
@@ -91,61 +77,7 @@ const EditMyProfile = ({ initialProfile, updateProfile }) => {
           />
         )}
       </div>
-      <div className="input-group">
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={editedProfile.name || ""}
-            onChange={handleChange}
-          />
-        </label>
-      </div>
-      <div className="input-group">
-        <label>
-          Profession:
-          <input
-            type="text"
-            name="job"
-            value={editedProfile.job || ""}
-            onChange={handleChange}
-          />
-        </label>
-      </div>
-      <div className="input-group">
-        <label>
-          Hobbies (comma-separated):
-          <input
-            type="text"
-            name="hobbies"
-            value={editedProfile.hobbies || ""}
-            onChange={handleChange}
-          />
-        </label>
-      </div>
-      <div className="input-group">
-        <label>
-          Allergies (comma-separated):
-          <input
-            type="text"
-            name="allergies"
-            value={editedProfile.allergies || ""}
-            onChange={handleChange}
-          />
-        </label>
-      </div>
-      <div className="input-group">
-        <label>
-          Dietary Restrictions:
-          <input
-            type="text"
-            name="dietaryRestrictions"
-            value={editedProfile.dietaryRestrictions || ""}
-            onChange={handleChange}
-          />
-        </label>
-      </div>
+      {/* Weitere Input-Felder hier */}
       <button type="submit">Save Changes</button>
     </form>
   );
