@@ -5,7 +5,7 @@ import MyPantryList from "./MyPantryList";
 export default function MyPantry() {
   const [foodList, setFoodList] = useState(JSON.parse(localStorage.getItem("foodList")) || []);
   const [showList, setShowList] = useState(false);
-  const [newEntry, setNewEntry] = useState({ name: "", amount: "", unit: "", bestBefore: "" });
+  const [newEntry, setNewEntry] = useState({ name: "", amount: "", unit: "", categorie: "", bestBefore: "" });
 
   const handleInputText = (value, property) => {
     setNewEntry((prevEntry) => ({ ...prevEntry, [property]: value.trim() }));
@@ -34,6 +34,7 @@ export default function MyPantry() {
       name: newEntry.name.trim(),
       amount: newEntry.amount.trim(),
       unit: newEntry.unit,
+      categorie: newEntry.categorie,
       bestBefore: formatBestBefore(newEntry.bestBefore),
     };
 
@@ -74,22 +75,20 @@ export default function MyPantry() {
     return formattedDate;
   };
 
-  // ... (der Rest des Codes bleibt unverändert)
 
   return (
     <div className="Food">
-      <h1>My Pantry</h1>
-      <br />
-      <h4>enter your stored food here</h4>
+      <h3>enter your stored food here:</h3>
       <MyPantryInput
         onTypingName={(value) => handleInputText(value, "name")}
         onTypingAmount={(value) => handleInputText(value, "amount")}
         onTypingUnit={(value) => handleInputText(value, "unit")}
+        onTypingCategorie={(value) => handleInputText(value, "categorie")}
         onTypingDate={(value) => handleInputText(value, "bestBefore")}
         newEntry={newEntry} // Übergeben Sie die aktuellen Werte an das Eingabefeld
       />
       <div className="buttons">
-        <button onClick={saveInput}>Save Entry</button>
+        <button onClick= {saveInput}>Save Entry</button>
         <button onClick={showFoodList}>Show List</button>
         <button onClick={clearFoodList}>Clear Entry</button>
         {showList && <MyPantryList foodList={foodList} onDelete={onDelete} />}
