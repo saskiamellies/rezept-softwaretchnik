@@ -2,66 +2,53 @@ import { useState } from "react";
 import RecipeInput from "./RecipeInput";
 import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
-import { unmountComponentAtNode } from "react-dom";
 
 const Recipes = () => {
-
-  const [ingredient, SetIngredient] = useState("");
+  
+  const [ingredient, setIngredient] = useState("");
+  const [isVegetarian, setIsVegetarian] = useState(false);
+  const [area, setArea] = useState("");
   const [dishSelected, setDishSelected] = useState([]);
-  const [isDetailsOpen, setDetailsOpen] = useState(false);
+  const [isRecipeShow, setIsRecipeShow] = useState(false);
 
+  const handleSearch = (value, isVegetarian, selectedArea) => {
+    setIngredient(value.trim());
+    setIsVegetarian(isVegetarian);
+    setArea(selectedArea);
+  };
 
-  const handleInputText = (value) => {
-    const valueTrim = value.trim();
-    SetIngredient(valueTrim);
-  }
+  const handleRandomRecipe = (dishRandom) => {
+    setDishSelected(dishRandom);
+    setIsRecipeShow(true);
+  };
 
+  const handleShowRecipe = (dish) => {
+    setDishSelected(dish);
+    console.log(dishSelected);
+    setIsRecipeShow(true);
+  };
 
-  const handleClickRecipe = (dishID) => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dishID}`)
-      .then(response => response.json())
-      .then(data => {
-        setDishSelected(data.meals);
-        setDetailsOpen(true);
-      })
-      .catch((error) => {
-        console.error("Error: Cannot open selected recipe:", error);
-      });
-    }
-
-  const handleRandomRecipe = () => {
-    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-      .then(response => response.json())
-      .then(data => {
-        setDishSelected(data.meals);
-        setDetailsOpen(true);
-      })
-      .catch((error) => {
-      console.error("Error: Cannot open selected recipe:", error);
-      });
-    }
-
-  const closeDetails = () => {
+  const handleCloseRecipe = () => {
     setDishSelected([]);
-    setDetailsOpen(false);
-  }
+    setIsRecipeShow(false);
+  };
 
 
-  if (isDetailsOpen) {
+  if (isRecipeShow) {
     return (
-    <div className="Recipes">
-    <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
-    <RecipeDetails onClose={closeDetails} recipeDetails={dishSelected} />
-    </div>)
+      <div className="Recipes">
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
+        <RecipeDetails recipeDetails={dishSelected} onClose={handleCloseRecipe} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="Recipes">
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
+        <RecipeList ingredient={ingredient} isVegetarian={isVegetarian} area={area} onClickRecipe={handleShowRecipe} />
+      </div>
+    );
   }
-  else {
-    return(
-    <div className="Recipes">
-    <RecipeInput onTyping={handleInputText} onClickingRandom={handleRandomRecipe} placeholder="Please enter ingredient ..." />
-    <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
-  </div>)
-  }
-
-}
+};
 
 export default Recipes;
