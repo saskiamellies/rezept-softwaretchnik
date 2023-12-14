@@ -37,11 +37,11 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
       <div className="recipe-input-container">
 
       <input type="text" id="inputText" className="form-control" placeholder="Please enter ingredient ..." />
-      <button onClick={handleSearchClick} className="btn btn-primary"> search </button>
+      <button onClick={handleSearchClick} className="btn-search"> search </button>
       </div>
 
       <div className="recipe-filter-container">
-        <label>Vegetarian:
+        <label>Vegetarian:          
           <input type="checkbox" onChange={handleCheckboxChange} />
         </label>
         <label>Area:

@@ -29,12 +29,7 @@ body {
     background-color: beige;
   }
 
-  .filter-container {
-    display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    gap: 1rem;
-  }
+
   
   .card-container {
     display: flex;

@@ -78,6 +78,12 @@ body {
   cursor: pointer;
 }
 
+.btn-search {
+  background-color: #a0adb6;
+  color: #000000;
+  border: 1px solid #ffffff
+}
+
 .Recipes input {
   width: 100%;
   padding: 10px;
@@ -105,10 +111,18 @@ body {
 
 .recipe-filter-container {
   display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 1rem;
 }
 
 
 /* Ausgabe*/
+
+.output-container {
+  padding-top: 20px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -131,11 +145,13 @@ body {
   padding: 15px;
 }
 
+
 .card:hover {
   cursor: pointer;
   margin-bottom: 20px;
   border-width: 2px;
   border-color: #14354b;
+  opacity:0.8;
 }
 
 .btn-primary {
