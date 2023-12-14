@@ -98,7 +98,12 @@ body {
   border-radius: 8px;
 }
 
-.filter-container {
+.recipe-input-container {
+  display: flex;
+}
+
+
+.recipe-filter-container {
   margin-top: 5px;
   margin-right: 240px;
   display: flex;
