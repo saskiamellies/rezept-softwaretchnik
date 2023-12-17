@@ -30,7 +30,20 @@ class IndexedDBService {
   }
 
   addProfile(profile) {
-    // ... (unverändert)
+  return new Promise((resolve, reject) => {
+      const transaction = this.db.transaction([storeName], 'readwrite');
+      const objectStore = transaction.objectStore(storeName);
+
+      const request = objectStore.add(profile);
+
+      request.onsuccess = () => {
+        resolve(request.result);
+      };
+
+      request.onerror = (event) => {
+        reject(event.target.error);
+      };
+    });
   }
 
   getProfile() {
