@@ -1,3 +1,10 @@
+import Dexie from "dexie";
+
+
+const db = new Dexie('MyDatabase');
+db.version(1).stores({
+  myData: '++id, name, email', // Definiere die Datenbankstruktur
+});
 const dbName = 'UserProfileDB';
 const storeName = 'userProfiles';
 
