@@ -80,7 +80,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
         </label>
       </div>
 
-      <button onClick={handleRandomClick} className="btn btn-primary"> give me a random recipe! </button>
+      <button onClick={handleRandomClick} className="btn btn-primary"> Give me a random recipe! </button>
     </div>
   );
 };

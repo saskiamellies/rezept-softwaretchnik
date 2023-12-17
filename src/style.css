@@ -111,11 +111,22 @@ body {
 
 .recipe-filter-container {
   display: flex;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  gap: 1rem;
+  align-items: center;
+
 }
 
+/* Stil für das Label */
+.recipe-filter-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* Stil für die Checkbox */
+.recipe-filter-container input[type="checkbox"] {
+  margin-right: 15rem; /* Abstand zwischen Checkbox und Text */
+
+}
 
 /* Ausgabe*/
 
@@ -328,4 +339,18 @@ width: 16%;
 
 .profile-text {
   margin-bottom: 10px;
+}
+
+
+.MyMealSchedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* vertikale Anordnung */
+  margin-top: 60px; 
+}
+
+.meal {
+  text-align: center;
+  margin-bottom: 10px; /* Abstand zwischen den Mahlzeiten */
 }
