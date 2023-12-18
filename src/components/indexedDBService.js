@@ -1,3 +1,4 @@
+{/*
 import Dexie from "dexie";
 
 
@@ -79,3 +80,4 @@ class IndexedDBService {
 const indexedDBServiceInstance = new IndexedDBService();
 
 export { indexedDBServiceInstance as indexedDBService };
+*/}
