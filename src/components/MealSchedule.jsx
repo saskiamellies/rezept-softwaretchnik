@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const MyMealSchedule = () => {
+  const MyMealSchedule = ({ dishSaved }) => {
   const [mealPlan, setMealPlan] = useState(Array(7).fill(null).map(() => ({ title: "", link: "" })));
 
+  useEffect(() => {
+    setMealPlan(dishSaved);
+      }
+, [dishSaved]);
+
   const handleTitleChange = (index, title) => {
+    console.log(dishSaved);
     setMealPlan((prevMealPlan) => {
       const updatedPlan = [...prevMealPlan];
       updatedPlan[index] = { ...updatedPlan[index], title };

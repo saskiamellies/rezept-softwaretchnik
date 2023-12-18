@@ -3,7 +3,7 @@ import RecipeInput from "./RecipeInput";
 import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
 
-const Recipes = () => {
+const Recipes = ({ onRecipeSave }) => {
   
   const [ingredient, setIngredient] = useState("");
   const [isVegetarian, setIsVegetarian] = useState(false);
@@ -24,8 +24,12 @@ const Recipes = () => {
 
   const handleShowRecipe = (dish) => {
     setDishSelected(dish);
-    console.log(dishSelected);
     setIsRecipeShow(true);
+  };
+
+  const handleSaveRecipe = (dish) => {
+    setDishSelected(dish);
+    onRecipeSave(dishSelected);
   };
 
   const handleCloseRecipe = () => {
@@ -38,7 +42,7 @@ const Recipes = () => {
     return (
       <div className="Recipes">
         <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
-        <RecipeDetails recipeDetails={dishSelected} onClose={handleCloseRecipe} />
+        <RecipeDetails recipeDetails={dishSelected} onSave={handleSaveRecipe} onClose={handleCloseRecipe} />
       </div>
     );
   } else {

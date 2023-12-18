@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link, Navigate} from "react-router-dom";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
@@ -12,15 +12,18 @@ import EditProfile from "./components/EditProfile";
 
 
 const App = () => {
+
+  const [dishSelected, setDishSelected] = useState([]);
+  
   return (
     <div className="App">
       <Router>
         <Header />
         <Routes>
-          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/recipes" element={<Recipes  onRecipeSave={setDishSelected}/>} />
           <Route path="/profile" element={<MyProfile />} />
           <Route path="/mypantry" element={<MyPantry/>} />
-          <Route path="/meal-schedule" element={<MyMealSchedule />} />
+          <Route path="/meal-schedule" element={<MyMealSchedule dishSaved={dishSelected}/>} />
           
         </Routes>
     </Router>

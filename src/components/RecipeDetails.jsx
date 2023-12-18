@@ -1,12 +1,13 @@
 import React from "react";
 
-const RecipeDetails = ({ recipeDetails, onClose }) => {
+const RecipeDetails = ({ recipeDetails, onSave, onClose }) => {
 
   return (
     <div className="recipe-details">
       <h2>{recipeDetails.strMeal}</h2>
 
       <button onClick={onClose}>Close </button>
+      <button onClick={onSave}>Save </button>
 
       <img src={recipeDetails.strMealThumb} alt={recipeDetails.strMeal} />
 
