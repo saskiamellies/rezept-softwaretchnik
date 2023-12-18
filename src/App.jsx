@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link, Navigate} from "react-router-dom";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
@@ -8,22 +8,20 @@ import MyMealSchedule from "./components/MealSchedule";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import EditProfile from "./components/EditProfile";
+import useDrivePicker from "react-google-drive-picker";
 
 
 
 const App = () => {
-
-  const [dishSelected, setDishSelected] = useState([]);
-  
   return (
     <div className="App">
       <Router>
         <Header />
         <Routes>
-          <Route path="/recipes" element={<Recipes  onRecipeSave={setDishSelected}/>} />
+          <Route path="/recipes" element={<Recipes />} />
           <Route path="/profile" element={<MyProfile />} />
           <Route path="/mypantry" element={<MyPantry/>} />
-          <Route path="/meal-schedule" element={<MyMealSchedule dishSaved={dishSelected}/>} />
+          <Route path="/meal-schedule" element={<MyMealSchedule />} />
           
         </Routes>
     </Router>
