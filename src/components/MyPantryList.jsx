@@ -58,6 +58,14 @@ const MyPantryList = ({ foodList, onDelete }) => {
                   checked={selectedItems.includes(foodItem.id)}
                 />
               </td>
+
+              <td>
+                
+                <input
+                  type="button"
+                  onClick={foodItem.name}
+                />
+              </td>
             </tr> 
           ))}
          

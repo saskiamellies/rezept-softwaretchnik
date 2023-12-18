@@ -42,7 +42,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
 
       <div className="recipe-filter-container">
         <label>Vegetarian:          
-          <input type="checkbox" onChange={handleCheckboxChange} />
+          <input type="checkbox" onChange={handleCheckboxChange} className="filter-checkbox" />
         </label>
         <label>Area:
           <select onChange={handleAreaChange} value={selectedArea}>
