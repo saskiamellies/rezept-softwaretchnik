@@ -1,22 +1,39 @@
-import React, { useState } from "react";
-import EditMyProfile from "./EditProfile";
+import React, { useState, useEffect } from 'react';
+import EditProfile from './EditProfile'; 
+import { getProfile } from './profileService';
+
 
 const MyProfile = () => {
   const [profileInfo, setProfileInfo] = useState({
-    name: "your name",
-    job: "your profession",
-    hobbies: ["Hobby1", "Hobby2"],
-    allergies: ["Allergie1", "Allergie2"],
-    dietaryRestrictions: "Vegetarian",
+    name: 'your name',
+    job: 'your profession',
+    hobbies: ['Hobby1', 'Hobby2'],
+    allergies: ['Allergie1', 'Allergie2'],
+    dietaryRestrictions: 'Vegetarian',
     photo: null,
   });
 
   const [editing, setEditing] = useState(false);
 
-  const handleProfileEdit = (updatedProfile) => {
+  const handleProfileEdit = async (updatedProfile) => {
     setProfileInfo(updatedProfile);
     setEditing(false);
   };
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const profiles = await getProfile();
+        if (profiles.length > 0) {
+          setProfileInfo(profiles[0]);
+        }
+      } catch (error) {
+        console.error('Failed to fetch profile from IndexedDB:', error);
+      }
+    };
+
+    fetchProfile();
+  }, []);
 
   return (
     <div>
@@ -57,7 +74,7 @@ const MyProfile = () => {
 
       <div className="clear">
         {editing ? (
-          <EditMyProfile
+          <EditProfile
             initialProfile={profileInfo}
             updateProfile={handleProfileEdit}
           />

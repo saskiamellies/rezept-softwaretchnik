@@ -7,6 +7,8 @@ import MyPantry from "./components/MyPantry";
 import MyMealSchedule from "./components/MealSchedule";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
+import EditProfile from "./components/EditProfile";
+
 
 
 const App = () => {
