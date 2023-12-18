@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 .vercel
 .vscode
+
+# Ignore googleDriveConfig.js in components folder
+components/googleDriveConfig.js
