@@ -1,9 +1,9 @@
 
 const driveConfig = {
-  clientId: '326889312184-9cnsvm9s8kp8ool4b7d3halqo3mv7r2v.apps.googleusercontent.com',
-  developerKey: 'AIzaSyC2KwV3Do-K4eZYUeHBxZYTD26ahGmm3O4',
+  clientId: ' ',
+  developerKey: '',
   viewId: 'DOCS_IMAGES_AND_VIDEOS',
-  token: '',
+  token: ''
   showUploadFolders: true,
   showUploadView: true,
   supportDrives: true,
