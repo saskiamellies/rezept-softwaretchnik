@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import EditProfile from './EditProfile'; 
+import EditProfile from './EditProfile';
 import { getProfile } from './profileService';
 
 
@@ -13,10 +13,10 @@ const MyProfile = () => {
     firstName: 'your first name',
     lastName: 'your last name',
     email: 'your.email@example.com',
-    id:null,
+    id: null,
     allergies: [],
     dietaryRestrictions: 'none',
-    favoriteDish:'Favorite Dish',
+    favoriteDish: 'Favorite Dish',
     photo: null,
   });
   const [isEmailValid, setIsEmailValid] = useState(true);
@@ -62,55 +62,56 @@ const MyProfile = () => {
 
 
   return (
-      <div>
-        <div className="profile-container" id="profile-container">
-          <h2>Profil</h2>
-          <div className="profile-info">
-            <div className="label">First Name:</div>
-            <div className="profile-text">{profileInfo.firstName}</div>
-          </div>
-          <div className="profile-info">
-            <div className="label">Last Name:</div>
-            <div className="profile-text">{profileInfo.lastName}</div>
-          </div>
-          <div className="profile-info">
+    <div>
+      <div className="profile-container" id="profile-container">
+        <h2>Profil</h2>
+        <div className="profile-info">
+          <div className="label">First Name:</div>
+          <div className="profile-text">{profileInfo.firstName}</div>
+        </div>
+        <div className="profile-info">
+          <div className="label">Last Name:</div>
+          <div className="profile-text">{profileInfo.lastName}</div>
+        </div>
+        <div className="profile-info">
           <div className="label">E-Mail:</div>
-        {isEmailValid ? (
-          <div className="profile-text">{profileInfo.email}</div>
-        ) : (
-          <div className="profile-text invalid-email">Ungültige E-Mail-Adresse</div>
-        )}
-      </div>
-          <div className="profile-info">
-            <div className="label">ID:</div>
-            <div className="profile-text">{profileInfo.id}</div>
-          </div>
-          <div className="profile-info">
-            <div className="label">Allergies:</div>
-            <div className="profile-text">
-              {profileInfo.allergies.join(', ')}
-            </div>
-          </div>
-          <div className="profile-info">
-            <div className="label">Dietary Restrictions:</div>
-            <div className="profile-text">
-              {profileInfo.dietaryRestrictions}
-            </div>
-          </div>
-          <div className="profile-info">
-            <div className="label">Favorite Dish:</div>
-            <div className="profile-text">
-              {profileInfo.favoriteDish}
-            </div>
-          </div>
-          {profileInfo.photo && (
-            <img
-              src={profileInfo.photo}
-              alt="Profile"
-              className="profile-photo"
-            />
+          {isEmailValid ? (
+            <div className="profile-text">{profileInfo.email}</div>
+          ) : (
+            <div className="profile-text invalid-email">Ungültige E-Mail-Adresse</div>
           )}
         </div>
+        <div className="profile-info">
+          <div className="label">ID:</div>
+          <div className="profile-text">{profileInfo.id}</div>
+        </div>
+        <div className="profile-info">
+          <div className="label">Allergies:</div>
+          <div className="profile-text">
+            {profileInfo.allergies ? profileInfo.allergies.join(', ') : 'No allergies'}
+          </div>
+        </div>
+
+        <div className="profile-info">
+          <div className="label">Dietary Restrictions:</div>
+          <div className="profile-text">
+            {profileInfo.dietaryRestrictions}
+          </div>
+        </div>
+        <div className="profile-info">
+          <div className="label">Favorite Dish:</div>
+          <div className="profile-text">
+            {profileInfo.favoriteDish}
+          </div>
+        </div>
+        {profileInfo.photo && (
+          <img
+            src={profileInfo.photo}
+            alt="Profile"
+            className="profile-photo"
+          />
+        )}
+      </div>
 
       <div className="clear">
         {editing ? (
@@ -126,7 +127,7 @@ const MyProfile = () => {
       </div>
     </div>
   );
-        };
+};
 
 
 export default MyProfile;
