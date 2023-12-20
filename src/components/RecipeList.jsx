@@ -5,10 +5,10 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
   const [dishesUnfiltered, setDishesUnfiltered] = useState([]);
   const [dishes, setDishes] = useState([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const filteredDishes = filterDishes(dishesUnfiltered);
     setDishes(filteredDishes);
-  }, [filterDishes, dishesUnfiltered]);
+  }, [filterDishes, dishesUnfiltered]);*/
   
    useEffect(() => {
     const fetchData = async () => {
