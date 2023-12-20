@@ -5,7 +5,7 @@ const saveProfile = async (profile) => {
 };
 
 const getProfile = async () => {
-  return await indexedDBService.getProfile();
+  return await indexedDBService.getAllProfiles(); // Änderung hier
 };
 
 export { saveProfile, getProfile };
