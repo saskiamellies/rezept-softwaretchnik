@@ -28,8 +28,8 @@ const Recipes = ({ onRecipeSave }) => {
   };
 
   const handleSaveRecipe = (dish) => {
-    setDishSelected(dish);
-    onRecipeSave(dishSelected);
+    onRecipeSave(dish);
+    window.alert("meal saved to meal-schedule")
   };
 
   const handleCloseRecipe = () => {
