@@ -2,6 +2,7 @@ import React from "react";
 
 const RecipeDetails = ({ recipeDetails, onSave, onClose }) => {
 
+  /*Für das angeklickte Gericht werden die Daten aus dem Array (Name, Bild, Zutaten, Anleitung, Video) gelesen und dargestellt */
   return (
     <div className="recipe-details">
       <h2>{recipeDetails.strMeal}</h2>

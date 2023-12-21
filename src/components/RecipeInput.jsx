@@ -5,23 +5,28 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
   const [isVegetarian, setIsVegetarian] = useState(false);
   const [selectedArea, setSelectedArea] = useState("");
 
+  /*Bei Klick auf Suchen werden die Zutat und ggf. die aktivierten Filter an die Eltern-Komponente zur Anzeige übergeben*/
   const handleSearchClick = () => {
     const ingredient = document.getElementById("inputText").value;
     onClickingSearch(ingredient, isVegetarian, selectedArea);
   };
 
+  /*Bei Änderungen an der Checkbox-wird der gewählte Wert an die Eltern-Komponente übergeben*/
   const handleCheckboxChange = (event) => {
     const checkboxValue = event.target.checked;
     setIsVegetarian(checkboxValue) 
     onCheckboxChange(checkboxValue);
   };
 
+  /*Bei Änderungen am DropDown-wird der gewählte Wert an die Eltern-Komponente übergeben*/
   const handleAreaChange = (event) => {
     const areaValue = event.target.value;
     setSelectedArea(areaValue);
     onAreaChange(areaValue);
   };
 
+/*Bei Klick auf den Button für die Anzeige eines zufälligen Rezeptes wird eine API-Abfrage durchgeführt und das Ergebnis an die 
+Eltern-Komponente zur Anzeige übergeben*/
   const handleRandomClick = () => {
     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
       .then((response) => response.json())
@@ -30,7 +35,8 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
       });
   };
 
-
+/*Ein Textfeld zur Eingabe einer Zutat, eine Checkbox und ein Dropdown-Menü zur Filterung nach vegetarischen Gerichten 
+oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige eines zufälligen Rezeptes werden angezeigt */
   return (
     <div>
       <h3>You can search for recipes here</h3>
