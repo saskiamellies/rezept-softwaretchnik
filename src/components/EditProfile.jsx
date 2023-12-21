@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { saveProfile } from "./profileService.js";
 
+
+const generateUniqueId = () => {
+  const randomNumber = Math.floor(100000 + Math.random() * 900000); // Erzeugt eine Zufallszahl zwischen 100000 und 999999
+  return randomNumber.toString();
+};
 const EditProfile = ({ initialProfile = {}, updateProfile }) => {
   const [editedProfile, setEditedProfile] = useState(initialProfile || {});
-  const [updatedProfile, setUpdatedProfile] = useState(initialProfile || {});
+  const [isEmailValid, setIsEmailValid] = useState(true);
 
   useEffect(() => {
     const storedProfile = JSON.parse(localStorage.getItem("userProfile")) || initialProfile;
@@ -13,26 +18,33 @@ const EditProfile = ({ initialProfile = {}, updateProfile }) => {
     setEditedProfile(storedProfile);
   }, [initialProfile, editedProfile]);
 
+  const isValidEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
+
   const handleSaveProfile = async (profile) => {
     try {
-      await saveProfile(profile);
-      localStorage.setItem("userProfile", JSON.stringify(profile));
-      setEditedProfile(profile);
+      if (isValidEmail(profile.email)) {
+        await saveProfile(profile);
+        localStorage.setItem('userProfile', JSON.stringify(profile));
+        setEditedProfile(profile);
+        setIsEmailValid(true);
+      } else {
+        setIsEmailValid(false);
+        alert('Das E-Mail-Format ist inkorrekt. Bitte überprüfe deine Eingabe.');
+      }
     } catch (error) {
-      console.error("Failed to save profile:", error);
+      console.error('Failed to save profile:', error);
     }
   };
 
-  const handleChange = async (e) => {
+  const handleChange = (e) => {
     const { name, value, type, files } = e.target;
 
     if (type === "file" && files && files.length > 0) {
       const reader = new FileReader();
       reader.onload = (event) => {
         const fileValue = event.target.result;
-        if (editedProfile[name] !== fileValue) {
-          localStorage.removeItem("userProfile");
-        }
         setEditedProfile((prevProfile) => ({
           ...prevProfile,
           [name]: fileValue,
@@ -40,15 +52,26 @@ const EditProfile = ({ initialProfile = {}, updateProfile }) => {
       };
       reader.readAsDataURL(files[0]);
     } else {
-      const updatedProfile = {
-        ...editedProfile,
+      setEditedProfile((prevProfile) => ({
+        ...prevProfile,
         [name]: value,
-      };
-      setUpdatedProfile(updatedProfile);
-      setEditedProfile(updatedProfile);
+      }));
     }
+  };
 
-    handleSaveProfile(updatedProfile);
+  const handleProfileEdit = async (updatedProfile) => {
+    try {
+      const newId = generateUniqueId();
+      const profileWithNewId = {
+        ...updatedProfile,
+        id: newId,
+      };
+
+      console.log('Updated Profile:', updatedProfile);
+
+    } catch (error) {
+      console.error('Error updating profile:', error);
+    }
   };
 
   const handleDeletePhoto = () => {
@@ -60,16 +83,24 @@ const EditProfile = ({ initialProfile = {}, updateProfile }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const newId = generateUniqueId();
     const updatedProfile = {
       ...editedProfile,
+      id: newId,
       hobbies: typeof editedProfile.hobbies === "string" ? editedProfile.hobbies.split(", ") : [],
       allergies: typeof editedProfile.allergies === "string" ? editedProfile.allergies.split(", ") : [],
     };
 
-    handleSaveProfile(updatedProfile);
-    updateProfile(updatedProfile);
-  };
+    const isValid = isValidEmail(updatedProfile.email);
 
+    if (isValid) {
+      await handleSaveProfile(updatedProfile);
+      updateProfile(updatedProfile);
+      handleProfileEdit(updatedProfile);
+    } else {
+      alert('Das E-Mail-Format ist inkorrekt. Bitte überprüfe deine Eingabe.');
+    }
+  };
 
   return (
     <form className="edit-form" onSubmit={handleSubmit}>
@@ -106,7 +137,9 @@ const EditProfile = ({ initialProfile = {}, updateProfile }) => {
             onChange={handleChange}
           />
         </label>
-
+        {!isEmailValid && (
+          <div className="error-message">Ungültige E-Mail-Adresse</div>
+        )}
       </div>
       <div className="input-group">
         <label>
