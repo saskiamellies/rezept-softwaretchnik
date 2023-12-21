@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { saveProfile } from "./profileService.js";
+import { indexedDBService, generateUniqueId } from './indexedDBService';
 
 
-const generateUniqueId = () => {
-  const randomNumber = Math.floor(100000 + Math.random() * 900000); // Erzeugt eine Zufallszahl zwischen 100000 und 999999
-  return randomNumber.toString();
-};
+
 const EditProfile = ({ initialProfile = {}, updateProfile }) => {
   const [editedProfile, setEditedProfile] = useState(initialProfile || {});
   const [isEmailValid, setIsEmailValid] = useState(true);
@@ -66,8 +64,9 @@ const EditProfile = ({ initialProfile = {}, updateProfile }) => {
         ...updatedProfile,
         id: newId,
       };
-
+      await indexedDBService.addProfile(profileWithNewId);
       console.log('Updated Profile:', updatedProfile);
+      console.log('Updated Profile with New ID:', profileWithNewId);
 
     } catch (error) {
       console.error('Error updating profile:', error);

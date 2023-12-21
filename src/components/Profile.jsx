@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import EditProfile from './EditProfile';
 import { getProfile } from './profileService';
+import { generateUniqueId } from './indexedDBService';
 
-
-const generateUniqueId = () => {
-  const randomNumber = Math.floor(100000 + Math.random() * 900000); // Erzeugt eine Zufallszahl zwischen 100000 und 999999
-  return randomNumber.toString();
-};
 
 const MyProfile = () => {
   const [profileInfo, setProfileInfo] = useState({
@@ -14,7 +10,7 @@ const MyProfile = () => {
     lastName: 'your last name',
     email: 'your.email@example.com',
     id: null,
-    allergies: [],
+    allergies: ['milk.honey'],
     dietaryRestrictions: 'none',
     favoriteDish: 'Favorite Dish',
     photo: null,
