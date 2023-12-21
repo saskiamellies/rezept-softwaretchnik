@@ -29,7 +29,7 @@ const Recipes = ({ onRecipeSave }) => {
 
   const handleSaveRecipe = (dish) => {
     onRecipeSave(dish);
-    window.alert("meal saved to meal-schedule")
+    window.alert("meal saved to meal-schedule");
   };
 
   const handleCloseRecipe = () => {
