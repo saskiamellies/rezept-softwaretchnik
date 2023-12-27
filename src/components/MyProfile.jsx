@@ -14,7 +14,7 @@ const MyProfile = () => {
     dietaryRestrictions: "",
     email: "",
     id: uuidv4(),
-    profilePicture: generator.generateRandomAvatar(),
+    profilePicture: "",
   };
 
   const [profileData, setProfileData] = useState(JSON.parse(localStorage.getItem("user")) || initialProfileState);
@@ -53,7 +53,16 @@ const MyProfile = () => {
     };
   }, []);
 
-
+  useEffect(() => {
+    // Generate a new profile picture only if the profile is being created for the first time
+    if (!profileData.profilePicture && !isValidProfile) {
+      setProfileData((prevData) => ({
+        ...prevData,
+        profilePicture: generator.generateRandomAvatar(),
+      }));
+    }
+  }, [profileData.profilePicture, isValidProfile]);
+  
   const handleInputText = (value, property) => {
     if (property === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

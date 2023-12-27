@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-  const MyMealSchedule = ({ dishSaved }) => {
+  const MealSchedule = ({ dishSaved }) => {
     
   const [mealPlan, setMealPlan] = useState(Array(7).fill(null).map(() => ({ title: "", link: "" })));
 
@@ -23,7 +23,7 @@ import React, { useState, useEffect } from "react";
   };
 
   return (
-    <div className="MyMealSchedule">
+    <div className="MealSchedule">
       <table>
         <thead>
           <tr>
@@ -58,4 +58,4 @@ import React, { useState, useEffect } from "react";
   );
 };
 
-export default MyMealSchedule;
+export default MealSchedule;
