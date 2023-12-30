@@ -18,7 +18,7 @@ const App = () => {
       dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
       integrations: [
         new Sentry.BrowserTracing({
-          tracePropagationTargets: ["localhost", /^https:\/\/dein-server\.de\/api/],
+          tracePropagationTargets: ["localhost",rezept-softwaretchnik-7uv1jj7yj-saskia-mellies-projects.vercel.app],
         }),
         new Sentry.Replay({
           maskAllText: false,
