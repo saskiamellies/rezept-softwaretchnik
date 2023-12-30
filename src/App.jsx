@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import MyPantry from "./components/MyPantry";
-import MyMealSchedule from "./components/MealSchedule";
+import MealSchedule from "./components/MealSchedule";
 import MyProfile from "./components/MyProfile";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
