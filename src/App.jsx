@@ -5,15 +5,15 @@ import Recipes from "./components/Recipes";
 import MyPantry from "./components/MyPantry";
 import MealSchedule from "./components/MealSchedule";
 import MyProfile from "./components/MyProfile";
-import { Integrations } from '@sentry/tracing';
-import * as Sentry from "@sentry/react";
+//import { Integrations } from '@sentry/tracing';
+//import * as Sentry from "@sentry/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
 const App = () => {
   const [dishSaved, setDishSaved] = useState([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     Sentry.init({
       dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
       integrations: [
@@ -29,7 +29,7 @@ const App = () => {
       replaysSessionSampleRate: 0.1,
       replaysOnErrorSampleRate: 1.0,
     });
-  }, []);
+  }, []);*/
 
   return (
     <Router>
