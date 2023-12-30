@@ -62,7 +62,7 @@ const MyProfile = () => {
       }));
     }
   }, [profileData.profilePicture, isValidProfile]);
-  
+
   const handleInputText = (value, property) => {
     if (property === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -101,6 +101,10 @@ const MyProfile = () => {
 
   const enterEditMode = () => {
     setIsEditMode(true);
+  };
+
+  const breakTheWorld = () => {
+    Sentry.captureException(new Error('This is an intentional error for testing.'));
   };
 
 
@@ -215,6 +219,7 @@ const MyProfile = () => {
         {!isEditMode && isValidProfile && <button onClick={enterEditMode}>Update Profile</button>}
         {isEditMode && <button onClick={saveProfile}>{buttonLabel}</button>}
         {isValidProfile && !isEditMode && <button onClick={deleteProfile}>Delete Profile</button>}
+        <button onClick={breakTheWorld}>Break the world</button>
       </div>
     </div>
   );
