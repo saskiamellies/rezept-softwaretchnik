@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import App from '../App';
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText('learn react');
-  expect(linkElement).toBeInTheDocument();
-=======
 import React from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
@@ -34,5 +25,4 @@ test('renders App component with React Router', () => {
   //Check whether the footer text is present
   const footerText = getByText(/Footer Text hier/i);
   expect(footerText).toBeInTheDocument();
->>>>>>> 80d4a2b (Update)
 });
