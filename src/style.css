@@ -63,8 +63,6 @@ body {
 }
 
 
-
-
 /* Eingabe (recipe search) */
 .input-container {
   justify-content: center;
@@ -127,21 +125,6 @@ body {
   margin-right: 15rem; /* Abstand zwischen Checkbox und Text */
 
 }
-
-.filter-checkbox {
-  width: 15px;
-  height: 15px;
-  border-radius: 5px;
-  border: 2px solid #8cad2d;
-  background-color: #fff;
-  display: block;
-  content: "";
-  float: left;
-  margin-right: 5px;
-  z-index: 5;
-  position: relative;
-}
-
 
 /* Ausgabe*/
 
@@ -331,16 +314,6 @@ width: 16%;
   display: block;
   margin: 0 auto; /* Zentriert das Bild */
 }
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-  padding: 20px;
-  border: 2px solid #14354b; /* Rahmenfarbe */
-  border-radius: 10px; /* Abgerundete Ecken */
-}
 
 .profile-info {
   margin-bottom: 10px;
@@ -368,4 +341,15 @@ width: 16%;
 .meal {
   text-align: center;
   margin-bottom: 10px; /* Abstand zwischen den Mahlzeiten */
+}
+
+
+.Profile {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
