@@ -7,20 +7,18 @@ const Impressum = () => {
         <h1>Willkommen auf der Impressum-Seite</h1>
       </div>
 
-      <p>Dies ist ein Studierenden-Projekt im Rahmen des Moduls 'Wirtschaftsinformatik-Projekt' des Studiengangs B.Sc. Wirtschaftsinformatik an der BHT Berlin</p>
-
+      <textarea
+        value="Dies ist ein Studierenden-Projekt im Rahmen des Moduls 'Wirtschaftsinformatik-Projekt' des Studiengangs B.Sc. Wirtschaftsinformatik an der BHT Berlin"
+        rows={4}
+        cols={50}
+        readOnly
+      />
       <div>
         <h3>Anschrift der Hochschule:</h3>
       </div>
       <address className="address-container">
         Luxemburger Straße 10<br />
         13353 Berlin<br />
-      </address>
-
-      <div>
-        <h3>Kontaktinformationen:</h3>
-      </div>
-      <address className="address-container">
         <p>
           Telefon:{" "}
           <a href="tel:03045040" style={{ textDecoration: "underline" }}>
@@ -31,7 +29,7 @@ const Impressum = () => {
           <a href="mailto:webteam@bht-berlin.de">webteam@bht-berlin.de</a>
         </p>
       </address>
-      
+
       <address className="address-container">
         <div>
           <h3>Die Teammitglieder:</h3>
