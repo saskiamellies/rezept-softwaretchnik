@@ -2,7 +2,7 @@ import React from "react";
 
 const Impressum = () => {
   return (
-    <div>
+    <div className="impressum-container">
       <div>
         <h1>Willkommen auf der Impressum-Seite</h1>
       </div>
@@ -28,6 +28,13 @@ const Impressum = () => {
           E-Mail:{" "}
           <a href="mailto:webteam@bht-berlin.de">webteam@bht-berlin.de</a>
         </p>
+        <p>
+        Besuchen Sie auch die{" "}
+        <a href="https://www.bht-berlin.de/" target="_blank" rel="noopener noreferrer">
+          Homepage der BHT
+        </a>
+        .
+      </p>
       </address>
 
       <address className="address-container">
@@ -61,13 +68,7 @@ const Impressum = () => {
         <br />
       </address>
 
-      <p>
-        Besuchen Sie auch die{" "}
-        <a href="https://www.bht-berlin.de/" target="_blank" rel="noopener noreferrer">
-          Homepage der Hochschule
-        </a>
-        .
-      </p>
+    
     </div>
   );
 };
