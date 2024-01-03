@@ -384,3 +384,16 @@ input {
   color: #fff; /* Ändert die Farbe beim Überfahren des Links */
   text-decoration: underline; /* Fügt eine Unterstreichung beim Überfahren hinzu */
 }
+/*Design Impressum*/
+.address-container {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.address-container p {
+  margin-bottom: 5px;
+}
+
+.address-container a {
+  color: #007bff; 
+}

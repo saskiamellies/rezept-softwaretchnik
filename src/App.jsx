@@ -5,6 +5,7 @@ import Recipes from "./components/Recipes";
 import MyPantry from "./components/MyPantry";
 import MealSchedule from "./components/MealSchedule";
 import MyProfile from "./components/MyProfile";
+import Impressum from "./components/Impressum";
 //import { Integrations } from '@sentry/tracing';
 //import * as Sentry from "@sentry/react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/myprofile" element={<MyProfile />} />
           <Route path="/mypantry" element={<MyPantry />} />
           <Route path="/meal-schedule" element={<MealSchedule dishSaved={dishSaved} />} />
+          <Route path="/impressum" element={<Impressum />} />
         </Routes>
       </div>
     </Router>
