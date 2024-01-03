@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 //import * as Sentry from "@sentry/react";
 import { v4 as uuidv4 } from 'uuid';
 import { AvatarGenerator } from 'random-avatar-generator';
 
 
 const MyProfile = () => {
-  const generator = new AvatarGenerator();
+  const generator = useMemo(() => new AvatarGenerator(),[]);
   const initialProfileState = {
     firstName: "",
     lastName: "",
@@ -22,7 +22,7 @@ const MyProfile = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidProfile, setIsValidProfile] = useState(!!localStorage.getItem("user"));
   const [isEditMode, setIsEditMode] = useState(!isValidProfile);
-
+  
 
   useEffect(() => {
     // WebSocket connection
@@ -62,7 +62,7 @@ const MyProfile = () => {
         profilePicture: generator.generateRandomAvatar(),
       }));
     }
-  }, [profileData.profilePicture, isValidProfile]);
+  }, [profileData.profilePicture, isValidProfile, generator]);
 
   const handleInputText = (value, property) => {
     if (property === "email") {
