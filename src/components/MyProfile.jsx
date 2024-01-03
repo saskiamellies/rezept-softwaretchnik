@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+//mport * as Sentry from "@sentry/react";
 import { v4 as uuidv4 } from 'uuid';
 import { AvatarGenerator } from 'random-avatar-generator';
 
@@ -62,7 +63,7 @@ const MyProfile = () => {
       }));
     }
   }, [profileData.profilePicture, isValidProfile]);
-  
+
   const handleInputText = (value, property) => {
     if (property === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -102,6 +103,10 @@ const MyProfile = () => {
   const enterEditMode = () => {
     setIsEditMode(true);
   };
+  /*
+  const breakTheWorld = () => {
+    Sentry.captureException(new Error('This is an intentional error for testing.'));
+  };*/
 
 
   return (
@@ -215,6 +220,7 @@ const MyProfile = () => {
         {!isEditMode && isValidProfile && <button onClick={enterEditMode}>Update Profile</button>}
         {isEditMode && <button onClick={saveProfile}>{buttonLabel}</button>}
         {isValidProfile && !isEditMode && <button onClick={deleteProfile}>Delete Profile</button>}
+        
       </div>
     </div>
   );
