@@ -22,7 +22,7 @@ const App = () => {
             <Route path="/recipes" element={<Recipes onRecipeSave={setDishSaved} />} />
             <Route path="/myprofile" element={<MyProfile />} />
             <Route path="/mypantry" element={<MyPantry />} />
-            <Route path="/meal-schedule" element={<MealSchedule dishSaved={dishSaved} />} />
+            <Route path="/meal-schedule" element={<MyMealSchedule dishSaved={dishSaved} />} />
           </Routes>
       </Router>
     </div>
