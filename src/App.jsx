@@ -1,37 +1,49 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link, Navigate} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
+import MyPantry from "./components/MyPantry";
+import MealSchedule from "./components/MealSchedule";
+import MyProfile from "./components/MyProfile";
+//import { Integrations } from '@sentry/tracing';
+//import * as Sentry from "@sentry/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import NavBar from "./components/Navbar";
-import Login from "./components/Login";
-import MeineVorratskammer from "./components/MeineVorratskammer";
-import MeinEssensplaner from "./components/MeinEssensplaner";
-
 
 const App = () => {
-  return (
-      <Router>
-        <div className="App">
-          <Header>
-          <NavBar/>
-          </Header>
-          <Recipes />
-        <Link to="/login">Go to Login</Link>
-        <Link to="/my-pantry">Go to My Pantry</Link>
-        <Link to="/meal-schedule">Go to Meal Schedule</Link>
+  const [dishSaved, setDishSaved] = useState([]);
 
+  /*useEffect(() => {
+    Sentry.init({
+      dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+      integrations: [
+        new Sentry.BrowserTracing({
+          tracePropagationTargets: ["localhost", /^https:\/\/dein-server\.de\/api/],
+        }),
+        new Sentry.Replay({
+          maskAllText: false,
+          blockAllMedia: false,
+        }),
+      ],
+      tracesSampleRate: 1.0,
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+    });
+  }, []);*/
+
+  return (
+    <Router>
+      <div className="App">
+        <Header />
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/my-pantry" element={<MeineVorratskammer />} />
-          <Route path="/meal-schedule" element={<MeinEssensplaner />} />
+          <Route path="/recipes" element={<Recipes onRecipeSave={setDishSaved} />} />
+          <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="/mypantry" element={<MyPantry />} />
+          <Route path="/meal-schedule" element={<MealSchedule dishSaved={dishSaved} />} />
         </Routes>
       </div>
     </Router>
-    );
-  }
-
-
+  );
+}
 
 export default App;

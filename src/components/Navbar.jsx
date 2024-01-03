@@ -1,17 +1,18 @@
-// src/Navbar.js
 import React from "react";
 
-function NavBar(props) {
+const Navbar = () => {
   return (
-    <nav className="nav">
-      <ul><li><a href="/" className="home-page">Home Page</a></li></ul>
+    <nav className="nav" data-testid="navbar">
       <ul>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/my-pantry">Meine Vorratskammer</a></li>
-        <li><a href="/meal-schedule">Mein Essensplaner</a></li>
+        <li><a href="/recipes" className="home-page">recipe search</a></li>
+      </ul>
+      <ul>
+        <li><a href="/myprofile">profile</a></li>
+        <li><a href="/myPantry">my pantry</a></li>
+        <li><a href="/meal-schedule">meal schedule</a></li>
       </ul>
     </nav>
   );
 }
 
-export default NavBar;
+export default Navbar;

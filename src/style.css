@@ -10,80 +10,133 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+
+/* Header*/
 .header-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background-color: #14354b;
   padding: 10px;
   color: #fff;
 }
 
-.nav-container {
-  z-index: 1;
+/* Text des Containers (EnchantedEats) */
+.headline-container {
+  text-align: center; 
 }
 
-/* NavBar-Elemente*/
-.nav a {
-  color: inherit;
-  text-decoration: none;
-  height: 100%;
+
+.nav {
   display: flex;
-  align-items: stretch;
-  padding: .25rem;
+  justify-content: center; 
+  margin-top: 10px; /*Abstand der Nav-Elemente nach oben*/
+  
 
 }
-.nav ul{
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
+
 .nav li {
-  margin-right: 40px
+  margin-right: 20px /*Abstand zwischen den Nav-Elementen */
 }
+
 .nav li:hover{
   background-color: #550d0d;
   border-radius: 8px;
 }
 
-/* HeadLine Component */
-.headline-container {
-  color: #fdfdfd;
-  text-align: center;
+.nav-container {
+  z-index: 1;
+}
+
+.nav a {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  align-items: center;
+}
+
+.nav ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
 }
 
 
-/* InputDish Komponente */
+/* Eingabe (recipe search) */
 .input-container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  width: 93%;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  width: 100%;
 }
 
-/* Button Suchleiste (Zutaten) */
 .form-button-control {
   cursor: pointer;
 }
 
+.btn-search {
+  background-color: #a0adb6;
+  color: #000000;
+  border: 1px solid #ffffff
+}
 
-/* FilterKategorien */
-.filter-container {
-  margin-top: 5px;
-  margin-right: 240px;
+.Recipes input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.Recipes button {
+  background-color: #14354b; 
+  color: #fff; 
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.Recipes button:hover{
+  background-color: #550d0d;
+  border-radius: 8px;
+}
+
+.recipe-input-container {
   display: flex;
+}
+
+
+.recipe-filter-container {
+  display: flex;
+  align-items: center;
 
 }
 
-/* CardDish und OutputDish Komponenten */
+/* Stil für das Label */
+.recipe-filter-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* Stil für die Checkbox */
+.recipe-filter-container input[type="checkbox"] {
+  margin-right: 15rem; /* Abstand zwischen Checkbox und Text */
+
+}
+
+/* Ausgabe*/
+
+.output-container {
+  padding-top: 20px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 .card {
@@ -101,13 +154,20 @@ body {
   padding: 15px;
 }
 
+
+.card:hover {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-width: 2px;
+  border-color: #14354b;
+  opacity:0.8;
+}
+
 .btn-primary {
   background-color: #14354b;
   color: #ffffff;
   border: 1px solid #ffffff
 }
-
-
 
 .Recipes {
   max-width: 800px; 
@@ -115,29 +175,10 @@ body {
   padding: 20px; 
 }
 
-/* Eingabebereich */
-.Recipes input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+.recipe-details {
+  border-width: 200px;
+  padding: 50px 50px 50px 50px;
 }
-
-/* Zufälliges-Rezept-Button */
-.Recipes button {
-  background-color: #14354b; 
-  color: #fff; 
-  padding: 10px;
-  border: none;
-  cursor: pointer;
- 
-}
-
-.Recipes button:hover{
-  background-color: #550d0d;
-  border-radius: 8px;
-}
-
 
 
 
@@ -146,4 +187,189 @@ body {
   .card-container {
     flex-direction: column;
   }
+}
+
+
+
+
+/* ab hier von Jan zugefügt - kann gerne angepasst werden */
+
+
+
+.input-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 80%; 
+}
+
+label {
+  margin-top: 20px;
+  width: 80%;
+}
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.card-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.card-container th, .card-container td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+
+.deleteB{
+ margin-left: 84%;
+padding-left: 3%;
+padding-right: 3%;
+width: 16%;
+}
+
+.dropdown{
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+ 
+}
+
+/* bis hier von Jan hinzugefügt*/
+
+
+.Food {
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  text-align: center;
+
+}
+
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  background-color: #14354b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px; 
+}
+
+.buttons button:hover {
+  background-color: #550d0d;
+}
+
+/* Liste der Lebensmittel */
+.MyPantryList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style für die MyProfile-Seite*/
+
+
+.clear {
+  clear: both;
+}
+
+.image-preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid black; /* Schwarzer Rahmen */
+  border-radius: 8px; /* Abgerundete Ecken */
+  display: block;
+  margin: 0 auto; /* Zentriert das Bild */
+}
+
+.profile-info {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-text {
+  margin-bottom: 10px;
+}
+
+
+.MealSchedule {
+  max-width: 900px; 
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px; 
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+
+.meal {
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+
+.Profile {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

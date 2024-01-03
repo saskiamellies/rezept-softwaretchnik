@@ -3,57 +3,62 @@ import RecipeInput from "./RecipeInput";
 import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
 
-const Recipes = () => {
-
-  const [ingredient, SetIngredient] = useState("");
+const Recipes = ({ onRecipeSave }) => {
+  
+  const [ingredient, setIngredient] = useState("");
+  const [isVegetarian, setIsVegetarian] = useState(false);
+  const [area, setArea] = useState("");
   const [dishSelected, setDishSelected] = useState([]);
-  const [isDetailsOpen, setDetailsOpen] = useState(false);
+  const [isRecipeShow, setIsRecipeShow] = useState(false);
 
-
-  const handleInputText = (value) => {
-    const valueTrim = value.trim();
-    SetIngredient(valueTrim);
-  }
-
-  const handleClickRecipe = (dishID) => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dishID}`)
-      .then(response => response.json())
-      .then(data => {
-        setDishSelected(data.meals);
-          })
-    setDetailsOpen(true);
-    }
-
-  const closeDetails = () => {
-    setDishSelected([]);
-    setDetailsOpen(false);
-  }
-
-  // Random Rezept Ausgabe - Verknüpfung API
-
-  const handleRandomRecipe = () => {
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-      .then((response) => response.json())
-      .then((data) => {
-        const randomDish = data.meals[0];
-        setDishSelected([randomDish]);
-        setDetailsOpen(true);
-      })
-      .catch((error) => {
-        console.error("Fehler beim Abrufen des zufälligen Rezepts:", error);
-      });
+  /*Falls der Such-Button angeklickt wurde, wird der state aktualisiert und die Details angezeigt*/
+  const handleSearch = (value, isVegetarian, selectedArea) => {
+    setIngredient(value.trim());
+    setIsVegetarian(isVegetarian);
+    setArea(selectedArea);
   };
 
+  /*Falls ein zufälliges Rezept angeklickt wurde, wird der state aktualisiert und die Details angezeigt*/
+  const handleRandomRecipe = (dishRandom) => {
+    setDishSelected(dishRandom);
+    setIsRecipeShow(true);
+  };
 
-  return (
-    <div className="Recipes">
-      <RecipeInput onTyping={handleInputText} placeholder="Bitte Hauptzutat eingeben" />
-      {/* Random Rezept Button */}
-      <button onClick={handleRandomRecipe} className="btn btn-primary">Zufälliges Rezept </button>
-      <RecipeList ingredient={ingredient} onClickRecipe={handleClickRecipe} />
-      <RecipeDetails isOpen={isDetailsOpen} onClose={closeDetails} recipeDetails={dishSelected} />
-    </div>
-  )
-}
+  /*Falls ein Rezept angeklickt wurde, werden der state aktualisiert und die Details angezeigt*/
+  const handleShowRecipe = (dish) => {
+    setDishSelected(dish);
+    setIsRecipeShow(true);
+  };
+
+    /*Wenn dieRezeptdetails gespeichert werden, werden diese an die Eltern-Komponente übergeben*/
+  const handleSaveRecipe = (dish) => {
+    onRecipeSave(dish);
+    window.alert("meal saved to meal-schedule");
+  };
+
+  /*Wenn dieRezeptdetails geschlossen werden, wird wieder die Rezeptliste angezeigt*/
+  const handleCloseRecipe = () => {
+    setDishSelected([]);
+    setIsRecipeShow(false);
+  };
+
+/*Falls ein Rezept angeklickt wurde, werden die Details anstelle der Rezeptliste angezeigt
+Ansonsten wird die Rezeptlist angezeigt*/
+  if (isRecipeShow) {
+    return (
+      <div className="Recipes">
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
+        <RecipeDetails recipeDetails={dishSelected} onSave={handleSaveRecipe} onClose={handleCloseRecipe} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="Recipes">
+        <RecipeInput onClickingSearch={handleSearch} onClickingRandom={handleRandomRecipe} onCheckboxChange={setIsVegetarian} onAreaChange={setArea} />
+        <RecipeList ingredient={ingredient} isVegetarian={isVegetarian} area={area} onClickRecipe={handleShowRecipe} />
+      </div>
+    );
+  }
+};
 
 export default Recipes;
