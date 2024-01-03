@@ -30,7 +30,7 @@ const Recipes = ({ onRecipeSave }) => {
     setIsRecipeShow(true);
   };
 
-    /*Wenn dieRezeptdetails gespeichert werden, diese an die Eltern-Komponente übergeben*/
+    /*Wenn dieRezeptdetails gespeichert werden, werden diese an die Eltern-Komponente übergeben*/
   const handleSaveRecipe = (dish) => {
     onRecipeSave(dish);
     window.alert("meal saved to meal-schedule");
