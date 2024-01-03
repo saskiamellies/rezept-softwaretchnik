@@ -42,7 +42,7 @@ oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige ei
       <h3>You can search for recipes here</h3>
       <div className="recipe-input-container">
 
-      <input type="text" id="inputText" className="form-control" placeholder="Please enter ingredient ..." />
+      <input type="text" id="inputText" onKeyDown={handleSearchClick} className="form-control" placeholder="Please enter ingredient ..." />
       <button onClick={handleSearchClick} className="btn-search"> search </button>
       </div>
 
