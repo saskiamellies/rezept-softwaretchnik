@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+=======
+import { MemoryRouter as Router, Route, Routes } from "react-router-dom";
+>>>>>>> fe3ee29 (Nabar-test korrigiert, Verlinkung angepasst)
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import MyPantry from "./components/MyPantry";
