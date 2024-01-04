@@ -1,11 +1,10 @@
-import { useState, useEffect, useMemo } from 'react';
-//import * as Sentry from "@sentry/react";
+import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { AvatarGenerator } from 'random-avatar-generator';
 
 
 const MyProfile = () => {
-  const generator = useMemo(() => new AvatarGenerator(),[]);
+  const generator = new AvatarGenerator();
   const initialProfileState = {
     firstName: "",
     lastName: "",
@@ -22,7 +21,7 @@ const MyProfile = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidProfile, setIsValidProfile] = useState(!!localStorage.getItem("user"));
   const [isEditMode, setIsEditMode] = useState(!isValidProfile);
-  
+
 
   useEffect(() => {
     // WebSocket connection
@@ -62,8 +61,8 @@ const MyProfile = () => {
         profilePicture: generator.generateRandomAvatar(),
       }));
     }
-  }, [profileData.profilePicture, isValidProfile, generator]);
-
+  }, [profileData.profilePicture, isValidProfile]);
+  
   const handleInputText = (value, property) => {
     if (property === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -103,10 +102,6 @@ const MyProfile = () => {
   const enterEditMode = () => {
     setIsEditMode(true);
   };
-  /*
-  const breakTheWorld = () => {
-    Sentry.captureException(new Error('This is an intentional error for testing.'));
-  };*/
 
 
   return (
@@ -220,7 +215,6 @@ const MyProfile = () => {
         {!isEditMode && isValidProfile && <button onClick={enterEditMode}>Update Profile</button>}
         {isEditMode && <button onClick={saveProfile}>{buttonLabel}</button>}
         {isValidProfile && !isEditMode && <button onClick={deleteProfile}>Delete Profile</button>}
-        
       </div>
     </div>
   );
