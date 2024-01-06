@@ -78,7 +78,7 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
           </div>
         </>
       ) : (
-        <p>no recipe found</p>
+        <p className="no-recipe-found">no recipe found</p>
       )}
     </div>
   );

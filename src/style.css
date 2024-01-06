@@ -41,7 +41,7 @@ body {
 
 .nav li:hover{
   background-color: #550d0d;
-  border-radius: 8px;
+
 }
 
 .nav-container {
@@ -77,6 +77,7 @@ body {
 }
 
 .btn-search {
+  margin-bottom: 8px;
   background-color: #a0adb6;
   color: #000000;
   border: 1px solid #ffffff
@@ -94,37 +95,68 @@ body {
   color: #fff; 
   padding: 10px;
   border: none;
-  cursor: pointer;
 }
 
 .Recipes button:hover{
   background-color: #550d0d;
-  border-radius: 8px;
+
 }
 
 .recipe-input-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
+
+.form-control {
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
 
 
 .recipe-filter-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-
 }
 
-/* Stil für das Label */
-.recipe-filter-container label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 60px;
+.filter-container {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-/* Stil für die Checkbox */
-.recipe-filter-container input[type="checkbox"] {
-  margin-right: 15rem; /* Abstand zwischen Checkbox und Text */
-
+.filter-label {
+  margin-bottom: 5px;
 }
+
+.filter-dropdown {
+  padding: 8px;
+  font-size: 16px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 2px; 
+}
+
+
+.filter-checkbox {
+  margin-top: 5px;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+
+
 
 /* Ausgabe*/
 
@@ -164,9 +196,14 @@ body {
 }
 
 .btn-primary {
-  background-color: #14354b;
-  color: #ffffff;
-  border: 1px solid #ffffff
+  margin: 20px auto; /* horizontal zentriert */
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: block;
 }
 
 .Recipes {
@@ -386,14 +423,17 @@ input {
 }
 /*Design Impressum*/
 .impressum-container {
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .address-container {
-  font-style: italic;
+ 
   margin-top: 10px;
   text-align: center;
 }
@@ -409,4 +449,26 @@ input {
 h3 {
   font-weight: bold;
   text-decoration: underline;
+
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.textarea-no-border {
+  width: 700px;
+  margin-bottom: 20px;
+  border: none; 
+  resize: none; 
+  outline: none;
+  text-align: center;
+}
+
+.no-recipe-found {
+  text-align: center;
+  margin-top: 5px;
 }
