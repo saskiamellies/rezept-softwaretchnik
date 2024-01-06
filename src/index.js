@@ -5,8 +5,7 @@ import "./style.css";
 import reportWebVitals from './reportWebVitals';
 import * as Sentry from "@sentry/react";
 
-// process.env.NODE_ENV === "production" && 
-Sentry.init({
+process.env.NODE_ENV === "production" && Sentry.init({
     dsn: "https://8efaac5c47089d3c566cbea2881445ff@o4506486865199104.ingest.sentry.io/4506486868213760",
     integrations: [
       new Sentry.BrowserTracing({
