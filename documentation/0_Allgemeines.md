@@ -34,7 +34,6 @@ Website/App-Entwickler, in sp채teren Release Versionen Ern채hrungsberater und m�
 **Partner von Lebensmittelgesch채ften:**
 Unterst체tzen unsere Website/App, um bestimmte Lebensmittel f체r das Kocherlebnis zu empfehlen.
 
-
 <!-- blank line -->
 ## Minimal Viable Product (MVP)
 <!-- blank line -->
