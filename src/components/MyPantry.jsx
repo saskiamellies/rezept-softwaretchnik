@@ -77,6 +77,7 @@ export default function MyPantry() {
 
 
   return (
+    
     <div className="Food">
       <h3>enter your stored food here:</h3>
       <MyPantryInput
@@ -85,14 +86,14 @@ export default function MyPantry() {
         onTypingUnit={(value) => handleInputText(value, "unit")}
         onTypingCategorie={(value) => handleInputText(value, "categorie")}
         onTypingDate={(value) => handleInputText(value, "bestBefore")}
-        newEntry={newEntry} // Übergeben Sie die aktuellen Werte an das Eingabefeld
-      />
+        newEntry={newEntry}/>
+        
       <div className="buttons">
         <button onClick= {saveInput}>Save Entry</button>
         <button onClick={showFoodList}>Show List</button>
         <button onClick={clearFoodList}>Clear Entry</button>
+        </div>
         {showList && <MyPantryList foodList={foodList} onDelete={onDelete} />}
-      </div>
     </div>
   );
 }

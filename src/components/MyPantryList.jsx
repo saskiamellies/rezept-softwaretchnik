@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const MyPantryList = ({ foodList, onDelete }) => {
   const [selectedItems, setSelectedItems] = useState([]);
+  const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
   const handleCheckboxChange = (itemId) => {
     if (selectedItems.includes(itemId)) {
@@ -22,11 +23,31 @@ const MyPantryList = ({ foodList, onDelete }) => {
     return today > expirationDate;
   };
 
-  if (foodList.length === 0) {
-    return null; // Wenn die Liste leer ist, nichts anzeigen
-  }
+  const requestSort = (key) => {
+    let direction = 'asc';
+    if (sortConfig.key === key && sortConfig.direction === 'asc') {
+      direction = 'desc';
+    }
+    setSortConfig({ key, direction });
+  };
 
-  const columnHeaders = ["ID", "Name", "Amount", "Unit", "Categorie", "Best Before Date", "Actions"];
+  const sortedList = () => {
+    let list = [...foodList];
+    if (sortConfig.key !== null) {
+      list.sort((a, b) => {
+        if (a[sortConfig.key] < b[sortConfig.key]) {
+          return sortConfig.direction === 'asc' ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+          return sortConfig.direction === 'asc' ? 1 : -1;
+        }
+        return 0;
+      });
+    }
+    return list;
+  };
+
+  const columnHeaders = ["id", "name", "amount", "unit", "categorie", "bestBefore", "actions"];
 
   return (
     <div className="card-container" style={{ marginBottom: "20px"}}>
@@ -34,12 +55,17 @@ const MyPantryList = ({ foodList, onDelete }) => {
         <thead>
           <tr>
             {columnHeaders.map((header, index) => (
-              <th key={index}>{header}</th>
+              <th key={index} onClick={() => requestSort(header)}>
+                {header}
+                {sortConfig.key === header && (
+                  <span>{sortConfig.direction === 'asc' ? ' ▲' : ' ▼'}</span>
+                )}
+              </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {foodList.map((foodItem) => (
+          {sortedList().map((foodItem) => (
             <tr key={foodItem.id}>
               <td>{foodItem.id}</td>
               <td>{foodItem.name}</td>
@@ -47,36 +73,23 @@ const MyPantryList = ({ foodList, onDelete }) => {
               <td>{foodItem.unit}</td>
               <td>{foodItem.categorie}</td>
               <td style={{ color: isExpired(foodItem.bestBefore) ? 'red' : 'black' }}>
-  {foodItem.bestBefore}
-  {isExpired(foodItem.bestBefore) && <span> - abgelaufen</span>}
-</td>
+                {foodItem.bestBefore}
+                {isExpired(foodItem.bestBefore) && <span> - abgelaufen</span>}
+              </td>
               <td>
-                
                 <input
                   type="checkbox"
                   onChange={() => handleCheckboxChange(foodItem.id)}
                   checked={selectedItems.includes(foodItem.id)}
                 />
               </td>
-
-              <td>
-                
-                <input
-                  type="button"
-                  onClick={foodItem.name}
-                />
-              </td>
             </tr> 
           ))}
-         
         </tbody>
       </table>
-       <button class="deleteB" onClick={handleDelete}>Delete Selected</button>
-      {selectedItems.length > 0 && (
-        <div>
-         
-        </div>
-      )}
+      <div className="buttons">
+        <button className="deleteb" onClick={handleDelete}>Delete Selected</button>
+      </div>
     </div>
   );
 };
