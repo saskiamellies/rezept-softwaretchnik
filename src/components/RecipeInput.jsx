@@ -38,7 +38,7 @@ Eltern-Komponente zur Anzeige übergeben*/
 /*Ein Textfeld zur Eingabe einer Zutat, eine Checkbox und ein Dropdown-Menü zur Filterung nach vegetarischen Gerichten 
 oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige eines zufälligen Rezeptes werden angezeigt */
   return (
-    <div>
+    <div className="inputArea">
       <h3>You can search for recipes here</h3>
       <div className="recipe-input-container">
 
@@ -53,7 +53,8 @@ oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige ei
           </div>
           <div className="filter-container">
         <label className="filter-label">Area:</label>
-          <select onChange={handleAreaChange} value={selectedArea} className="filter-dropdown">
+        <form className="dropdownM" name="chooseunit" method="post">
+          <select id="area" onChange={handleAreaChange} value={selectedArea} className="filter-dropdown">
             <option value="">Select Area</option>
             <option value="American">American</option>
             <option value="British">British</option>
@@ -85,10 +86,13 @@ oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige ei
             <option value="Vietnamese">Vietnamese</option>
           {/* Weitere Optionen hier hinzufügen */}
           </select>
+          </form>
           </div>
-      </div>
-
+      
+       <div className="filterContainer">
       <button onClick={handleRandomClick} className="btn-primary"> Give me a random recipe! </button>
+    </div>
+    </div>
     </div>
   );
 };

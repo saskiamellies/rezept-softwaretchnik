@@ -24,6 +24,7 @@ import React, { useState, useEffect } from "react";
 
   return (
     <div className="MealSchedule">
+       <h3>your MealSchedule</h3>
       <table>
         <thead>
           <tr>

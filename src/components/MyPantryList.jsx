@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
+//Komponente für die Anzeige der MyPantryList
 const MyPantryList = ({ foodList, onDelete }) => {
+  //der State für ausgewählte/ selected Elemente und Sortierung
   const [selectedItems, setSelectedItems] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
+  //hiermit wird die Checkbox-Änderung bearbeitet
   const handleCheckboxChange = (itemId) => {
     if (selectedItems.includes(itemId)) {
       setSelectedItems(selectedItems.filter((id) => id !== itemId));
@@ -11,18 +13,19 @@ const MyPantryList = ({ foodList, onDelete }) => {
       setSelectedItems([...selectedItems, itemId]);
     }
   };
-
+//löscht ausgewählte Elemente
   const handleDelete = () => {
     onDelete(selectedItems);
     setSelectedItems([]);
   };
-
+//Funktion, die prüft, ob Lebensmittel über dem Verfallsdatum liegt
   const isExpired = (bestBeforeDate) => {
     const today = new Date();
     const expirationDate = new Date(bestBeforeDate);
     return today > expirationDate;
   };
 
+  //Funktion, die die Sortierung anfordert
   const requestSort = (key) => {
     let direction = 'asc';
     if (sortConfig.key === key && sortConfig.direction === 'asc') {
@@ -31,6 +34,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
     setSortConfig({ key, direction });
   };
 
+  //Funktion, die die Liste sortiert
   const sortedList = () => {
     let list = [...foodList];
     if (sortConfig.key !== null) {
@@ -46,14 +50,16 @@ const MyPantryList = ({ foodList, onDelete }) => {
     }
     return list;
   };
-
+// Liste der Spaltenüberschriften der Tabelle/ Liste
   const columnHeaders = ["id", "name", "amount", "unit", "categorie", "bestBefore", "actions"];
 
+  //Rückgabewert der Komponente (gibt die Liste/ Tabelle mit Sortierfunktion aus inklusive delete Button)
   return (
-    <div className="card-container" style={{ marginBottom: "20px"}}>
+    <div className="card-container">
       <table>
         <thead>
           <tr>
+            {/*Spaltenüberschriften mit Sortierfunktion*/}
             {columnHeaders.map((header, index) => (
               <th key={index} onClick={() => requestSort(header)}>
                 {header}
@@ -65,6 +71,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
           </tr>
         </thead>
         <tbody>
+          {/*Liste der eingegebenen Lebensmittel*/}
           {sortedList().map((foodItem) => (
             <tr key={foodItem.id}>
               <td>{foodItem.id}</td>
@@ -77,19 +84,20 @@ const MyPantryList = ({ foodList, onDelete }) => {
                 {isExpired(foodItem.bestBefore) && <span> - abgelaufen</span>}
               </td>
               <td>
-                <input
-                  type="checkbox"
-                  onChange={() => handleCheckboxChange(foodItem.id)}
-                  checked={selectedItems.includes(foodItem.id)}
+                {/* Checkbox, zur Auswahl einer Zeile/ eines eingegebenen Elements*/}
+                <input type="checkbox" onChange={() => handleCheckboxChange(foodItem.id)} checked={selectedItems.includes(foodItem.id)}
                 />
               </td>
             </tr> 
           ))}
         </tbody>
       </table>
+      <div className="input-container3">
       <div className="buttons">
+        {/* Button zum löschen ausgewählter Elemente*/}
         <button className="deleteb" onClick={handleDelete}>Delete Selected</button>
       </div>
+    </div>
     </div>
   );
 };
