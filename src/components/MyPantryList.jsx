@@ -39,8 +39,19 @@ const MyPantryList = ({ foodList, onDelete }) => {
     let list = [...foodList];
     if (sortConfig.key !== null) {
       list.sort((a, b) => {
-        if (sortConfig.key !== 'amount' && sortConfig.key !== 'id') {
-          // Wenn es nicht um 'amount' oder 'id' geht, führe den normalen Vergleich durch
+        if (sortConfig.key === 'bestBefore') {
+          // Wenn es sich um die Spalte 'bestBefore' handelt, führe einen Datumssortierung durch
+          const dateA = new Date(a.bestBefore);
+          const dateB = new Date(b.bestBefore);
+  
+          if (dateA < dateB) {
+            return sortConfig.direction === 'asc' ? -1 : 1;
+          }
+          if (dateA > dateB) {
+            return sortConfig.direction === 'asc' ? 1 : -1;
+          }
+        } else if (sortConfig.key !== 'amount' && sortConfig.key !== 'id') {
+          // Wenn es nicht um 'amount', 'id' oder 'bestBefore' geht, führe den normalen Vergleich durch
           if (a[sortConfig.key] < b[sortConfig.key]) {
             return sortConfig.direction === 'asc' ? -1 : 1;
           }
@@ -64,6 +75,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
     }
     return list;
   };
+  
 // Liste der Spaltenüberschriften der Tabelle/ Liste
   const columnHeaders = ["id", "name", "amount", "unit", "categorie", "bestBefore", "actions"];
 
