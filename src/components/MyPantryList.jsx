@@ -39,11 +39,25 @@ const MyPantryList = ({ foodList, onDelete }) => {
     let list = [...foodList];
     if (sortConfig.key !== null) {
       list.sort((a, b) => {
-        if (a[sortConfig.key] < b[sortConfig.key]) {
-          return sortConfig.direction === 'asc' ? -1 : 1;
-        }
-        if (a[sortConfig.key] > b[sortConfig.key]) {
-          return sortConfig.direction === 'asc' ? 1 : -1;
+        if (sortConfig.key !== 'amount' && sortConfig.key !== 'id') {
+          // Wenn es nicht um 'amount' oder 'id' geht, führe den normalen Vergleich durch
+          if (a[sortConfig.key] < b[sortConfig.key]) {
+            return sortConfig.direction === 'asc' ? -1 : 1;
+          }
+          if (a[sortConfig.key] > b[sortConfig.key]) {
+            return sortConfig.direction === 'asc' ? 1 : -1;
+          }
+        } else {
+          // Für 'amount' und 'id', führe den numerischen Vergleich durch
+          const numA = parseFloat(a[sortConfig.key]);
+          const numB = parseFloat(b[sortConfig.key]);
+  
+          if (numA < numB) {
+            return sortConfig.direction === 'asc' ? -1 : 1;
+          }
+          if (numA > numB) {
+            return sortConfig.direction === 'asc' ? 1 : -1;
+          }
         }
         return 0;
       });
