@@ -9,7 +9,7 @@ const Impressum = () => {
 
       <textarea
       className="textarea-no-border"
-        value="Dies ist ein Studierenden-Projekt im Rahmen des Moduls 'Wirtschaftsinformatik-Projekt' des Studiengangs B.Sc. Wirtschaftsinformatik an der BHT Berlin."
+        value="This is a student project as part of the 'Business Informatics Project' module of the B.Sc. degree program. Business informatics at BHT Berlin."
         rows={4}
         cols={50}
         readOnly
