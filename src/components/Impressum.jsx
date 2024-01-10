@@ -4,11 +4,12 @@ const Impressum = () => {
   return (
     <div className="impressum-container">
       <div>
-        <h1>Willkommen auf der Impressum-Seite</h1>
+        <h1>Impressum</h1>
       </div>
 
       <textarea
-        value="Dies ist ein Studierenden-Projekt im Rahmen des Moduls 'Wirtschaftsinformatik-Projekt' des Studiengangs B.Sc. Wirtschaftsinformatik an der BHT Berlin"
+      className="textarea-no-border"
+        value="Dies ist ein Studierenden-Projekt im Rahmen des Moduls 'Wirtschaftsinformatik-Projekt' des Studiengangs B.Sc. Wirtschaftsinformatik an der BHT Berlin."
         rows={4}
         cols={50}
         readOnly

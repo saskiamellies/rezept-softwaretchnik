@@ -38,7 +38,7 @@ Eltern-Komponente zur Anzeige übergeben*/
 /*Ein Textfeld zur Eingabe einer Zutat, eine Checkbox und ein Dropdown-Menü zur Filterung nach vegetarischen Gerichten 
 oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige eines zufälligen Rezeptes werden angezeigt */
   return (
-    <div>
+    <div className="inputArea">
       <h3>You can search for recipes here</h3>
       <div className="recipe-input-container">
 
@@ -47,11 +47,14 @@ oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige ei
       </div>
 
       <div className="recipe-filter-container">
-        <label>Vegetarian:          
+      <div className="filter-container">
+        <label className="filter-label">Vegetarian: </label>          
           <input type="checkbox" onChange={handleCheckboxChange} className="filter-checkbox" />
-        </label>
-        <label>Area:
-          <select onChange={handleAreaChange} value={selectedArea}>
+          </div>
+          <div className="filter-container">
+        <label className="filter-label">Area:</label>
+        <form className="dropdownM" name="chooseunit" method="post">
+          <select id="area" onChange={handleAreaChange} value={selectedArea} className="filter-dropdown">
             <option value="">Select Area</option>
             <option value="American">American</option>
             <option value="British">British</option>
@@ -83,10 +86,13 @@ oder nach gerichten aus bestimmten Ländern sowie ein Button für die Anzeige ei
             <option value="Vietnamese">Vietnamese</option>
           {/* Weitere Optionen hier hinzufügen */}
           </select>
-        </label>
-      </div>
-
-      <button onClick={handleRandomClick} className="btn btn-primary"> Give me a random recipe! </button>
+          </form>
+          </div>
+      
+       <div className="filterContainer">
+      <button onClick={handleRandomClick} className="btn-primary"> Give me a random recipe! </button>
+    </div>
+    </div>
     </div>
   );
 };

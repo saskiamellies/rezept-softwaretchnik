@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 
-test('renders header component with navigation links', () => {
+test('renders navbar component with navigation links', () => {
   render(
     <MemoryRouter>
-      <Header />
+      <Navbar />
     </MemoryRouter>
   );
 
