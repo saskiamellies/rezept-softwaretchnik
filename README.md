@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# EnchantedEats
+ Webapplication for searching recipes as a project for the “Software Technology Project” module at the Berlin University of Technology (BHT).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+description:
 
-## Available Scripts
 
-In the project directory, you can run:
+## Setting up this REACT project on your local machine typically involves the following steps:
+1. Clone or download the project source code to your local machine (Clone: https://github.com/saskiamellies/rezept-softwaretchnik.git`).
+2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn.
+3. Run the development server. This can be done using a command line tool such as the terminal, where you can run the command npm start or yarn start.
+4. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+### Installation 
+****************************************************************************************************
+*** - clone repo with `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`     ***
+*** - install Node and npm                                                                       ***
+*** - install dependencies:                                                                      ***
+***   `npm install --save react-router-dom'                                                      ***
+***   `npm install random-avatar-generator'                                                      ***
+****************************************************************************************************
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Start
+ - start development server with 'npm start'
+   application runs on 'http://127.0.0.1:3000'
 
-### `npm test`
+### Tests
+ - run tests with 'npm test'
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What Technology are Using In This Projects
+Front End :
 
-### `npm run build`
+ - React
+ - Bootstrap
+ - JavaScript(ES6)
+ - Html
+ - css5
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Back-End:
+ Vercel ???
+ 
+API:
+ - https://www.themealdb.com/api.php
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Our Website: [EnchantedEats] (https://rezept-softwaretchnik-umber.vercel.app/)
 
 ### Deployment
+There is one `.yaml` file for workflow:
+ - `test+deploydeploy.yaml` - After push into master, it will be automatically testes and deployes to Vercel once tests are successful. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Monitoring (Sentry)
+ - default integraton provide from Sentry
+ - Sentry will be notified only for production environment
 
-### `npm run build` fails to minify
+### License
+  MIT License --> More information see LICENSE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Documentation
+  see dodumenation index.md
+
+### Contact
+ - André Schlichting     Mail: s69575@bht-berlin.de
+ - Daniel Kunst          Mail: s81797@bht-berlin.de
+ - Christoph Rudolph     Mail: s82089@bht-berlin.de
+ - Theo Prill            Mail: s82168@bht-berlin.de
+ - Jan Gruner            Mail: s81694@bht-berlin.de
+ - Saskia-Maria Mellies  Mail: s54177@bht-berlin.de
+
+## What Features Will You Find Here?
+ - Recipe search by entering ingredients
+ - Filtering function
+ - Random recipe search
+ - Create and save a profile
+ - Pantries (store food items...)
+
+![Bild1](./Bild1.png)
+![Bild2](./Bild2.png)
+![Bild3](./Bild3.png)
+![Bild4](./Bild4.png)
+
+Future Feature
+ in prepation -> Menu Schedule
+
+![Bild5](./Bild5.png)
