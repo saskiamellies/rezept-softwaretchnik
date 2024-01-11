@@ -3,6 +3,23 @@
 
 description:
 
+## functions
+ - Recipe search by entering ingredients
+ - Filtering function
+ - Random recipe search
+ - Create and save a profile
+ - Pantries (store food items...)
+
+![Bild1](./Bild1.png)
+![Bild2](./Bild2.png)
+![Bild3](./Bild3.png)
+![Bild4](./Bild4.png)
+
+Future Feature
+ in prepation -> Menu Schedule
+
+![Bild5](./Bild5.png)
+
 
 ## installation & start
 ****************************************************************************************************
@@ -26,8 +43,10 @@ description:
  - start development server with 'npm start'
    application runs on 'http://127.0.0.1:3000'
 
+
 ### Tests
  - run tests with 'npm test'
+
 
 ## technologies
 ### Front End:
@@ -37,8 +56,10 @@ description:
  - HTML
  - CSS
 
+
 ### Back-End:
  - Vercel ???
+
  
 ### API:
  - https://www.themealdb.com/api.php
@@ -55,8 +76,10 @@ There is one `.yaml` file for workflow:
  - default integraton provide from Sentry
  - Sentry will be notified only for production environment
 
+
 ## License
-  MIT License --> More information see LICENSE
+  [MIT License](LICENSE) 
+
 
 ## Documentation
   see dodumenation index.md
@@ -69,19 +92,4 @@ There is one `.yaml` file for workflow:
  - Jan Gruner            Mail: s81694@bht-berlin.de
  - Saskia-Maria Mellies  Mail: s54177@bht-berlin.de
 
-## functions
- - Recipe search by entering ingredients
- - Filtering function
- - Random recipe search
- - Create and save a profile
- - Pantries (store food items...)
 
-![Bild1](./Bild1.png)
-![Bild2](./Bild2.png)
-![Bild3](./Bild3.png)
-![Bild4](./Bild4.png)
-
-Future Feature
- in prepation -> Menu Schedule
-
-![Bild5](./Bild5.png)
