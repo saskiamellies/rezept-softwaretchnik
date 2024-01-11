@@ -1,7 +1,19 @@
 # EnchantedEats
  Webapplication for searching recipes as a project for the “Software Technology Project” module at the Berlin University of Technology (BHT).
 
-description:
+ Welcome to the future of cooking and dining - discover EnchantedEats, your revolutionary kitchen assistant! In our hectic world, 
+ EnchantedEats offers a unique solution that transforms your refrigerator into a source of inspiration. Imagine this: You open your 
+ fridge and instead of uncertainty, you are greeted by a world full of tailor-made recipe ideas, perfectly suited to what you already 
+ have at home. With just a few additional ingredients, an entire universe of new taste experiences unfolds.
+
+ EnchantedEats understands you and your individual needs. Whether it's allergies, special diets, or personal taste preferences - 
+ our app takes all of this into account and provides custom-made recipes that not only fit but also inspire. For the health-conscious among us, 
+ EnchantedEats offers i ntelligent nutritional adjustment based on your activities and needs. You receive recipe suggestions that perfectly 
+ complement your nutrient and energy requirements, complete with calorie counting and nutritional information.
+
+ But that's not all. EnchantedEats is committed to sustainability and actively fights food waste by encouraging you to use existing food 
+ completely and creatively. With EnchantedEats by your side, healthy, delicious food tailored to your desires is just a fingertip away. 
+ Experience what it's like to always have a personal chef on hand - welcome to EnchantedEats, your partner for a smarter, healthier kitchen!
 
 ## functions
  - Recipe search by entering ingredients
@@ -10,15 +22,15 @@ description:
  - Create and save a profile
  - Pantries (store food items...)
 
-![Bild1](./Bild1.png)
-![Bild2](./Bild2.png)
-![Bild3](./Bild3.png)
-![Bild4](./Bild4.png)
+![Bild1](./documentation/Bild1.png)
+![Bild2](./documentation/Bild2.png)
+![Bild3](./documentation/Bild3.png)
+![Bild4](./documentation/Bild4.png)
 
 Future Feature
  in prepation -> Menu Schedule
 
-![Bild5](./Bild5.png)
+![Bild5](./documentation/Bild5.png)
 
 
 ## installation & start
@@ -76,7 +88,7 @@ Sentry will be notified only for production environment
 
 
 ## License
-[MIT License](LICENSE) 
+see [MIT License](LICENSE) 
 
 
 ## Documentation
