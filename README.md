@@ -82,7 +82,7 @@ There is one `.yaml` file for workflow:
 
 
 ## Documentation
-  see [dodumenation](documentaion/Index.md)
+  see [dodumenation](documentation/Index.md)
 
 ## Contact
  - André Schlichting     Mail: s69575@bht-berlin.de
