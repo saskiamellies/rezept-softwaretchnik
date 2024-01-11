@@ -25,7 +25,7 @@ Future Feature
 ****************************************************************************************************
 1. Clone or download the project source code to your local machine (https://github.com/saskiamellies/rezept-softwaretchnik.git).
 2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn.
-3. Run the development server. This can be done using a command line tool such as the terminal, where you can run the command 'npm start' or 'yarn start'.
+3. Run the development server. This can be done using a command line tool such as the terminal, where you can run the command `npm start` or `yarn start`.
 4. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
 ****************************************************************************************************
 
@@ -49,40 +49,39 @@ Future Feature
 
 
 ## technologies
-### Front End:
+Front End:
  - React
  - Bootstrap
  - JavaScript
  - HTML
  - CSS
 
-
-### Back-End:
+Back-End:
  - Vercel ???
 
- 
-### API:
+API:
  - https://www.themealdb.com/api.php
 
 
 ## Website
-[EnchantedEats] (https://rezept-softwaretchnik-umber.vercel.app/)
+https://rezept-softwaretchnik-umber.vercel.app/
 
 ### Deployment
-There is one `.yaml` file for workflow:
- - `test+deploydeploy.yaml` - After push into master, it will be automatically testes and deployes to Vercel once tests are successful. 
+There is one `.yaml` file for workflow: `test+deploydeploy.yaml` 
+--> After push into master, it will be automatically testes and deployes to Vercel once tests are successful. 
 
 ### Monitoring (Sentry)
- - default integraton provide from Sentry
- - Sentry will be notified only for production environment
+default integraton provide from Sentry
+Sentry will be notified only for production environment
 
 
 ## License
-  [MIT License](LICENSE) 
+[MIT License](LICENSE) 
 
 
 ## Documentation
-  see [dodumenation](documentation/Index.md)
+see [IT-Konzept](documentation/Index.md)
+
 
 ## Contact
  - André Schlichting     Mail: s69575@bht-berlin.de
