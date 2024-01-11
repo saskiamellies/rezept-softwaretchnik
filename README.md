@@ -22,15 +22,15 @@
  - Create and save a profile
  - Pantries (store food items...)
 
-![Bild1](./documentation/Bild1.png)
-![Bild2](./documentation/Bild2.png)
-![Bild3](./documentation/Bild3.png)
-![Bild4](./documentation/Bild4.png)
+![Bild1](./documentation/img/Bild1.png)
+![Bild2](./documentation/img/Bild2.png)
+![Bild3](./documentation/img/Bild3.png)
+![Bild4](./documentation/img/Bild4.png)
 
 Future Feature
  in prepation -> Menu Schedule
 
-![Bild5](./documentation/Bild5.png)
+![Bild5](./documentation/img/Bild5.png)
 
 
 ## installation & start
