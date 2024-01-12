@@ -26,13 +26,6 @@
 - Anwendungsplattform
 - Datenbankintegration
 - Websitehosting
-- Hardware – Wartungsbedarf?
-- Betriebssystem
-- Updateverfahren (Securitypatches,..)
-- Softwarepflege
-  - Securitypatches,..
-- Notfallkonzeption
-- Datensicherung  / Logs
 ----
 4. [**Support**](4_Support.md)
 - Entry Point für Incidents
