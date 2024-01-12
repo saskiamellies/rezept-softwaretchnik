@@ -52,6 +52,19 @@
 5. [**Bedienoberflächen**](5_Bedienoberflächen.md)
 - Systemvoraussetzungen
 - Nutzer- und Berechtigungskonzept
+- Übersicht des User Interface (UI)
+- Design-Prinzipien
+- Farbschema und Typografie
+- Navigationsstruktur
+- Interaktionsdesign
+- Responsives Design
+- Zugänglichkeit (Accessibility)
+- UI-Komponentenbibliothek 
+- Screenshots und Beispiele
+- Feedback- und Fehlermeldungen
+- Internationalisierung und Lokalisierung
+- Richtlinien zur UI-Entwicklung
+- Versionierung und Updates
 ----
 6. [**Design**](6_Design.md)
 - Anforderungen/ Requirements
