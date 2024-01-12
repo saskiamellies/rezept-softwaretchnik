@@ -5,48 +5,56 @@ Nutzung über alle gängigen Browsers wie Egde, Crome, Firefox, Safari ...
 Noch in Arbeit für Login- und MyProfile
 
 ## Übersicht des User Interface (UI): 
-Geben Sie einen allgemeinen Überblick über die Benutzeroberfläche, einschließlich der Hauptkomponenten und der allgemeinen Layoutstruktur.
++ Startseite mit Suchfeld zentral platziert.
++ Checkboxes für Filteroptionen wie "Vegetarian" und eine Dropdown-Liste zur Auswahl der Küchenregion.
++ "Give me a random recipe!"-Button für Zufallsrezepte.
++ Eine Rezeptkarte mit einem Foto, Titel und Optionen zum Schließen und Speichern.
++ Profilerstellungsbereich mit Formularfeldern für Bild, Namen, Benutzernamen, Lieblingsgericht, Allergien, Ernährungsbeschränkungen, E-Mail und einer eindeutigen ID.
 
 ## Design-Prinzipien: 
-Erklären Sie die grundlegenden Design-Prinzipien, die Ihrem UI-Design zugrunde liegen, wie Konsistenz, Einfachheit, Intuitivität und Zugänglichkeit.
++ Schlichtes und modernes Design mit einer einheitlichen Farbpalette.
++ Ausreichender Weißraum um die Elemente, um eine klare Trennung und einfache Lesbarkeit zu gewährleisten.
 
 ## Farbschema und Typografie: 
-Dokumentieren Sie das Farbschema und die Typografie, die in der Benutzeroberfläche verwendet werden, einschließlich Richtlinien für Farbkontraste und Schriftarten.
-
-Blaue NavBar und der Rest ist schlicht in Weiß gehalten
++ Dominierende Blautöne im Header und Footer, Weiß als Hintergrund für den Inhaltsbereich.
++ Serifenlose Schriftart für Textinhalte, steht für Klarheit und Modernität.
 
 ## Navigationsstruktur: 
-Beschreiben Sie die Navigationsstruktur der Anwendung, wie Menüs, Tabs, Schaltflächen und andere interaktive Elemente.
-
-Im Weblayout befindet sich eine NavBar mit aktuell den Buttons "Recipe Search", "My Profile", "MyPantry" und "Meal-Schedule" und einer Suchleiste
-zur Eingabe der Zutaten (Aktuell ist nur eine Zutat möglich)
++ Im Weblayout befindet sich eine horizontale Menüleiste mit Links zu "Recipe Search", "Profile", "My Pantry", "Meal Schedule" und "Impressum" und einer Suchleiste
+  zur Eingabe der Zutaten (aktuell ist nur eine Zutat möglich)
++ Klare visuelle Trennung der Menüleiste vom Inhalt durch Farbkontrast.
 
 ## Interaktionsdesign: 
-Erläutern Sie, wie Interaktionen mit der Benutzeroberfläche funktionieren, einschließlich Click- und Touch-Gesten, Drag-and-Drop-Funktionen und Tastaturkürzel.
-
-In der Suchleiste ist die Einfabe von Zutaten (in englisch) möglich
-Drop Down Menues in MyPantry zur Auswahl von Gewicht und Essenskategorie
++ Interaktive Elemente wie Buttons und Formularfelder sind klar erkennbar und nutzerfreundlich.
++ In der Suchleiste ist die Einfabe von Zutaten (in englisch) möglich
++ Drop Down Menues in MyPantry zur Auswahl von Gewicht und Essenskategorie
 
 ## Responsives Design: 
-Stellen Sie sicher, dass die Benutzeroberfläche für verschiedene Gerätetypen und Bildschirmgrößen angepasst ist. Dokumentieren Sie, wie das responsive Design umgesetzt wird.
++ Die Gestaltung der Elemente lässt auf ein fließendes Layout schließen, das sich an unterschiedliche Bildschirmgrößen anpassen kann
 
 ## Zugänglichkeit (Accessibility): 
-Berücksichtigen Sie Richtlinien für Barrierefreiheit, um sicherzustellen, dass Ihre Anwendung von allen Nutzern, einschließlich Menschen mit Behinderungen, genutzt werden kann.
++ Große, klickbare Elemente und klare Beschriftungen für eine gute Zugänglichkeit.
++ derzeitig Keine Hilfsmittel für Nutzer mit Sehbehinderungen wie Alternativtexte oder ARIA-Labels verfügbar.
 
 ## UI-Komponentenbibliothek: 
-Falls vorhanden, verweisen Sie auf eine UI-Komponentenbibliothek oder ein Design-System, das in Ihrem Projekt verwendet wird.
++ Wiederverwendbare Komponenten wie Suchfelder, Buttons und Rezeptkarten sind im gesamten Interface konsistent integriert.
 
 ## Screenshots und Beispiele: 
-Fügen Sie Screenshots und Beispiele hinzu, um die verschiedenen Aspekte Ihrer UI zu veranschaulichen.
+Jeder Screenshot zeigt einen bestimmten Bereich der Webseite: Suche, Rezeptansicht, Profilerstellung und Vorratsverwaltung.
+
+![Bild6](./img/Bild6.png)
+![Bild7](./img/Bild7.png)
+![Bild8](./img/Bild8.png)
+![Bild9](./img/Bild9.png)
 
 ## Feedback- und Fehlermeldungen: 
-Beschreiben Sie, wie das System Feedback und Fehlermeldungen an den Benutzer kommuniziert.
++ Feedback kann über das Impressum gegeben werden - Kontaktendaten sind angegeben
 
 ## Internationalisierung und Lokalisierung: 
-Berücksichtigen Sie die Unterstützung mehrerer Sprachen und kultureller Konventionen in Ihrem UI-Design.
++ Die gesamte Webseite ist derzeitig nur in englischer Sprache verfügbar
 
 ## Richtlinien zur UI-Entwicklung: 
-Geben Sie Entwicklern Richtlinien zur Implementierung und Erweiterung der Benutzeroberfläche.
++ spezifische Richtlinien zur UI-Entwicklung definiert/ bekannt
 
 ## Versionierung und Updates: 
-Dokumentieren Sie, wie Änderungen an der Benutzeroberfläche versioniert und aktualisiert werden.
++ aktuell (noch) nicht implementiert
