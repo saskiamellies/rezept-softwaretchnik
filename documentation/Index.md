@@ -20,15 +20,7 @@
 ----
 2. [**Netzwerkkonzept**](2_Netzwerkkonzept.md)
 -  Bandbreite (Carrier, QoS)
--    Anteile intern/extern
--    Was wird benötigt?
-    - IP-Adressen/ Ports /Firewallfreischaltung/QoS
-      - Platz im Technikraum (nur, wenn Hardware)
-      - Anzahl HE
-      - Tiefe
-      - Cloud-Bedarf
-   - Autarke Anteile
-   - Darstellung Aufbau
+
 ----
 3. [**Betriebskonzept**](3_Betriebskonzept.md)
 - Anwendungsplattform
