@@ -22,22 +22,22 @@
  - Create and save a profile
  - Pantries (store food items...)
 
-![Bild1](./documentation/Bild1.png)
-![Bild2](./documentation/Bild2.png)
-![Bild3](./documentation/Bild3.png)
-![Bild4](./documentation/Bild4.png)
+![Bild1](./documentation/img/Bild1.png)
+![Bild2](./documentation/img/Bild2.png)
+![Bild3](./documentation/img/Bild3.png)
+![Bild4](./documentation/img/Bild4.png)
 
 Future Feature
  in prepation -> Menu Schedule
 
-![Bild5](./documentation/Bild5.png)
+![Bild5](./documentation/img/Bild5.png)
 
 
 ## installation & start
 ****************************************************************************************************
-1. Clone or download the project source code to your local machine (https://github.com/saskiamellies/rezept-softwaretchnik.git).
-2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn.
-3. Run the development server. This can be done using a command line tool such as the terminal, where you can run the command `npm start` or `yarn start`.
+1. Clone or download the project source code to your local machine with `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`
+2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn. (`npm install` or `yarn install`.
+3. Run the development server with `npm start` or `yarn start`.
 4. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
 ****************************************************************************************************
 
@@ -75,16 +75,14 @@ API:
  - https://www.themealdb.com/api.php
 
 
-## Website
-https://rezept-softwaretchnik-umber.vercel.app/
+## Deployment
+There is `test+deploydeploy.yaml` file for workflow: After push into master, it will be automatically tested and deployed to Vercel once tests are successful. 
 
-### Deployment
-There is one `.yaml` file for workflow: `test+deploydeploy.yaml` 
---> After push into master, it will be automatically testes and deployes to Vercel once tests are successful. 
+Website: https://rezept-softwaretchnik-umber.vercel.app/
 
-### Monitoring (Sentry)
-default integraton provide from Sentry
-Sentry will be notified only for production environment
+
+## Monitoring (Sentry)
+default integraton provide from Sentry, which will be notified only for production environment
 
 
 ## License
