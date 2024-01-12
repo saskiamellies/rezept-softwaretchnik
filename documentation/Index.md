@@ -28,11 +28,13 @@
 - Websitehosting
 ----
 4. [**Support**](4_Support.md)
-- Entry Point für Incidents
-- Supportzeit
-- Reaktionszeit
-- Wiederherstellungszeit
-- Wartungszugang erforderlich?
+- Kontaktinformationen: 
+- Häufig gestellte Fragen (FAQs): 
+- Problemberichterstattung: 
+- Verhaltenskodex: 
+- Sicherheitsrichtlinien: 
+- Community-Beiträge: 
+- Lizenzinformationen: 
 ----
 5. [**Bedienoberflächen**](5_Bedienoberflächen.md)
 - Systemvoraussetzungen
