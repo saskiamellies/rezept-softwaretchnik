@@ -36,8 +36,8 @@ Future Feature
 ## installation & start
 ****************************************************************************************************
 1. Clone or download the project source code to your local machine with `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`
-2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn.
-3. Run the development server. This can be done using a command line tool such as the terminal, where you can run the command `npm start` or `yarn start`.
+2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn. (`npm install` or `yarn install`.
+3. Run the development server with `npm start` or `yarn start`.
 4. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
 ****************************************************************************************************
 
@@ -76,15 +76,13 @@ API:
 
 
 ## Deployment
-There is one `.yaml` file for workflow: `test+deploydeploy.yaml` 
---> After push into master, it will be automatically tested and deployed to Vercel once tests are successful. 
+There is `test+deploydeploy.yaml` file for workflow: After push into master, it will be automatically tested and deployed to Vercel once tests are successful. 
 
 Website: https://rezept-softwaretchnik-umber.vercel.app/
 
 
 ## Monitoring (Sentry)
-default integraton provide from Sentry
-Sentry will be notified only for production environment
+default integraton provide from Sentry, which will be notified only for production environment
 
 
 ## License
