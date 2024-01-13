@@ -18,3 +18,4 @@ Die Anwendung soll auf einem geeigneten Server gehostet werden, sobald das MVP f
 <!-- blank line -->
 Anforderungen an den Server sind noch zu definieren, sollten aber Skalierbarkeit, Sicherheit und gewissen Verfügbarkeit berücksichtigen.
 <!-- blank line -->
+
