@@ -33,8 +33,20 @@ Website/App-Entwickler, in späteren Release Versionen Ernährungsberater und m�
 <!-- blank line -->
 **Partner von Lebensmittelgeschäften:**
 Unterstützen unsere Website/App, um bestimmte Lebensmittel für das Kocherlebnis zu empfehlen.
-
+## **Anforderungen/ Requirements**
 <!-- blank line -->
+- Die Anwendung is als Website per Webbrowser nutzbar
+- Eingabefelder für Lebensmittel
+- Ausgabe von Rezeptvorschlägen aus Basis der ausgewählten Lebensmittel
+- Filterfunktion für Intoleranzen, Ernährungsformen etc.
+- Abfragen über API von "TheMealDB.com" 
+- Skalierbarkeit: Die Anwendung soll so skalierbar sein, das zukünftige Erweiterungen und Funktionen unterstützt werden können
+- Sicherheit: Sicherheitsmaßnahmen müssen so implementiert werden,um die 
+              Nutzerdaten und die Integrität der Anwendung zu schützen
+- Benutzerführung: Die Anwendung soll zwingend eine intuitive Benutzerführung bieten,
+die es den Nutzern ermöglicht, effizient und einfache Rezepte zu suchen und zu finden.
+<!-- blank line -->
+
 ## Minimal Viable Product (MVP)
 <!-- blank line -->
 Das Ziel ist die Bereitstellung einer Kocherfahrung für Nutzer basierend auf verfügbaren Lebensmitteln und Ernährungsvorlieben, welche sich im Kühlschrank oder in der Vorratskammer befinden oder Lebensmittel die auch zugekauft werden können.

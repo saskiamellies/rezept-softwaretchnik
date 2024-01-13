@@ -11,10 +11,11 @@ Die genutzte API verwendet nur die englische Sprache
 <!-- blank line -->
 ## **Websitehosting**
 <!-- blank line -->
-derzeitige Development - Nutzung über GitHub
+derzeitige Development - Nutzung über Vercel
 https://rezept-softwaretchnik-umber.vercel.app/
 <!-- blank line -->
 Die Anwendung soll auf einem geeigneten Server gehostet werden, sobald das MVP finalisiert worden ist.
 <!-- blank line -->
 Anforderungen an den Server sind noch zu definieren, sollten aber Skalierbarkeit, Sicherheit und gewissen Verfügbarkeit berücksichtigen.
 <!-- blank line -->
+

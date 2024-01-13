@@ -12,15 +12,9 @@
 ----
 1.   [**Systemkomponenten**](1_Systemkomponenten.md)
 - Programmiersprache
-- Hardware
-- Software
-- Quellsysteme
-- Ausgangsschnittstellen
-- Zielsysteme und Schnittstellen 
 ----
 2. [**Netzwerkkonzept**](2_Netzwerkkonzept.md)
 -  Bandbreite (Carrier, QoS)
-
 ----
 3. [**Betriebskonzept**](3_Betriebskonzept.md)
 - Anwendungsplattform
