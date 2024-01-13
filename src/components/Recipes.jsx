@@ -3,47 +3,52 @@ import RecipeInput from "./RecipeInput";
 import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
 
+    /* 
+    The `Recipes` component receives one prop:
+    - onRecipeSave: A function called when the "Save" button is clicked.
+  */
 const Recipes = ({ onRecipeSave }) => {
-  
+
   const [ingredient, setIngredient] = useState("");
   const [isVegetarian, setIsVegetarian] = useState(false);
   const [area, setArea] = useState("");
   const [dishSelected, setDishSelected] = useState([]);
   const [isRecipeShow, setIsRecipeShow] = useState(false);
 
-  /*Falls der Such-Button angeklickt wurde, wird der state aktualisiert und die Details angezeigt*/
+  /* If the search button is clicked, update the state and display the details */
   const handleSearch = (value, isVegetarian, selectedArea) => {
     setIngredient(value.trim());
     setIsVegetarian(isVegetarian);
     setArea(selectedArea);
   };
 
-  /*Falls ein zufälliges Rezept angeklickt wurde, wird der state aktualisiert und die Details angezeigt*/
+  /* If a random recipe is clicked, update the state and display the details */
   const handleRandomRecipe = (dishRandom) => {
     setDishSelected(dishRandom);
     setIsRecipeShow(true);
   };
 
-  /*Falls ein Rezept angeklickt wurde, werden der state aktualisiert und die Details angezeigt*/
+  /* If a recipe is clicked, update the state and display the details */
   const handleShowRecipe = (dish) => {
     setDishSelected(dish);
     setIsRecipeShow(true);
   };
 
-    /*Wenn dieRezeptdetails gespeichert werden, werden diese an die Eltern-Komponente übergeben*/
+  /* When recipe details are saved, pass them to the parent component */
+  /* function is not yet fully implemented*/
   const handleSaveRecipe = (dish) => {
     onRecipeSave(dish);
-    window.alert("meal saved to meal-schedule");
+    {/*window.alert("Meal saved to meal schedule");*/} 
   };
 
-  /*Wenn dieRezeptdetails geschlossen werden, wird wieder die Rezeptliste angezeigt*/
+  /* When recipe details are closed, display the recipe list again */
   const handleCloseRecipe = () => {
     setDishSelected([]);
     setIsRecipeShow(false);
   };
 
-/*Falls ein Rezept angeklickt wurde, werden die Details anstelle der Rezeptliste angezeigt
-Ansonsten wird die Rezeptlist angezeigt*/
+  /* If a recipe is clicked, display the details instead of the recipe list
+  Otherwise, display the recipe list */
   if (isRecipeShow) {
     return (
       <div className="Recipes">

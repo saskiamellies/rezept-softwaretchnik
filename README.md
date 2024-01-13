@@ -6,16 +6,6 @@
  fridge and instead of uncertainty, you are greeted by a world full of tailor-made recipe ideas, perfectly suited to what you already 
  have at home. With just a few additional ingredients, an entire universe of new taste experiences unfolds.
 
- EnchantedEats understands you and your individual needs. Whether it's allergies, special diets, or personal taste preferences - 
- our app takes all of this into account and provides custom-made recipes that not only fit but also inspire. For the health-conscious among us, 
- EnchantedEats offers i ntelligent nutritional adjustment based on your activities and needs. You receive recipe suggestions that perfectly 
- complement your nutrient and energy requirements, complete with calorie counting and nutritional information.
-
- But that's not all. EnchantedEats is committed to sustainability and actively fights food waste by encouraging you to use existing food 
- completely and creatively. With EnchantedEats by your side, healthy, delicious food tailored to your desires is just a fingertip away. 
- Experience what it's like to always have a personal chef on hand - welcome to EnchantedEats, your partner for a smarter, healthier kitchen!
-
-
 ## functions
  - Recipe search by entering ingredients (currently only one ingredient)
  - Filtering function

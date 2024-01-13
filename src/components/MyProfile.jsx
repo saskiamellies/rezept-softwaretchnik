@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo } from 'react';
-//import * as Sentry from "@sentry/react";
 import { v4 as uuidv4 } from 'uuid';
 import { AvatarGenerator } from 'random-avatar-generator';
 
@@ -103,12 +102,10 @@ const MyProfile = () => {
   const enterEditMode = () => {
     setIsEditMode(true);
   };
-   /*
-  const breakTheWorld = () => {
-    Sentry.captureException(new Error('This is an intentional error for testing.'));
-  };*/
 
-
+  /* displays user profile information, allowing users to view, edit, and save their details. 
+     includes fields for profile image, first name, last name, username, favorite dish, allergies, dietary restrictions, email, and profile ID.
+  */
   return (
     <div className="Profile">
       <h3>{isValidProfile ? "Your Profile:" : "Create Your Profile:"}</h3>

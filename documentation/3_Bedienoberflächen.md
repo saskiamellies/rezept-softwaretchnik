@@ -1,5 +1,5 @@
 ## Systemvoraussetzungen
-Nutzung über alle gängigen Browsers wie Egde, Crome, Firefox, Safari ...
+Nutzung über alle gängigen Browsers wie Egde, Crome, Firefox, Safari u.ä.. 
 
 ## Nutzer- und Berechtigungskonzept
 Noch in Arbeit für Login- und MyProfile
@@ -59,13 +59,10 @@ Jeder Screenshot zeigt einen bestimmten Bereich der Webseite: Suche, Rezeptansic
 ## Versionierung und Updates: 
 + aktuell (noch) nicht implementiert
 
-+ ## **Benutzeroberfläche Website**
-<!-- blank line -->
+## **Benutzeroberfläche Website**
 Klare und intuitive Benutzeroberfläche, die eine einfache Navigation und Interaktion mit der Webseite ermöglicht.
-<!-- blank line -->
 
 ## **Benutzeroberfläche APP**
-<!-- blank line -->
 Für die spätere mobile Version soll die Anwendung ein Design verwendet 
 werden bzw., aufweisen, dass eine optimale Darstellung auf verschiedenen 
 Geräten ermöglicht.

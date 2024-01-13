@@ -1,23 +1,30 @@
 import { useState, useEffect } from "react";
 
+  /* 
+    The `RecipeList` component receives four props:
+    - ingredient: A string containing the typed ingredient.
+    - isVegetarian: A boolean containing true, if the checkbox is checked
+    - area: A string containing the selected country
+    - onClickRecipe: A function called when a recipe card is clicked
+  */
 const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
 
   const [dishesUnfiltered, setDishesUnfiltered] = useState([]);
   const [dishes, setDishes] = useState([]);
 
-  /*Bei Eingabe einer Zutat werden API-Abfragen ausgeführt und die gefunden Gerichte in einem geschachtelten Array gespeichert*/
-   useEffect(() => {
+  /* When entering an ingredient, API requests are made, and the found dishes are stored in a nested array */
+  useEffect(() => {
     const fetchData = async () => {
       if (!ingredient) {
         setDishes([]);
         return;
       }
-    /*Zuerst werden die Übersichten (entält Name und Bild) aller gefundenen Gerichte mit dieser Zutat abgefragt*/
+      /* First, overviews (containing name and image) of all found dishes with this ingredient are queried */
       try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`);
         const data = await response.json();
 
-        /*Dann werden für jedes Element der Abfrage die Details abgefragt (z.B. Zutaten, Anleitung, Video) und jeweils in einem eigenen Array gespeichert */
+        /* Then, details for each item of the query are fetched (e.g. ingredients, instructions, video) and stored in separate arrays */
         if (data.meals) {
           const dishesFetch = await Promise.all(data.meals.map(async (dish) => {
               const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dish.idMeal}`);
@@ -25,7 +32,7 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
               return dishData.meals[0];
             })
           );
-          /*Wenn ein Filter gesetzt wurde, wird das gespeicherte Array entsprechend gefiltert*/
+          /* If a filter is set, the stored array is filtered accordingly */
           setDishesUnfiltered(dishesFetch);
           const filteredDishes = filterDishes(dishesFetch);
           setDishes(filteredDishes);
@@ -40,15 +47,13 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
     fetchData();
   }, [ingredient]);
 
-  /*Bei Aktivierung eines Filters (vegetarian, area) wird das gespeicherte Array entsprechend gefiltert*/
+  /* When a filter (vegetarian, area) is activated, the stored array is filtered accordingly */
   useEffect(() => {
-      const filteredDishes = filterDishes(dishesUnfiltered);
-      setDishes(filteredDishes);
-        }
-  , [isVegetarian, area]);
-  
+    const filteredDishes = filterDishes(dishesUnfiltered);
+    setDishes(filteredDishes);
+  }, [isVegetarian, area]);
 
-/*Funktion zur Filterung*/
+  /* Function for filtering */
   const filterDishes = (dishesUnfiltered) => {
     const vegetarianFilter = isVegetarian
       ? dishesUnfiltered.filter((dish) => dish.strCategory === 'Vegetarian')
@@ -61,24 +66,24 @@ const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
     return areaFilter;
   };
 
-  /*Ausgabe eines div-Elements je gefundenem Gericht mit den Angaben Name und Bild
-  Bei Klick auf das Element, wird dieses an die Eltern-Komponente überreicht und dort angezeigt*/
+  /* Output of a div element for each found dish with the details Name and Image
+  When clicking on the element, it is passed to the parent component and displayed there */
   return (
     <div className="output-container">
       {dishes?.length > 0 ? (
         <>
-          <h3>found {dishes.length} recipes:</h3>
+          <h3>Found {dishes.length} recipes:</h3>
           <div className="card-container">
             {dishes.map((dishComplete) => (
               <div key={dishComplete.idMeal} onClick={() => onClickRecipe(dishComplete)} className="card">
-                <img src={dishComplete.strMealThumb} alt="could not be loaded"  />
+                <img src={dishComplete.strMealThumb} alt="Could not be loaded" />
                 <h5 className="card-title">{dishComplete.strMeal}</h5>
               </div>
             ))}
           </div>
         </>
       ) : (
-        <p className="no-recipe-found">no recipe found</p>
+        <p className="no-recipe-found">No recipe found</p>
       )}
     </div>
   );
