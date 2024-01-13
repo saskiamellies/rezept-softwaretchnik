@@ -16,7 +16,7 @@
  Experience what it's like to always have a personal chef on hand - welcome to EnchantedEats, your partner for a smarter, healthier kitchen!
 
 ## functions
- - Recipe search by entering ingredients
+ - Recipe search by entering ingredients (currently only one ingredient)
  - Filtering function
  - Random recipe search
  - Create and save a profile
@@ -27,8 +27,8 @@
 ![Bild3](./documentation/img/Bild3.png)
 ![Bild4](./documentation/img/Bild4.png)
 
-Future Feature
- in prepation -> Menu Schedule
+Future Feature (in prepation)
+ - Saving recipes in meal schedule
 
 ![Bild5](./documentation/img/Bild5.png)
 
