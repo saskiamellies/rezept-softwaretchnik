@@ -9,7 +9,7 @@ Wir sind bemüht, Ihre Anfragen innerhalb von 48 Stunden zu beantworten.
 + Jan Gruner Mail:            s81694@bht-berlin.de
 + Saskia-Maria Mellies Mail:  s54177@bht-berlin.de
 <!-- blank line -->
-## Häufig gestellte Fragen (FAQs):_(Auch für spätere Releases)_ 
+## Häufig gestellte Fragen (FAQs):_(auch für spätere Releases)_ 
 Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuche, Account-Verwaltung und Nutzung der 'My Pantry'-Funktion. 
 ### F: Wie finde ich ein Rezept, das meinen Ernährungsbedürfnissen entspricht?
 
@@ -32,6 +32,7 @@ Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuc
       Ablaufdatum im Blick. Die Funktion hilft Ihnen auch, Rezepte zu finden, die Sie mit den vorhandenen Zutaten kochen können.
 
 ### F: Wie erstelle ich einen Essensplan?
+
    A: In Ihrem Profil finden Sie den Bereich 'Meal Schedule', wo Sie für jeden Tag der Woche Rezepte einplanen können. Sie können Rezepte aus Ihrer gespeicherten
       Sammlung oder neue Entdeckungen hinzufügen.
 

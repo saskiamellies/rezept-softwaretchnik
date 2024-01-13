@@ -50,22 +50,22 @@ die es den Nutzern ermöglicht, effizient und einfache Rezepte zu suchen und zu 
 <!-- blank line -->
 Das Ziel ist die Bereitstellung einer Kocherfahrung für Nutzer basierend auf Ernährungsvorlieben. Das MVP unterstützt die Verwertung vorhandener Lebensmittel, welche sich im Kühlschrank oder in der Vorratskammer befinden, oder schlägt Rezepte vor, die einen kleinen Zukauf benötigen.
 <!-- blank line -->
-- Filterfunktion:
+- **Filterfunktion:**
 Nutzer können eine Zutat, die sie zu Hause haben, eingeben und sich Rezepte dazu anzeigen lassen. Außerdem können sie die Ergbenisse nach Land filtern und auch die Filterfunktion "Vegetarisch" nutzen. 
 <!-- blank line -->
-- Rezeptvorschläge:
+- **Rezeptvorschläge:**
 Rezepte werden auf Basis des Queries erstellt, auch kombiniert mit dem Filter "Land" oder "Vegetarisch". Außerdem kann man sich ein zufälliges Rezept anzeigen lassen.
 <!-- blank line -->
-- Anzeigen von Details:
+- **Anzeigen von Details:**
 Die Suchergebnisse werden in Form von Karten mit der Bezeichnung und einem Bild dargestellt. Durch das Klicken auf eine Karte werden die Details angezeigt:
     - Foto des Gerichtes
     - benötigte Zutaten
     - Kochanleitung als Text
     - Kochanleitung als YouTube-Video (wenn vorhanden)
-- Profilseite:
+- **Profilseite:**
     - Erstellung, Speicherung, Änderung und Löschung eines Profils (akutell auf LocalStorage)
     - Zufällig generiertes Profilbild, zufällig generierte UniqueID
-- Vorrat verwalten:
+- **Vorrat verwalten:**
     - Anlegen von Listen, in der das Produkt, Einheit, Kategorie und Mindeshaltbarkeitsdatum erfasst werden kann
     - Listen können angezeigt und gelöscht werden
     - Wenn ein Mindesthaltbarkeitsdatum erreicht ist, wird dieses rot und mit expired gekennzeichnet
@@ -78,44 +78,44 @@ Im Folgenden sind die möglichen spezifischen Ziele für jede Release-Version da
 Das Ziel des Release 1 „Personalisierung und Organisation“ ist die Schaffung einer benutzerzentrierten und organisierten Kocherfahrung, die es den Nutzern ermöglicht, auf der Grundlage ihres persönlichen Lebensmittelvorrats maßgeschneiderte Rezeptvorschläge zu erhalten. Dieser Release zielt darauf ab, den Nutzern eine intuitive und strukturierte Plattform zu bieten, die sowohl ihre individuellen Ernährungsvorlieben als auch die vorhandenen Zutaten berücksichtigt, um die Lebensmittelverschwendung zu reduzieren und die tägliche Mahlzeitenplanung zu vereinfachen.
 - **_Hochladen und Verwalten von eigenen Rezepten:_**
 Der Nutzer soll die Möglichkeit haben, eigene Rezepte, auch mit Foto oder Video hochzuladen. Diese sollen aus Sicherheitsgründen in einem gesicherten Account gespeichert werden und durch Freigabe des Nutzers für andere sichtbar sein.
-- Erstellen eines Logins:
+- **_Erstellen eines Logins:_**
 Um eigene Rezepte hinzuzufügen und individuelle Einstellungen zu speichern, soll dem Nutzer die Möglichkeit gegeben werden, sein Profil in einem Account zu speichern und anzupassen
-- Vorratsmanagement:
+- **_Vorratsmanagement:_**
 Anzeigen der erfassten Lebensmittel nach Kategorie und auch anlegen mehrere unterschiedlicher Listen zur Strukturierung.
-- Erstellen eines Essensplanes:
+- **_Erstellen eines Essensplanes:_**
 Der Nutzer sucht sich Rezepte heraus und kann diese in einem Essensplan speichern, der als Wochenplan ausgelegt ist. Dieser kann ausgedruckt, gespeichert oder archiviert werden. Beim Ausdruck werden die Zutaten und die Zubereitung in dem jeweiligen Tag dargestellt. Beim Speichern und archivieren des Essenslanes werden die Links zum Rezept hinterlegt.
 <!-- blank line -->
 **Release 2: Gesundheitsorientierte Funktionen**
 Das Ziel des Release 2 „Gesundheitsorientierte Funktionen“ ist die Erweiterung der Webanwendung „EnchantedEats.de„ um Funktionen, die Gesundheits- und Fitnessaspekte berücksichtigen. Sie sollen den Nutzern dabei helfen, ihre Ernährung gemäß ihren gesundheitlichen Bedürfnissen und Fitnesszielen zu gestalten. Dieses Release soll die Webseite in ein umfassendes Werkzeug verwandeln, das nicht nur beim Kochen hilft, sondern auch bei der Förderung eines gesunden Lebensstils.
-- Eingabe von Gesundheitsdaten:
+- **_Eingabe von Gesundheitsdaten:_**
 Eingabe von Größe, Alter, Geschlecht und besonderen gesundheitlichen Ernährungsformen.
-- Eingaben von Sport- und Aktivitätsdaten:
+- **_Eingaben von Sport- und Aktivitätsdaten:_**
 Auswahl der bevorzugten Sportart und Rezepte, die dem Nährstoffbedarf der jeweiligen Aktivität entsprechen.
-- Kalorienbedarfsrechner:
+- **_Kalorienbedarfsrechner:_**
 Die Website berechnet den durchschnittlichen Kalorienbedarf und zeigt an, wie viel Prozent des Bedarfs mit den Rezeptportionen gedeckt werden.
-- Ernährungsvorlieben:
+- **_Ernährungsvorlieben:_**
 Anpassung von Rezeptvorschlägen basierend auf Allergien, Fastenzeiten, speziellen Diäten oder Laktoseintoleranz.
 <!-- blank line -->
 **Release 3: Integration und Interaktion**
 Das Ziel des Release 3 „Integration und Interaktion“ ist die Einführung der erweiterten Funktionen, die eine Interaktion mit der Webseite und die Individualisierung des Nutzererlebnisses weiter verbessern. Dies umfasst die Möglichkeit, neue Lebensmittel durch digitale Kassenzettel schnell und einfacher zu importieren und so den Lebensmittelvorrat aktuell zu halten und effizient zu verwalten. Die Webseite wird zu einem umfassenden Küchenassistenten, der den Nutzern dabei hilft, ihren Alltag in der Küche besser zu organisieren, um eigene oder Rezepte von anderen Köchen schneller wieder zu finden. 
-- Anbindung an den digitalen Kassenzettel:
+- **_Anbindung an den digitalen Kassenzettel:_**
 Importieren von Kassenzetteln, welche durch die jeweilige Kundenkarte z.B. Lidl oder Kaufland Website/App angebunden ist, um die Lebensmittel automatisch in der „Vorratsliste“ zu aktualisieren
-- Bewertungssystem:
+- **_Bewertungssystem:_**
 Nutzer können Rezepte anderer Nutzer bewerten (Sterne) und entsprechend kommentieren.
-- QR-Code-Erzeugung:
+- **_QR-Code-Erzeugung:_**
 Für selbst erstellte Rezepte wird ein QR-Code generiert. Dadurch kann man  Rezepte wieder leicht ausfindig machen und/ oder mit anderen zu teilen.
 <!-- blank line -->
 **Release 4: Community-Fokus und erweiterte Interaktion**
 Das Ziel der Release 4 „Community-Fokus und erweiterte Interaktion“ ist die Förderung einer aktiven, engagierten und interaktiven Community rund um die vielen verschiedenartigen Rezepte, die den Austausch von Rezepten und die Bewertungen und Kommentaren ermöglicht. Dieses Release soll die Anwendung in eine soziale Plattform verwandeln, die nicht nur individuelle Nutzererfahrungen unterstützt, sondern auch den Austausch und die Vernetzung innerhalb der Koch-Community fördert.
-- Community-Feed:
+- **_Community-Feed:_**
 Nutzer können nach ihrer Eingabe der Login-Daten, dann  ihre eigenen Rezepte teilen, Highlights entdecken und sich inspirieren lassen.
-- Interaktives Bewertungssystem:
+- **_Interaktives Bewertungssystem:_**
 Nutzer können nicht nur die die vielen Rezepte bewerten, sondern auch ausführlichere Bewertungen mit Fotos ihrer Kochergebnisse hinzufügen. [Ein Bewertungssystem müsste noch separat entwickelt werden]
-- Kommentar- und Diskussionsbereich:
+- **_Kommentar- und Diskussionsbereich:_**
 Unter jedem vorhandenem Rezept, können sich Nutzer Tipps austauschen, Fragen stellen und Feedback geben.
-- Community-basierte Rezeptsammlungen:
+- **_Community-basierte Rezeptsammlungen:_**
 Nutzer können ihre eigene Rezeptsammlungen erstellen und teilen, ähnlich wie Playlists bei Musik Streaming Diensten, die von anderen Nutzern abonniert werden können.
-- Follow- und Freundschaftsfunktion:
+- **_Follow- und Freundschaftsfunktion:_**
 Nutzer können anderen Köchen folgen und Freundschaftsanfragen senden, um deren Aktivitäten und Rezeptfreigaben im Feed zu sehen. 
-- Live-Kochsessions und Tutorials:
+- **_Live-Kochsessions und Tutorials:_**
 Integration von Live-Streaming-Optionen, wo Nutzer Kochsessions hosten oder an Tutorials teilnehmen können. Tutorials könnten über Youtube abrufbar sein.
