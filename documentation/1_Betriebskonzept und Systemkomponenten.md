@@ -10,8 +10,6 @@
 - **Vercel**: Eine Plattform für serverloses Deployment, die für das Hosting und die Bereitstellung dieses Projekts verwendet wird.
 - **Sentry.io**: Ein Überwachungstool zur Fehlerverfolgung und Leistungsüberwachung.
 
-
-- **ESLint**: Ein statisches Codeanalysetool zur Identifizierung und Behebung von Problemen im JavaScript-Code.
 ## **Anwendungsplattform**
 <!-- blank line -->
 Primäre Plattform: Web-Anwendung
