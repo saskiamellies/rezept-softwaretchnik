@@ -58,3 +58,4 @@ Jeder Screenshot zeigt einen bestimmten Bereich der Webseite: Suche, Rezeptansic
 
 ## Versionierung und Updates: 
 + aktuell (noch) nicht implementiert
+
