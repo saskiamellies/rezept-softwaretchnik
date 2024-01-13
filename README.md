@@ -34,15 +34,16 @@ Future Feature (in prepation)
 
 
 ## technologies
-- **React**: A JavaScript library for building user interfaces.
-- **JavaScript**: The programming language used for implementing logical functions and interactions.
-- **CSS**: The stylesheet language used for styling and designing the user interface.
-- **Bootstrap**: A frontend framework for developing responsive and stylish websites.
-- **Jest**: A JavaScript testing framework used for unit and integration testing.
-- **MealDB API**: An external API (https://www.themealdb.com/api.php) used to retrieve meal-related data.
-- **GitHub Actions**: A CI/CD tool integrated with GitHub for automating workflows.
-- **Vercel**: A platform for serverless deployment used for hosting and deploying this project.
-- **Sentry.io**: A monitoring tool used for error tracking and performance monitoring.
+- **React**: A JavaScript library for building user interfaces
+- **JavaScript**: The programming language used for implementing logical functions and interactions
+- **CSS**: The stylesheet language used for styling and designing the user interface
+- **Bootstrap**: A frontend framework for developing responsive and stylish websites
+- **Jest**: A JavaScript testing framework used for unit and integration testing
+- **MealDB API**: An external API (https://www.themealdb.com/api.php) used to retrieve meal-related data
+- **GitHub Actions**: A CI/CD tool integrated with GitHub for automating workflows
+- **Vercel**: A platform for serverless deployment used for hosting and deploying this project
+- **Sentry.io**: A monitoring tool used for error tracking and performance monitoring
+
 
 ## Deployment
 There is `test+deploydeploy.yaml` file for workflow: After push into master, it will be automatically tested and deployed to Vercel once tests are successful. 
