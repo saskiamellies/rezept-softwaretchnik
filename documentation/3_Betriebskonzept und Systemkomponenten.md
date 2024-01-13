@@ -29,4 +29,7 @@ Anforderungen an den Server sind noch zu definieren, sollten aber Skalierbarkeit
 <!-- blank line -->
 Bei der Verwendung von Youtube in HD Qualität ist eine Bandbreite von max. 15Mbit/s notwendig.
 Ansonsten reichen 5.0 Mbit/s aus um Videos ruckelfrei sehen zu können.
-
+## **Komponenten**
+Die nachfolgende Grafik soll als Schaubild einen Überblick über unser Vorhaben geben:
+<!-- blank line -->
+![Bild10](./img/Bild10.png)

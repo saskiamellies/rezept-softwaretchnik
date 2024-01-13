@@ -60,12 +60,9 @@ Jeder Screenshot zeigt einen bestimmten Bereich der Webseite: Suche, Rezeptansic
 + aktuell (noch) nicht implementiert
 
 + ## **Benutzeroberfläche Website**
-<!-- blank line -->
 Klare und intuitive Benutzeroberfläche, die eine einfache Navigation und Interaktion mit der Webseite ermöglicht.
-<!-- blank line -->
 
 ## **Benutzeroberfläche APP**
-<!-- blank line -->
 Für die spätere mobile Version soll die Anwendung ein Design verwendet 
 werden bzw., aufweisen, dass eine optimale Darstellung auf verschiedenen 
 Geräten ermöglicht.
