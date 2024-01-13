@@ -3,8 +3,12 @@ import RecipeInput from "./RecipeInput";
 import RecipeList from "./RecipeList";
 import RecipeDetails from "./RecipeDetails";
 
+    /* 
+    The `Recipes` component receives one prop:
+    - onRecipeSave: A function called when the "Save" button is clicked.
+  */
 const Recipes = ({ onRecipeSave }) => {
-  
+
   const [ingredient, setIngredient] = useState("");
   const [isVegetarian, setIsVegetarian] = useState(false);
   const [area, setArea] = useState("");
@@ -31,9 +35,10 @@ const Recipes = ({ onRecipeSave }) => {
   };
 
   /* When recipe details are saved, pass them to the parent component */
+  /* function is not yet fully implemented*/
   const handleSaveRecipe = (dish) => {
     onRecipeSave(dish);
-    window.alert("Meal saved to meal schedule");
+    {/*window.alert("Meal saved to meal schedule");*/} 
   };
 
   /* When recipe details are closed, display the recipe list again */

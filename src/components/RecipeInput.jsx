@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 
+  /* 
+    The `RecipeList` component receives four props:
+    - onClickingSearch: A function called when search button is clicked
+    - onClickingRandom: A function called when random-recipe-button is clicked
+    - onCheckboxChange: A function called when Checkbox changes
+    - onAreaChange: A function called when dropdown-sleection changes
+  */
 const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onAreaChange }) => {
 
   const [isVegetarian, setIsVegetarian] = useState(false);

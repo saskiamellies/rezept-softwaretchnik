@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
 
+  /* 
+    The `RecipeList` component receives four props:
+    - ingredient: A string containing the typed ingredient.
+    - isVegetarian: A boolean containing true, if the checkbox is checked
+    - area: A string containing the selected country
+    - onClickRecipe: A function called when a recipe card is clicked
+  */
 const RecipeList = ({ ingredient, isVegetarian, area, onClickRecipe }) => {
 
   const [dishesUnfiltered, setDishesUnfiltered] = useState([]);
