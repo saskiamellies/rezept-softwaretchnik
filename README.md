@@ -16,7 +16,7 @@
  Experience what it's like to always have a personal chef on hand - welcome to EnchantedEats, your partner for a smarter, healthier kitchen!
 
 ## functions
- - Recipe search by entering ingredients
+ - Recipe search by entering ingredients (currently only one ingredient)
  - Filtering function
  - Random recipe search
  - Create and save a profile
@@ -27,18 +27,20 @@
 ![Bild3](./documentation/img/Bild3.png)
 ![Bild4](./documentation/img/Bild4.png)
 
-Future Feature
- in prepation -> Menu Schedule
+Future Feature (in prepation)
+ - Saving recipes in meal schedule
 
 ![Bild5](./documentation/img/Bild5.png)
 
 
 ## installation & start
 ****************************************************************************************************
-1. Clone or download the project source code to your local machine with `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`
-2. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn. (`npm install` or `yarn install`.
-3. Run the development server with `npm start` or `yarn start`.
-4. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
+1. Clone or download the project source code to your local machine with
+   `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`
+3. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn.
+   (`npm install` or `yarn install`).
+4. Run the development server with `npm start` or `yarn start`.
+5. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
 ****************************************************************************************************
 
 

@@ -20,38 +20,38 @@
 ----
 2. [**Netzwerkkonzept**](2_Netzwerkkonzept.md)
 -  Bandbreite (Carrier, QoS)
--    Anteile intern/extern
--    Was wird benötigt?
-    - IP-Adressen/ Ports /Firewallfreischaltung/QoS
-      - Platz im Technikraum (nur, wenn Hardware)
-      - Anzahl HE
-      - Tiefe
-      - Cloud-Bedarf
-   - Autarke Anteile
-   - Darstellung Aufbau
+
 ----
 3. [**Betriebskonzept**](3_Betriebskonzept.md)
 - Anwendungsplattform
 - Datenbankintegration
 - Websitehosting
-- Hardware – Wartungsbedarf?
-- Betriebssystem
-- Updateverfahren (Securitypatches,..)
-- Softwarepflege
-  - Securitypatches,..
-- Notfallkonzeption
-- Datensicherung  / Logs
 ----
 4. [**Support**](4_Support.md)
-- Entry Point für Incidents
-- Supportzeit
-- Reaktionszeit
-- Wiederherstellungszeit
-- Wartungszugang erforderlich?
+- Kontaktinformationen: 
+- Häufig gestellte Fragen (FAQs): 
+- Problemberichterstattung: 
+- Verhaltenskodex: 
+- Sicherheitsrichtlinien: 
+- Community-Beiträge: 
+- Lizenzinformationen: 
 ----
 5. [**Bedienoberflächen**](5_Bedienoberflächen.md)
 - Systemvoraussetzungen
 - Nutzer- und Berechtigungskonzept
+- Übersicht des User Interface (UI)
+- Design-Prinzipien
+- Farbschema und Typografie
+- Navigationsstruktur
+- Interaktionsdesign
+- Responsives Design
+- Zugänglichkeit (Accessibility)
+- UI-Komponentenbibliothek 
+- Screenshots und Beispiele
+- Feedback- und Fehlermeldungen
+- Internationalisierung und Lokalisierung
+- Richtlinien zur UI-Entwicklung
+- Versionierung und Updates
 ----
 6. [**Design**](6_Design.md)
 - Anforderungen/ Requirements

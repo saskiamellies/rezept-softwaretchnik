@@ -17,7 +17,7 @@ Weiterhin bieten Apps auch einen Offline-Zugriff, um die Rezepte auf dem Endger�
 <!-- blank line -->
 ## Projektziel
 <!-- blank line -->
-**Entwicklung einer Webanwendung für Rezepte mit dem Namen “zutatenzauber”, die auf einer robusten Datenbank basiert.**
+**Entwicklung einer Webanwendung für Rezepte mit dem Namen 'Enchanted Eats', die Rezepte, einen Essensplan und einen Vorrat vereint, um eine umfassende  Userexperience zu erzeugen.**
 <!-- blank line -->
 
 ## User Story
