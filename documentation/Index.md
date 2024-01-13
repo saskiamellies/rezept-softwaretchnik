@@ -7,30 +7,28 @@
 - Projektziel
 - User Story
 - Zielgruppen
+- Anforderungen/ Requirements
 - Minimal Viable Product (MVP)
 - Releases
 ----
-1.   [**Systemkomponenten**](1_Systemkomponenten.md)
-- Programmiersprache
-----
-2. [**Netzwerkkonzept**](2_Netzwerkkonzept.md)
+1. [**Betriebskonzept und Systemkomponenten**](1_Betriebskonzept_und_Systemkomponenten.md)
+-  Technologien
+-  Anwendungsplattformen
+-  Komponenten
+-  Datenbankintegration
+-  Websitehosting
 -  Bandbreite (Carrier, QoS)
 ----
-3. [**Betriebskonzept**](3_Betriebskonzept.md)
-- Anwendungsplattform
-- Datenbankintegration
-- Websitehosting
+2. [**Support**](2_Support.md)
+- Kontaktinformationen
+- Häufig gestellte Fragen (FAQs) (Auch für spätere Releases)
+- Problemberichterstattung
+- Verhaltenskodex
+- Sicherheitsrichtlinien
+- Community-Beiträge
+- Lizenzinformationen
 ----
-4. [**Support**](4_Support.md)
-- Kontaktinformationen: 
-- Häufig gestellte Fragen (FAQs): 
-- Problemberichterstattung: 
-- Verhaltenskodex: 
-- Sicherheitsrichtlinien: 
-- Community-Beiträge: 
-- Lizenzinformationen: 
-----
-5. [**Bedienoberflächen**](5_Bedienoberflächen.md)
+3. [**Bedienoberflächen**](3_Bedienoberflächen.md)
 - Systemvoraussetzungen
 - Nutzer- und Berechtigungskonzept
 - Übersicht des User Interface (UI)
@@ -46,8 +44,6 @@
 - Internationalisierung und Lokalisierung
 - Richtlinien zur UI-Entwicklung
 - Versionierung und Updates
-----
-6. [**Design**](6_Design.md)
-- Anforderungen/ Requirements
 - Benutzeroberfläche Website
 - Benutzeroberfläche APP
+----
