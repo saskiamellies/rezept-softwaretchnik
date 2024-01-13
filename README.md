@@ -35,47 +35,21 @@ Future Feature (in prepation)
 
 
 ## installation & start
-****************************************************************************************************
 1. Clone or download the project source code to your local machine with
    `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`
 3. Install dependencies. This can be done using a package manager such as npm (Node Package Manager) or yarn.
    (`npm install` or `yarn install`).
 4. Run the development server with `npm start` or `yarn start`.
 5. Access the project in your web browser by navigating to http://localhost:3000 or another specified URL.
-****************************************************************************************************
-
-
-### Installation 
-****************************************************************************************************
-*** - clone repo with `git clone https://github.com/saskiamellies/rezept-softwaretchnik.git`     ***
-*** - install Node and npm                                                                       ***
-*** - install dependencies:                                                                      ***
-***   `npm install --save react-router-dom'                                                      ***
-***   `npm install random-avatar-generator'                                                      ***
-****************************************************************************************************
-
-### Start
- - start development server with 'npm start'
-   application runs on 'http://127.0.0.1:3000'
-
-
-### Tests
- - run tests with 'npm test'
 
 
 ## technologies
-Front End:
- - React
- - Bootstrap
- - JavaScript
- - HTML
- - CSS
-
-Back-End:
- - Vercel ???
-
-API:
- - https://www.themealdb.com/api.php
+- **React**: A JavaScript library for building user interfaces.
+- **JavaScript**: The programming language used for implementing logical functions and interactions.
+- **CSS**: The stylesheet language used for styling and designing the user interface.
+- **Bootstrap**: A frontend framework for developing responsive and stylish websites.
+- **Vercel**: A platform for serverless deployment used for hosting and deploying this project.
+- **MealDB API**: An external API (https://www.themealdb.com/api.php) used to retrieve meal-related data.
 
 
 ## Deployment
