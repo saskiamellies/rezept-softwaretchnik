@@ -23,6 +23,7 @@ const MyPantryInput = ({ onTypingName, onTypingAmount, onTypingUnit, onTypingCat
           <select id="unit" onChange={(e) => onTypingUnit(e.target.value)}>
             <option value="--">choose:</option>
             <option value="kg">kilograms</option>
+            <option value="gr">grams</option>
             <option value="pcs">pieces</option>
             <option value="ltr">litres</option>
             <option value="btl">bottles</option>

@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo } from 'react';
-//import * as Sentry from "@sentry/react";
 import { v4 as uuidv4 } from 'uuid';
 import { AvatarGenerator } from 'random-avatar-generator';
 

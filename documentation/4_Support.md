@@ -8,9 +8,8 @@ Wir sind bemüht, Ihre Anfragen innerhalb von 48 Stunden zu beantworten.
 + Theo Prill Mail:            s82168@bht-berlin.de
 + Jan Gruner Mail:            s81694@bht-berlin.de
 + Saskia-Maria Mellies Mail:  s54177@bht-berlin.de
-+ 
 <!-- blank line -->
-## Häufig gestellte Fragen (FAQs): 
+## Häufig gestellte Fragen (FAQs):_(Auch für spätere Releases)_ 
 Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuche, Account-Verwaltung und Nutzung der 'My Pantry'-Funktion. 
 ### F: Wie finde ich ein Rezept, das meinen Ernährungsbedürfnissen entspricht?
 
@@ -42,7 +41,7 @@ Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuc
       Fehler aufgetreten ist, damit wir uns so schnell wie möglich darum kümmern können.
 <!-- blank line -->
 ## Problemberichterstattung: 
-Falls Sie auf unserer Webseite auf ein Problem stoßen, können Sie dieses per e-Mail melden. Bitte beschreiben Sie das Problem so genau wie möglich, damit wir uns  
+Falls Sie auf unserer Webseite auf ein Problem stoßen, können Sie dieses per E-Mail melden. Bitte beschreiben Sie das Problem so genau wie möglich, damit wir uns  
 schnellstmöglich darum kümmern kann."
 <!-- blank line -->
 ## Verhaltenskodex: 
@@ -58,4 +57,4 @@ Ihre Meinungen und Rezepte machen 'EnchantedEats' zu einem lebendigen Ort. Erfah
 oder sich an Diskussionen beteiligen.
 <!-- blank line -->
 ## Lizenzinformationen: 
-siehe LICENCE
+Unsere Lizenz ist die MIT licence

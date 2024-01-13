@@ -1,5 +1,5 @@
 ## Systemvoraussetzungen
-Nutzung über alle gängigen Browsers wie Egde, Crome, Firefox, Safari ...
+Nutzung über alle gängigen Browsers wie Egde, Crome, Firefox, Safari u.ä.. 
 
 ## Nutzer- und Berechtigungskonzept
 Noch in Arbeit für Login- und MyProfile

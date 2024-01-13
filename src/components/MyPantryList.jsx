@@ -107,7 +107,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
               <td>{foodItem.categorie}</td>
               <td style={{ color: isExpired(foodItem.bestBefore) ? 'red' : 'black' }}>
                 {foodItem.bestBefore}
-                {isExpired(foodItem.bestBefore) && <span> - abgelaufen</span>}
+                {isExpired(foodItem.bestBefore) && <span> - expired</span>}
               </td>
               <td>
                 {/* Checkbox, zur Auswahl einer Zeile/ eines eingegebenen Elements*/}
