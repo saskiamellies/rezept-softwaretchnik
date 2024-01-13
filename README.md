@@ -44,7 +44,6 @@ Future Feature (in prepation)
 - **Vercel**: A platform for serverless deployment used for hosting and deploying this project.
 - **Sentry.io**: A monitoring tool used for error tracking and performance monitoring.
 
-
 ## Deployment
 There is `test+deploydeploy.yaml` file for workflow: After push into master, it will be automatically tested and deployed to Vercel once tests are successful. 
 
