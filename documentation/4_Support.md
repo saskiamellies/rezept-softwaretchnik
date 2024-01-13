@@ -8,6 +8,7 @@ Wir sind bemüht, Ihre Anfragen innerhalb von 48 Stunden zu beantworten.
 + Theo Prill Mail:            s82168@bht-berlin.de
 + Jan Gruner Mail:            s81694@bht-berlin.de
 + Saskia-Maria Mellies Mail:  s54177@bht-berlin.de
++ 
 <!-- blank line -->
 ## Häufig gestellte Fragen (FAQs): 
 Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuche, Account-Verwaltung und Nutzung der 'My Pantry'-Funktion. 
