@@ -15,6 +15,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
     if (selectedItems.includes(itemId)) {
       setSelectedItems(selectedItems.filter((id) => id !== itemId));
     } else {
+      setSelectedItems([...selectedItems, itemId]);
     }
   };
 //deletes selected items
@@ -89,7 +90,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
       <table>
         <thead>
           <tr>
-            {/*column-hreadlines with sorting function*/}
+            {/*column-headlines with sorting function*/}
             {columnHeaders.map((header, index) => (
               <th key={index} onClick={() => requestSort(header)}>
                 {header}

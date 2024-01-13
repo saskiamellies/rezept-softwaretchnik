@@ -5,22 +5,17 @@ import MyPantryList from "./MyPantryList";
 
 export default function MyPantry() {
    
-  // list of the stored food, saved in local storage
+ 
   const [foodList, setFoodList] = useState(JSON.parse(localStorage.getItem("foodList")) || []);
-  //sets list visible or invisible
   const [showList, setShowList] = useState(false);
-  //sets a new entry from the values of the input fields
   const [newEntry, setNewEntry] = useState({ name: "", amount: "", unit: "", categorie: "", bestBefore: "" });
-  //refreshes the new Entry state, if a user entered values in the input fields
   const handleInputText = (value, property) => {
     setNewEntry((prevEntry) => ({ ...prevEntry, [property]: value.trim() }));
   };
    //saves new entry from the user
-  const saveInput = () => {
-    
-    //Konstante, die zuständig ist für die Überprüfung, ob Name oder Menge fehlen
+  const saveInput = () => { 
     const missingFields = [];
-    //checks if a name is filled in into the name field and returns Name, if field is empty
+
     if (!newEntry.name || !newEntry.name.trim()) {
       missingFields.push("Name");
     }
