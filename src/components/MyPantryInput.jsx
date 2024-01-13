@@ -8,6 +8,7 @@
     - onTypingDate: A function called when the input-field changes
   */
 const MyPantryInput = ({ onTypingName, onTypingAmount, onTypingUnit, onTypingCategorie, onTypingDate }) => {
+  
   return (
     <div className="input-container2">
        <div className="col">
