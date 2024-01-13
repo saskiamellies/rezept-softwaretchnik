@@ -38,9 +38,9 @@ Future Feature (in prepation)
 - **JavaScript**: The programming language used for implementing logical functions and interactions.
 - **CSS**: The stylesheet language used for styling and designing the user interface.
 - **Bootstrap**: A frontend framework for developing responsive and stylish websites.
-- **Vercel**: A platform for serverless deployment used for hosting and deploying this project.
 - **MealDB API**: An external API (https://www.themealdb.com/api.php) used to retrieve meal-related data.
-
+- **Vercel**: A platform for serverless deployment used for hosting and deploying this project.
+- **Sentry.io**: A monitoring tool used for error tracking and performance monitoring.
 
 ## Deployment
 There is `test+deploydeploy.yaml` file for workflow: After push into master, it will be automatically tested and deployed to Vercel once tests are successful. 

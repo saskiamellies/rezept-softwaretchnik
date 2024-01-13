@@ -5,6 +5,7 @@
 - **CSS**: Für Styling und Design
 - **Bootstrap**: Ein Frontend-Framework als Stilmittel
 - **Sentry**: Als Monitoring-Tool eingesetzt 
+- **Vercel**: Eine Plattform für serverloses Deployment, die für das Hosting und Bereitstellen dieses Projekts verwendet wird.
 ## **Anwendungsplattform**
 <!-- blank line -->
 Primäre Plattform: Web-Anwendung
