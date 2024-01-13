@@ -479,3 +479,8 @@ h3 {
   text-align: center;
   margin-top: 5px;
 }
+
+.logo {
+  width: 70px; 
+  height: auto;
+}
