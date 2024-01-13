@@ -1,11 +1,17 @@
 ## **Technologien**
 <!-- blank line -->
-- **React**: Ein JavaScript Framework
-- **JavaScript**: Die Programmiersprache für die Implementierung von Funktionen und Interaktionen genutzt.
-- **CSS**: Für Styling und Design
-- **Bootstrap**: Ein Frontend-Framework als Stilmittel
-- **Sentry**: Als Monitoring-Tool eingesetzt 
-- **Vercel**: Eine Plattform für serverloses Deployment, die für das Hosting und Bereitstellen dieses Projekts verwendet wird.
+- **React**: Eine JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen.
+- **JavaScript**: Die Programmiersprache, die für die Umsetzung logischer Funktionen und Interaktionen verwendet wird.
+- **CSS**: Die Stylesheet-Sprache, die für das Styling und Design der Benutzeroberfläche genutzt wird.
+- **Bootstrap**: Ein Frontend-Framework für die Entwicklung responsiver und stilvoller Websites.
+- **Jest**: Ein JavaScript-Testframework zur Durchführung von Einheits- und Integrationstests.
+- **MealDB API**: Eine externe API (https://www.themealdb.com/api.php), die zur Abfrage von informationsbezogenen Daten verwendet wird.
+- **GitHub Actions**: Ein CI/CD-Tool, das in GitHub integriert ist, um Workflows zu automatisieren.
+- **Vercel**: Eine Plattform für serverloses Deployment, die für das Hosting und die Bereitstellung dieses Projekts verwendet wird.
+- **Sentry.io**: Ein Überwachungstool zur Fehlerverfolgung und Leistungsüberwachung.
+
+
+- **ESLint**: Ein statisches Codeanalysetool zur Identifizierung und Behebung von Problemen im JavaScript-Code.
 ## **Anwendungsplattform**
 <!-- blank line -->
 Primäre Plattform: Web-Anwendung
