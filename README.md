@@ -15,6 +15,7 @@
  completely and creatively. With EnchantedEats by your side, healthy, delicious food tailored to your desires is just a fingertip away. 
  Experience what it's like to always have a personal chef on hand - welcome to EnchantedEats, your partner for a smarter, healthier kitchen!
 
+
 ## functions
  - Recipe search by entering ingredients (currently only one ingredient)
  - Filtering function
