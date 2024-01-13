@@ -90,7 +90,6 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
             <option value="Turkish">Turkish</option>
             <option value="Unknown">Unknown</option>
             <option value="Vietnamese">Vietnamese</option>
-          {/* Weitere Optionen hier hinzufügen */}
             </select>
           </form>
         </div>
