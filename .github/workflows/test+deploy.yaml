@@ -13,14 +13,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 16
-      
+          
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
       - name: Install Dependencies for Tests
         run: npm install --save-dev jest
     
@@ -31,13 +31,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 16
+          
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
