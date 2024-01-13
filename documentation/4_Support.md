@@ -12,18 +12,22 @@ Wir sind bemüht, Ihre Anfragen innerhalb von 24 Stunden zu beantworten.
 ## Häufig gestellte Fragen (FAQs): 
 Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuche, Account-Verwaltung und Nutzung der 'My Pantry'-Funktion. 
  + F: Wie finde ich ein Rezept, das meinen Ernährungsbedürfnissen entspricht?
+
    A: Nutzen Sie unsere erweiterte Suchfunktion, um Rezepte nach Ihren Ernährungspräferenzen zu filtern. Sie können Optionen wie 'vegetarisch', 'vegan' oder
       'glutenfrei' auswählen und nach Zutaten, die Sie bevorzugen oder ausschließen möchten, suchen.
    
  + F: Wie kann ich ein Rezept zu meiner persönlichen Sammlung hinzufügen?
+
    A: Wenn Sie ein Rezept finden, das Ihnen gefällt, klicken Sie einfach auf die 'Speichern'-Schaltfläche auf der Rezeptkarte. Das Rezept wird dann in
       Ihrem Profil unter 'Gespeicherte Rezepte' abgelegt.
 
  + F: Kann ich meine eigenen Rezepte auf 'EnchantedEats' teilen?
+
    A: Aktuell noch nicht, aber in den nächsten Releases wird es dann möglich sein und unsere Mitglieder unserer Community sind herzlich eingeladen, ihre
       Lieblingsrezepte zu teilen. Bitte gehen Sie zu 'Rezept erstellen' in Ihrem Profilbereich und folgen Sie den Anweisungen zum Hochladen Ihres Rezepts.
 
  + F: Wie funktioniert die 'My Pantry'-Funktion?
+
    A: Mit 'My Pantry' können Sie die Zutaten, die Sie zu Hause haben, verwalten. Fügen Sie neue Zutaten hinzu, aktualisieren Sie die Mengen und halten Sie das
       Ablaufdatum im Blick. Die Funktion hilft Ihnen auch, Rezepte zu finden, die Sie mit den vorhandenen Zutaten kochen können.
 
@@ -32,6 +36,7 @@ Unser FAQ-Bereich bietet Antworten auf allgemeine Fragen zu Themen wie Rezeptsuc
       Sammlung oder neue Entdeckungen hinzufügen.
 
  + F: Wie melde ich einen Fehler auf der Webseite?
+ 
    A: Wenn Sie auf einen technischen Fehler stoßen, nutzen Sie bitte unser Kontaktformular, um das Problem zu melden. Beschreiben Sie, was passiert ist und wo der   
       Fehler aufgetreten ist, damit wir uns so schnell wie möglich darum kümmern können.
 <!-- blank line -->
