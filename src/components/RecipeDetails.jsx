@@ -28,10 +28,7 @@ const RecipeDetails = ({ recipeDetails, onSave, onClose }) => {
           .map((index) => (
             /* Create a list item for each remaining index */
             <li key={index}>
-              {/* Display the quantity and ingredient name for the current index
-                  Quantity: recipeDetails[`strMeasure${index}`]
-                  Ingredient Name: recipeDetails[`strIngredient${index}`]
-               */}
+              {/* Display the quantity and ingredient name for the current index */}
               {recipeDetails[`strMeasure${index}`]}{" "}
               {recipeDetails[`strIngredient${index}`]}
             </li>

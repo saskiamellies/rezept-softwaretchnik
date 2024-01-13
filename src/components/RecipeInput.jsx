@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
   /* 
-    The `RecipeList` component receives four props:
+    The `RecipeInput` component receives four props:
     - onClickingSearch: A function called when search button is clicked
     - onClickingRandom: A function called when random-recipe-button is clicked
     - onCheckboxChange: A function called when Checkbox changes
