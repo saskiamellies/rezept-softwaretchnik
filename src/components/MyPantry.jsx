@@ -4,35 +4,36 @@ import MyPantryList from "./MyPantryList";
 
 
 export default function MyPantry() {
-  // Konstante, die die Liste der gespeicherten Lebensmittel darstellt, gespeichert wird lokal
+   
+  // list of the stored food, saved in local storage
   const [foodList, setFoodList] = useState(JSON.parse(localStorage.getItem("foodList")) || []);
-  // Konstante, die dafür zuständig ist, die Liste anzuzeigen oder nicht
+  //sets list visible or invisible
   const [showList, setShowList] = useState(false);
- //Konstante, die zuständig dafür ist, neue Einträge aufzunehmen
+  //sets a new entry from the values of the input fields
   const [newEntry, setNewEntry] = useState({ name: "", amount: "", unit: "", categorie: "", bestBefore: "" });
-//Konstante, aktualisiert den newEntry Zustand, wenn der Benutzer etwas eingibt
+  //refreshes the new Entry state, if a user entered values in the input fields
   const handleInputText = (value, property) => {
     setNewEntry((prevEntry) => ({ ...prevEntry, [property]: value.trim() }));
   };
-// Konstante, die den neuen Eintrag des Benutzers speichert
+   //saves new entry from the user
   const saveInput = () => {
     
     //Konstante, die zuständig ist für die Überprüfung, ob Name oder Menge fehlen
     const missingFields = [];
-// if Abfrage, die prüft, ob ein Name eingegeben wurde und als Ausgabe Name liefert
+    //checks if a name is filled in into the name field and returns Name, if field is empty
     if (!newEntry.name || !newEntry.name.trim()) {
       missingFields.push("Name");
     }
- // if Abfrage, die prüft, ob eine Menge eingegeben wurde und als Ausgabe Menge liefert
+  // checks if an amount is filled in into the amount field and returns Amount, if field is empty
     if (!newEntry.amount || !newEntry.amount.trim()) {
-      missingFields.push("Menge");
+      missingFields.push("Amount");
     }
-//if Abfrage, die prüft, ob die Länge der Eingabe größer als 0 ist und bei nicht Eingabe eine Info ausgibt
+//checks if length of the filled in input is not 0 and returns alert if it is 0
     if (missingFields.length > 0) {
-      alert(`Bitte füllen Sie folgende Felder aus: ${missingFields.join(", ")}`);
-      return; // Beendet die Funktion, wenn die Validierung nicht bestanden ist.
+      alert(`Please fill in the following fields: ${missingFields.join(", ")}`);
+      return; // ends the function, if validation is not passed
     }
-// Konstante, die ein neues Element enthält, das der Liste zugeführt wird
+    // includes a new element, which will be added to the list
     const entryToSave = {
       id: getAvailableId(foodList),
       name: newEntry.name.trim(),
@@ -41,50 +42,47 @@ export default function MyPantry() {
       categorie: newEntry.categorie,
       bestBefore: formatBestBefore(newEntry.bestBefore),
     };
-//Erstellt eine neue Liste und fügt die bisherigen Liste hinzu plus den neuen entryToSave Datensatz
+
+    //creates a new list, which includes the previous list and adds a new entry
     setFoodList((prevList) => [...prevList, entryToSave]);
 
-//Erstellt eine neue Liste und fügt die bisherigen Liste hinzu plus den neuen entryToSave Datensatz und speichert diese lokal
+    //creates a new list, which includes the previous list and adds a new entry and saves it to local storage
     const updatedList = [...foodList, entryToSave].map((item, index) => ({ ...item, id: index + 1 }));
     localStorage.setItem("foodList", JSON.stringify(updatedList));
   };
-//sorgt für die Aktivierung (macht diese Sichtbar) der showFoodList Konstante, setzt sie auf true
+//activates the showFoodList 
   const showFoodList = () => {
     setShowList(true);
   };
-//löscht die gesamte Liste, setzt anstatt der Einträge ein leeres Array ein
+//clears the whole list
   const clearFoodList = () => {
     setFoodList([]);
     setShowList(false);
     localStorage.removeItem("foodList");
   };
-//löscht ausgewählte Einträge (zeilenweise) aus der List
+//deletes selected elements (select through checkbox check)
   const onDelete = (selectedItems) => {
     setFoodList((prevList) => prevList.filter((item) => !selectedItems.includes(item.id)));
   };
-//erstellt eine neue verfügbare ID für ein neu erstelltes Element
+//creates a new ID for a new entry
   const getAvailableId = (list) => {
     const existingIds = list.map((item) => item.id);
     let newId = 1;
-//sucht die vorhandene Lsite der IDs durch nach nicht vorhandenen IDs, setzt die neue ID immer einen höher, als die letzte vorhandene
     while (existingIds.includes(newId)) {
       newId++;
     }
-// gibt die erstellte ID zurück
     return newId;
   };
-//Formatiert das Datum in die englische Form Monat, Tag, Jahr
+
+//formats the date into the english format day-month-year 
   const formatBestBefore = (dateString) => {
     const options = { day: "numeric", month: "long", year: "numeric" };
     const formattedDate = new Date(dateString).toLocaleDateString("en-EN", options);
     return formattedDate;
   };
 
-//
   return (
-    // Liefert die Funktionalität für die Eingabeelemente 
-    // und Buttons, um in der Tabelle Eingaben zu speichern,
-    // die Liste (Tabelle) anzuzeigen und die Liste zu löschen 
+    // returns functionality of input elements and buttons for the input of the values into the list
     <div className="food">
       <div className="inputArea">      
       <h3>enter your stored food here:</h3>

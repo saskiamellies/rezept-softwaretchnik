@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-//Komponente für die Anzeige der MyPantryList
+//components to display the MyPantryList list
 const MyPantryList = ({ foodList, onDelete }) => {
-  //der State für ausgewählte/ selected Elemente und Sortierung
+  //state for selected elements and sorting
   const [selectedItems, setSelectedItems] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
-  //hiermit wird die Checkbox-Änderung bearbeitet
+  //edit the checkbox
   const handleCheckboxChange = (itemId) => {
     if (selectedItems.includes(itemId)) {
       setSelectedItems(selectedItems.filter((id) => id !== itemId));
@@ -13,19 +13,19 @@ const MyPantryList = ({ foodList, onDelete }) => {
       setSelectedItems([...selectedItems, itemId]);
     }
   };
-//löscht ausgewählte Elemente
+//deletes selected items
   const handleDelete = () => {
     onDelete(selectedItems);
     setSelectedItems([]);
   };
-//Funktion, die prüft, ob Lebensmittel über dem Verfallsdatum liegt
+//checks if food is expired
   const isExpired = (bestBeforeDate) => {
     const today = new Date();
     const expirationDate = new Date(bestBeforeDate);
     return today > expirationDate;
   };
 
-  //Funktion, die die Sortierung anfordert
+  //calls the sorting function
   const requestSort = (key) => {
     let direction = 'asc';
     if (sortConfig.key === key && sortConfig.direction === 'asc') {
@@ -34,13 +34,13 @@ const MyPantryList = ({ foodList, onDelete }) => {
     setSortConfig({ key, direction });
   };
 
-  //Funktion, die die Liste sortiert
+  //sorts the list
   const sortedList = () => {
     let list = [...foodList];
     if (sortConfig.key !== null) {
       list.sort((a, b) => {
         if (sortConfig.key === 'bestBefore') {
-          // Wenn es sich um die Spalte 'bestBefore' handelt, führe einen Datumssortierung durch
+          // sorts after date, if the click is done in the column "bestBefore"
           const dateA = new Date(a.bestBefore);
           const dateB = new Date(b.bestBefore);
   
@@ -51,7 +51,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
             return sortConfig.direction === 'asc' ? 1 : -1;
           }
         } else if (sortConfig.key !== 'amount' && sortConfig.key !== 'id') {
-          // Wenn es nicht um 'amount', 'id' oder 'bestBefore' geht, führe den normalen Vergleich durch
+          // if it's not about 'amount', 'id' or 'bestBefore'does the usual comparison
           if (a[sortConfig.key] < b[sortConfig.key]) {
             return sortConfig.direction === 'asc' ? -1 : 1;
           }
@@ -59,7 +59,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
             return sortConfig.direction === 'asc' ? 1 : -1;
           }
         } else {
-          // Für 'amount' und 'id', führe den numerischen Vergleich durch
+          // for 'amount' and 'id', does the numeric copmarison
           const numA = parseFloat(a[sortConfig.key]);
           const numB = parseFloat(b[sortConfig.key]);
   
@@ -76,16 +76,16 @@ const MyPantryList = ({ foodList, onDelete }) => {
     return list;
   };
   
-// Liste der Spaltenüberschriften der Tabelle/ Liste
+// list of the column-headlines of the table/ list
   const columnHeaders = ["id", "name", "amount", "unit", "categorie", "bestBefore", "actions"];
 
-  //Rückgabewert der Komponente (gibt die Liste/ Tabelle mit Sortierfunktion aus inklusive delete Button)
+  //return value of the components (returns list/ table with sorting function including the dleete button)
   return (
     <div className="card-container">
       <table>
         <thead>
           <tr>
-            {/*Spaltenüberschriften mit Sortierfunktion*/}
+            {/*column-hreadlines with sorting function*/}
             {columnHeaders.map((header, index) => (
               <th key={index} onClick={() => requestSort(header)}>
                 {header}
@@ -97,7 +97,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
           </tr>
         </thead>
         <tbody>
-          {/*Liste der eingegebenen Lebensmittel*/}
+          {/*list of the entered food*/}
           {sortedList().map((foodItem) => (
             <tr key={foodItem.id}>
               <td>{foodItem.id}</td>
@@ -110,7 +110,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
                 {isExpired(foodItem.bestBefore) && <span> - abgelaufen</span>}
               </td>
               <td>
-                {/* Checkbox, zur Auswahl einer Zeile/ eines eingegebenen Elements*/}
+                {/* checkbox, to check one line/ one element*/}
                 <input type="checkbox" onChange={() => handleCheckboxChange(foodItem.id)} checked={selectedItems.includes(foodItem.id)}
                 />
               </td>
@@ -120,7 +120,7 @@ const MyPantryList = ({ foodList, onDelete }) => {
       </table>
       <div className="input-container3">
       <div className="buttons">
-        {/* Button zum löschen ausgewählter Elemente*/}
+        {/* button deletes checked/ selected elements*/}
         <button className="deleteb" onClick={handleDelete}>Delete Selected</button>
       </div>
     </div>
