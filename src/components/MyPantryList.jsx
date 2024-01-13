@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-//components to display the MyPantryList list
+
+  /* 
+    The `MyPantryList` component receives two props:
+    - foodList: A object that contains information for stored food
+    - onDelete: A function called when delete button is clicked
+  */
 const MyPantryList = ({ foodList, onDelete }) => {
   //state for selected elements and sorting
   const [selectedItems, setSelectedItems] = useState([]);
@@ -10,7 +15,6 @@ const MyPantryList = ({ foodList, onDelete }) => {
     if (selectedItems.includes(itemId)) {
       setSelectedItems(selectedItems.filter((id) => id !== itemId));
     } else {
-      setSelectedItems([...selectedItems, itemId]);
     }
   };
 //deletes selected items

@@ -1,5 +1,12 @@
 
-//MyPantryInput component defines the input elements, in which the user can entry values
+  /* 
+    The `MyPantryInput` component receives five props:
+    - onTypingName: A function called when the input-field changes
+    - onTypingAmount: A function called when the input-field changes
+    - onTypingUnit: A function called when the dropdown-selection changes
+    - onTypingCategorie: A function called when the dropdown-selection changes
+    - onTypingDate: A function called when the input-field changes
+  */
 const MyPantryInput = ({ onTypingName, onTypingAmount, onTypingUnit, onTypingCategorie, onTypingDate }) => {
   return (
     <div className="input-container2">
