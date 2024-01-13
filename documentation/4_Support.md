@@ -1,6 +1,6 @@
 ## Kontaktinformationen: 
-Bei Fragen oder Anregungen zu 'EnchantedEats' erreichen Sie uns über das Impressum auf unserer Webseite oder direkt per E-Mail an 
-Wir sind bemüht, Ihre Anfragen innerhalb von 24 Stunden zu beantworten.
+Bei Fragen oder Anregungen zu 'EnchantedEats' erreichen Sie uns per E-mail über das Impressum auf unserer Webseite.
+Wir sind bemüht, Ihre Anfragen innerhalb von 48 Stunden zu beantworten.
 
 + André Schlichting Mail:     s69575@bht-berlin.de
 + Daniel Kunst Mail:          s81797@bht-berlin.de
