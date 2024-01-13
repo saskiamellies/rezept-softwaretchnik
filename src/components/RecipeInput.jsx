@@ -48,7 +48,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
     <div className="inputArea">
       <h3>You can search for recipes here</h3>
       <div className="recipe-input-container">
-        <input type="text" id="inputText" onKeyDown={handleSearchClick} className="form-control" placeholder="Please enter an ingredient..." />
+        <input type="text" id="inputText" className="form-control" placeholder="Please enter an ingredient..." />
         <button onClick={handleSearchClick} className="btn-search">Search</button>
       </div>
 
