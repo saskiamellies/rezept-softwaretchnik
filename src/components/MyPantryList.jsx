@@ -6,7 +6,7 @@ import React, { useState } from "react";
     - onDelete: A function called when delete button is clicked
   */
 const MyPantryList = ({ foodList, onDelete }) => {
-  //state for selected elements and sorting
+
   const [selectedItems, setSelectedItems] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 

@@ -5,13 +5,14 @@ import MyPantryList from "./MyPantryList";
 
 export default function MyPantry() {
    
- 
   const [foodList, setFoodList] = useState(JSON.parse(localStorage.getItem("foodList")) || []);
   const [showList, setShowList] = useState(false);
   const [newEntry, setNewEntry] = useState({ name: "", amount: "", unit: "", categorie: "", bestBefore: "" });
+
   const handleInputText = (value, property) => {
     setNewEntry((prevEntry) => ({ ...prevEntry, [property]: value.trim() }));
   };
+
    //saves new entry from the user
   const saveInput = () => { 
     const missingFields = [];
@@ -19,15 +20,18 @@ export default function MyPantry() {
     if (!newEntry.name || !newEntry.name.trim()) {
       missingFields.push("Name");
     }
+
   // checks if an amount is filled in into the amount field and returns Amount, if field is empty
     if (!newEntry.amount || !newEntry.amount.trim()) {
       missingFields.push("Amount");
     }
+
 //checks if length of the filled in input is not 0 and returns alert if it is 0
     if (missingFields.length > 0) {
       alert(`Please fill in the following fields: ${missingFields.join(", ")}`);
       return; // ends the function, if validation is not passed
     }
+
     // includes a new element, which will be added to the list
     const entryToSave = {
       id: getAvailableId(foodList),
@@ -45,20 +49,24 @@ export default function MyPantry() {
     const updatedList = [...foodList, entryToSave].map((item, index) => ({ ...item, id: index + 1 }));
     localStorage.setItem("foodList", JSON.stringify(updatedList));
   };
+
 //activates the showFoodList 
   const showFoodList = () => {
     setShowList(true);
   };
+
 //clears the whole list
   const clearFoodList = () => {
     setFoodList([]);
     setShowList(false);
     localStorage.removeItem("foodList");
   };
+
 //deletes selected elements (select through checkbox check)
   const onDelete = (selectedItems) => {
     setFoodList((prevList) => prevList.filter((item) => !selectedItems.includes(item.id)));
   };
+  
 //creates a new ID for a new entry
   const getAvailableId = (list) => {
     const existingIds = list.map((item) => item.id);

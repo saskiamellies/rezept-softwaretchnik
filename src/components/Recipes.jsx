@@ -38,7 +38,6 @@ const Recipes = ({ onRecipeSave }) => {
   /* function is not yet fully implemented*/
   const handleSaveRecipe = (dish) => {
     onRecipeSave(dish);
-    {/*window.alert("Meal saved to meal schedule");*/} 
   };
 
   /* When recipe details are closed, display the recipe list again */
