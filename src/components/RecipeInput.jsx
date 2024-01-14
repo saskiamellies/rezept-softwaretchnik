@@ -57,6 +57,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
           <label className="filter-label">Vegetarian:</label>          
           <input type="checkbox" onChange={handleCheckboxChange} className="filter-checkbox" />
         </div>
+
         <div className="filter-container">
           <label className="filter-label">Area:</label>
           <form className="dropdownM" name="chooseunit" method="post">
@@ -93,9 +94,16 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
             </select>
           </form>
         </div>
-        <div className="filterContainer">
-          <button onClick={handleRandomClick} className="btn-primary">Give me a random recipe!</button>
+
+       
+
+        <div className="random-recipe">
+
+       <h3>No ideas yet?</h3>
+       <button onClick={handleRandomClick} className="btn-primary">Give me a random recipe!</button>
+
         </div>
+
       </div>
     </div>
   );
