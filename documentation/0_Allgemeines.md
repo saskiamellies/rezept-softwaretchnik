@@ -18,7 +18,7 @@ wie Erntedankfest.
 11. **_Eigene Rezepte:_** Der Nutzer hat die Möglichkeit, eigene Rezepte hochzuladen und mit anderen zu teilen, oder im eigenen Bereich zu halten.
 12. **_Einkaufliste und Vorratsübersicht:_** Alles soll auf einen Blick verfügbar sein. Beim Einkaufen den handgeschriebenen Zettel vergessen. Wie lange war das Hackfleisch noch gut? All diese Fragen könnte der Nutzer sich schnell und übersichtlich beantworten, indem er eine Website oder App nutzt, in der alles gemeinesam verwaltet wird.
 <!-- blank line -->
-<span style="color:green;">## Projektziel</span>
+<span style="color:green;"> ## Projektziel</span>
 <!-- blank line -->
 Entwicklung einer Webanwendung für Rezepte mit dem Namen 'EnchantedEats', die Rezepte, einen Essensplan und einen Vorrat vereint, um eine umfassende  Userexperience zu erzeugen.
 <!-- blank line -->
