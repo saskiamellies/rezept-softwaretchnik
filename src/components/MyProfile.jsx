@@ -68,7 +68,7 @@ const MyProfile = () => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       setIsValidEmail(emailRegex.test(value));
     }
-    setProfileData({ ...profileData, [property]: value.trim() });
+    setProfileData({ ...profileData, [property]: value() });
   };
 
   const saveProfile = () => {
