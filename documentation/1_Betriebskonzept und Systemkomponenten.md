@@ -12,9 +12,9 @@
 
 ## **Anwendungsplattform**
 <!-- blank line -->
-Primäre Plattform: Web-Anwendung
+**Primäre Plattform:** Web-Anwendung
 <!-- blank line -->
-Geplante Erweiterungen: Mobile Version der Website, Entwicklung einer Applikation für iOS- und Android-Geräte
+**Geplante Erweiterungen:** Mobile Version der Website, Entwicklung einer Applikation für iOS- und Android-Geräte
 <!-- blank line -->
 ## **Komponenten**
 Die nachfolgende Grafik soll als Schaubild einen Überblick über unser Vorhaben geben:
