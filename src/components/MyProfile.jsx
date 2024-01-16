@@ -14,7 +14,7 @@ const MyProfile = () => {
     dietaryRestrictions: null,
     email: "",
     id: uuidv4(),
-    profilePicture: null,
+    profilePicture: "",
   };
 
   const [profileData, setProfileData] = useState(JSON.parse(localStorage.getItem("user")) || initialProfileState);
