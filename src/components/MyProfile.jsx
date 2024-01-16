@@ -6,12 +6,12 @@ import { AvatarGenerator } from 'random-avatar-generator';
 const MyProfile = () => {
   const generator = useMemo(() => new AvatarGenerator(),[]);
   const initialProfileState = {
-    firstName: null,
-    lastName: null,
-    username: null,
-    favoriteDish: null,
-    allergies: null,
-    dietaryRestrictions: null,
+    firstName: "",
+    lastName: "",
+    username: "",
+    favoriteDish: "",
+    allergies: "",
+    dietaryRestrictions: "",
     email: "",
     id: uuidv4(),
     profilePicture: "",
@@ -68,7 +68,7 @@ const MyProfile = () => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       setIsValidEmail(emailRegex.test(value));
     }
-    setProfileData({ ...profileData, [property]: value() });
+    setProfileData({ ...profileData, [property]: value });
   };
 
   const saveProfile = () => {
