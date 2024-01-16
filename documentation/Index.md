@@ -28,7 +28,7 @@
 - Community-Beiträge
 - Lizenzinformationen
 ----
-3. [**Bedienoberflächen und Design**](3_Bedienoberflächen und Design.md)
+3. [**Bedienoberflächen und Design**](3_Bedienoberflächen_und_Design.md)
 - Systemvoraussetzungen
 - Nutzer- und Berechtigungskonzept
 - Übersicht des User Interface (UI)
