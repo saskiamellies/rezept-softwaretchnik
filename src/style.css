@@ -295,9 +295,12 @@ padding: 40px 20px 40px 20px;
 /*div-element buttons in myPantry */
 .buttons {
   display: flex;
-  justify-content:first baseline;
+  justify-content: center;
   padding-left: 15px;
   padding-bottom: 10px;
+  align-items: center;
+  margin-top: 40px;
+
   
 }
 /*buttons within div-element buttons in MYPAntry*/
