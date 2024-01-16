@@ -6,15 +6,15 @@ import { AvatarGenerator } from 'random-avatar-generator';
 const MyProfile = () => {
   const generator = useMemo(() => new AvatarGenerator(),[]);
   const initialProfileState = {
-    firstName: "",
-    lastName: "",
-    username: "",
-    favoriteDish: "",
-    allergies: "",
-    dietaryRestrictions: "",
+    firstName: null,
+    lastName: null,
+    username: null,
+    favoriteDish: null,
+    allergies: null,
+    dietaryRestrictions: null,
     email: "",
     id: uuidv4(),
-    profilePicture: "",
+    profilePicture: null,
   };
 
   const [profileData, setProfileData] = useState(JSON.parse(localStorage.getItem("user")) || initialProfileState);
