@@ -222,11 +222,12 @@ select {
 
 /*dropdown-elements in MyPantryInput */
 .dropdownM{
-  padding-top: 6px;
+  padding-top: 0px;
 }
 
 #unit, #categorie, #area{
   width: 20vw;
+  
 }
 
 /* all input elements in MyPantryInput*/
@@ -241,7 +242,7 @@ select {
 /*deleteButton in MyPantryList*/
 .input-container3 {
   display:flex;
-  justify-content:row;
+  justify-content:center;
   width: 100%;
 }
 
