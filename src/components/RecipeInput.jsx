@@ -46,7 +46,7 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
   or dishes from specific countries, as well as a button for displaying a random recipe, are displayed */
   return (
     <div className="inputArea">
-      <h3>You can search for recipes here</h3>
+      <h3>You can search for recipes here:</h3>
 
       <div className="recipe-filter-container">
         <div className="filter-container">
