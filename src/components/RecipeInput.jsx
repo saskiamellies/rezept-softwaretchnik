@@ -47,19 +47,9 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
   return (
     <div className="inputArea">
       <h3>You can search for recipes here</h3>
-      <div className="recipe-input-container">
-        <input type="text" id="inputText" className="form-control" placeholder="Please enter an ingredient..." />
-        <button onClick={handleSearchClick} className="btn-search">Search</button>
-      </div>
 
       <div className="recipe-filter-container">
         <div className="filter-container">
-          <label className="filter-label">Vegetarian:</label>          
-          <input type="checkbox" onChange={handleCheckboxChange} className="filter-checkbox" />
-        </div>
-
-        <div className="filter-container">
-          <label className="filter-label">Area:</label>
           <form className="dropdownM" name="chooseunit" method="post">
             <select id="area" onChange={handleAreaChange} value={selectedArea} className="filter-dropdown">
             <option value="">Select Area</option>
@@ -96,14 +86,23 @@ const RecipeInput = ({ onClickingSearch, onClickingRandom, onCheckboxChange, onA
         </div>
 
        
+      <div className="recipe-input-container">
+        <input type="text" id="inputText" className="form-control" placeholder="Please enter an ingredient..." />
 
+        <div className="filter-container">
+          <label className="filter-label">Vegetarian:</label>          
+          <input type="checkbox" onChange={handleCheckboxChange} className="filter-checkbox" />
+        </div>
+        <button onClick={handleSearchClick} className="btn-search">Search</button>
+      </div>
+
+      
         <div className="random-recipe">
 
        <h3>No ideas yet?</h3>
        <button onClick={handleRandomClick} className="btn-primary">Give me a random recipe!</button>
 
         </div>
-
       </div>
     </div>
   );
